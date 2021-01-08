@@ -1,0 +1,4124 @@
+fileFormatVersion: 2
+guid: 4fb596ea3aea096428527bc4d11ede90
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 9171181302878773188
+    second: SNES - Nosferatu - Hero_0
+  - first:
+      213: 5430193528330673527
+    second: SNES - Nosferatu - Hero_1
+  - first:
+      213: -6930621011578879578
+    second: SNES - Nosferatu - Hero_2
+  - first:
+      213: -4629643307085313239
+    second: SNES - Nosferatu - Hero_3
+  - first:
+      213: -9133272689621687815
+    second: SNES - Nosferatu - Hero_4
+  - first:
+      213: 5941589266692857119
+    second: SNES - Nosferatu - Hero_5
+  - first:
+      213: -2122151765311113337
+    second: SNES - Nosferatu - Hero_6
+  - first:
+      213: -3942161983872786586
+    second: SNES - Nosferatu - Hero_7
+  - first:
+      213: 4519902642619897947
+    second: SNES - Nosferatu - Hero_8
+  - first:
+      213: -8544823331602335076
+    second: SNES - Nosferatu - Hero_9
+  - first:
+      213: -5629241376170261802
+    second: SNES - Nosferatu - Hero_10
+  - first:
+      213: 2363161528744266166
+    second: SNES - Nosferatu - Hero_11
+  - first:
+      213: -748353259045984905
+    second: SNES - Nosferatu - Hero_12
+  - first:
+      213: 2978970214878538763
+    second: SNES - Nosferatu - Hero_13
+  - first:
+      213: -8989032337745882235
+    second: SNES - Nosferatu - Hero_14
+  - first:
+      213: -5946318218767452664
+    second: SNES - Nosferatu - Hero_15
+  - first:
+      213: 5644126040883817341
+    second: SNES - Nosferatu - Hero_16
+  - first:
+      213: -879504842928508348
+    second: SNES - Nosferatu - Hero_17
+  - first:
+      213: 6247996644489234953
+    second: SNES - Nosferatu - Hero_18
+  - first:
+      213: 6188970173082305157
+    second: SNES - Nosferatu - Hero_19
+  - first:
+      213: -8284117081622316155
+    second: SNES - Nosferatu - Hero_20
+  - first:
+      213: -7737146863664453443
+    second: SNES - Nosferatu - Hero_21
+  - first:
+      213: -8083435579220284043
+    second: SNES - Nosferatu - Hero_22
+  - first:
+      213: -3509335245632310027
+    second: SNES - Nosferatu - Hero_23
+  - first:
+      213: -4575983954574154880
+    second: SNES - Nosferatu - Hero_24
+  - first:
+      213: -16990523250116563
+    second: SNES - Nosferatu - Hero_25
+  - first:
+      213: -3361953347335971716
+    second: SNES - Nosferatu - Hero_26
+  - first:
+      213: 6534346454779741860
+    second: SNES - Nosferatu - Hero_27
+  - first:
+      213: -8361847239448572035
+    second: SNES - Nosferatu - Hero_28
+  - first:
+      213: -1781470719256372792
+    second: SNES - Nosferatu - Hero_29
+  - first:
+      213: -5713829714803460453
+    second: SNES - Nosferatu - Hero_30
+  - first:
+      213: 522888341083490852
+    second: SNES - Nosferatu - Hero_31
+  - first:
+      213: -7845147242970114994
+    second: SNES - Nosferatu - Hero_32
+  - first:
+      213: 3430599743846349894
+    second: SNES - Nosferatu - Hero_33
+  - first:
+      213: 4183604721388215488
+    second: SNES - Nosferatu - Hero_34
+  - first:
+      213: -7970166242823477055
+    second: SNES - Nosferatu - Hero_35
+  - first:
+      213: 5901608250724087041
+    second: SNES - Nosferatu - Hero_36
+  - first:
+      213: 5181668907372139833
+    second: SNES - Nosferatu - Hero_37
+  - first:
+      213: -5432154352180149032
+    second: SNES - Nosferatu - Hero_38
+  - first:
+      213: 1324882774225158405
+    second: SNES - Nosferatu - Hero_39
+  - first:
+      213: -4881956133986813832
+    second: SNES - Nosferatu - Hero_40
+  - first:
+      213: 2795920391697186507
+    second: SNES - Nosferatu - Hero_41
+  - first:
+      213: 4582427659939768032
+    second: SNES - Nosferatu - Hero_42
+  - first:
+      213: 7003372891620687500
+    second: SNES - Nosferatu - Hero_43
+  - first:
+      213: -6552138116841984845
+    second: SNES - Nosferatu - Hero_44
+  - first:
+      213: 640452417413829811
+    second: SNES - Nosferatu - Hero_45
+  - first:
+      213: 7331618955449813894
+    second: SNES - Nosferatu - Hero_46
+  - first:
+      213: -8010384985760939011
+    second: SNES - Nosferatu - Hero_47
+  - first:
+      213: -4671748332860717305
+    second: SNES - Nosferatu - Hero_48
+  - first:
+      213: -839254753768338044
+    second: SNES - Nosferatu - Hero_49
+  - first:
+      213: -8611577998882978537
+    second: SNES - Nosferatu - Hero_50
+  - first:
+      213: -1546873687986133223
+    second: SNES - Nosferatu - Hero_51
+  - first:
+      213: -174539508871469969
+    second: SNES - Nosferatu - Hero_52
+  - first:
+      213: 2583671394845178529
+    second: SNES - Nosferatu - Hero_53
+  - first:
+      213: -6985783170354792328
+    second: SNES - Nosferatu - Hero_54
+  - first:
+      213: 6760233607731409019
+    second: SNES - Nosferatu - Hero_55
+  - first:
+      213: 5606868766176780817
+    second: SNES - Nosferatu - Hero_56
+  - first:
+      213: -2906910371802688213
+    second: SNES - Nosferatu - Hero_57
+  - first:
+      213: -3239129047217578890
+    second: SNES - Nosferatu - Hero_58
+  - first:
+      213: -5389843619855491638
+    second: SNES - Nosferatu - Hero_59
+  - first:
+      213: 6693403621690132714
+    second: SNES - Nosferatu - Hero_60
+  - first:
+      213: -6557618269590588005
+    second: SNES - Nosferatu - Hero_61
+  - first:
+      213: 782652668028844217
+    second: SNES - Nosferatu - Hero_62
+  - first:
+      213: -5416874722678642078
+    second: SNES - Nosferatu - Hero_63
+  - first:
+      213: -7513524384277184439
+    second: SNES - Nosferatu - Hero_64
+  - first:
+      213: 8019457101982859083
+    second: SNES - Nosferatu - Hero_65
+  - first:
+      213: 8779832604940480025
+    second: SNES - Nosferatu - Hero_66
+  - first:
+      213: 2774221112205723369
+    second: SNES - Nosferatu - Hero_67
+  - first:
+      213: -2516250585072380381
+    second: SNES - Nosferatu - Hero_68
+  - first:
+      213: 4781161117386689264
+    second: SNES - Nosferatu - Hero_69
+  - first:
+      213: 8985567460664306595
+    second: SNES - Nosferatu - Hero_70
+  - first:
+      213: 2628653523607599226
+    second: SNES - Nosferatu - Hero_71
+  - first:
+      213: -3498658368962855888
+    second: SNES - Nosferatu - Hero_72
+  - first:
+      213: -8643421020003518220
+    second: SNES - Nosferatu - Hero_73
+  - first:
+      213: -1676687320475776135
+    second: SNES - Nosferatu - Hero_74
+  - first:
+      213: 2284630647783951379
+    second: SNES - Nosferatu - Hero_75
+  - first:
+      213: 294579847381493454
+    second: SNES - Nosferatu - Hero_76
+  - first:
+      213: -974462979697455517
+    second: SNES - Nosferatu - Hero_77
+  - first:
+      213: -813281638535008746
+    second: SNES - Nosferatu - Hero_78
+  - first:
+      213: 3812042542619902848
+    second: SNES - Nosferatu - Hero_79
+  - first:
+      213: 4088156861914777794
+    second: SNES - Nosferatu - Hero_80
+  - first:
+      213: 2667625176718833270
+    second: SNES - Nosferatu - Hero_81
+  - first:
+      213: -8377629784768783921
+    second: SNES - Nosferatu - Hero_82
+  - first:
+      213: 5487465036613465725
+    second: SNES - Nosferatu - Hero_83
+  - first:
+      213: -5173388632935343305
+    second: SNES - Nosferatu - Hero_84
+  - first:
+      213: -9068770887886228136
+    second: SNES - Nosferatu - Hero_85
+  - first:
+      213: -7921266574060242411
+    second: SNES - Nosferatu - Hero_86
+  - first:
+      213: -8331518957098570576
+    second: SNES - Nosferatu - Hero_87
+  - first:
+      213: -8169402483595317003
+    second: SNES - Nosferatu - Hero_88
+  - first:
+      213: -830395683409844184
+    second: SNES - Nosferatu - Hero_89
+  - first:
+      213: 4203346949920395136
+    second: SNES - Nosferatu - Hero_90
+  - first:
+      213: -4275406585111016666
+    second: SNES - Nosferatu - Hero_91
+  - first:
+      213: -7660337731039945655
+    second: SNES - Nosferatu - Hero_92
+  - first:
+      213: -2517407921541813424
+    second: SNES - Nosferatu - Hero_93
+  - first:
+      213: -4604834041854536137
+    second: SNES - Nosferatu - Hero_94
+  - first:
+      213: 3185817129797859565
+    second: SNES - Nosferatu - Hero_95
+  - first:
+      213: 2700616034050190445
+    second: SNES - Nosferatu - Hero_96
+  - first:
+      213: 7319715748112527193
+    second: SNES - Nosferatu - Hero_97
+  - first:
+      213: -8506808399872272793
+    second: SNES - Nosferatu - Hero_98
+  - first:
+      213: -375143694292897451
+    second: SNES - Nosferatu - Hero_99
+  - first:
+      213: 8321972407215760066
+    second: SNES - Nosferatu - Hero_100
+  - first:
+      213: 1633385175117684760
+    second: SNES - Nosferatu - Hero_101
+  - first:
+      213: 541887325687635779
+    second: SNES - Nosferatu - Hero_102
+  - first:
+      213: 198649155634627981
+    second: SNES - Nosferatu - Hero_103
+  - first:
+      213: 1469030393746784831
+    second: SNES - Nosferatu - Hero_104
+  - first:
+      213: -4850284070878462408
+    second: SNES - Nosferatu - Hero_105
+  - first:
+      213: -8841713237785796380
+    second: SNES - Nosferatu - Hero_106
+  - first:
+      213: -7153513821974347453
+    second: SNES - Nosferatu - Hero_107
+  - first:
+      213: -5911982717677187414
+    second: SNES - Nosferatu - Hero_108
+  - first:
+      213: -5428965814246937873
+    second: SNES - Nosferatu - Hero_109
+  - first:
+      213: 7053670437980603265
+    second: SNES - Nosferatu - Hero_110
+  - first:
+      213: 6407051033545006126
+    second: SNES - Nosferatu - Hero_111
+  - first:
+      213: 6599875774910459262
+    second: SNES - Nosferatu - Hero_112
+  - first:
+      213: -7625942312959676919
+    second: SNES - Nosferatu - Hero_113
+  - first:
+      213: 9119850306079870751
+    second: SNES - Nosferatu - Hero_114
+  - first:
+      213: 8316321935596647431
+    second: SNES - Nosferatu - Hero_115
+  - first:
+      213: -8831647959010504096
+    second: SNES - Nosferatu - Hero_116
+  - first:
+      213: -4337443585574978841
+    second: SNES - Nosferatu - Hero_117
+  - first:
+      213: -498324511985768274
+    second: SNES - Nosferatu - Hero_118
+  - first:
+      213: 4673633336912057341
+    second: SNES - Nosferatu - Hero_119
+  - first:
+      213: 6166799997980802777
+    second: SNES - Nosferatu - Hero_120
+  - first:
+      213: 9006142301941904978
+    second: SNES - Nosferatu - Hero_121
+  - first:
+      213: -3510715677394789320
+    second: SNES - Nosferatu - Hero_122
+  - first:
+      213: -9072316326217470126
+    second: SNES - Nosferatu - Hero_123
+  - first:
+      213: -386104160278620417
+    second: SNES - Nosferatu - Hero_124
+  - first:
+      213: 7959898535178568560
+    second: SNES - Nosferatu - Hero_125
+  - first:
+      213: -5020310101854495883
+    second: SNES - Nosferatu - Hero_126
+  - first:
+      213: -683784467794865877
+    second: SNES - Nosferatu - Hero_127
+  - first:
+      213: 3784276673328626017
+    second: SNES - Nosferatu - Hero_128
+  - first:
+      213: -7422809889060282979
+    second: SNES - Nosferatu - Hero_129
+  - first:
+      213: 138874252774119435
+    second: SNES - Nosferatu - Hero_130
+  - first:
+      213: -7854060665182489926
+    second: SNES - Nosferatu - Hero_131
+  - first:
+      213: -6414422891216410576
+    second: SNES - Nosferatu - Hero_132
+  - first:
+      213: -3304086590464914807
+    second: SNES - Nosferatu - Hero_133
+  - first:
+      213: -733856280760466620
+    second: SNES - Nosferatu - Hero_134
+  - first:
+      213: -6263509818955769185
+    second: SNES - Nosferatu - Hero_135
+  - first:
+      213: -3199752030469711083
+    second: SNES - Nosferatu - Hero_136
+  - first:
+      213: -5425618732988346476
+    second: SNES - Nosferatu - Hero_137
+  - first:
+      213: -7858838787096873234
+    second: SNES - Nosferatu - Hero_138
+  - first:
+      213: 7497186461902303840
+    second: SNES - Nosferatu - Hero_139
+  - first:
+      213: -4371779410726067787
+    second: SNES - Nosferatu - Hero_140
+  - first:
+      213: 8742763429668334064
+    second: SNES - Nosferatu - Hero_141
+  - first:
+      213: -8863456129830172060
+    second: SNES - Nosferatu - Hero_142
+  - first:
+      213: -5352714767279388218
+    second: SNES - Nosferatu - Hero_143
+  - first:
+      213: 5710990438344484408
+    second: SNES - Nosferatu - Hero_144
+  - first:
+      213: -253180948188835983
+    second: SNES - Nosferatu - Hero_145
+  - first:
+      213: 7916573165075520567
+    second: SNES - Nosferatu - Hero_146
+  - first:
+      213: -2956637944987444223
+    second: SNES - Nosferatu - Hero_147
+  - first:
+      213: -3640588329545395831
+    second: SNES - Nosferatu - Hero_148
+  - first:
+      213: -2458193933559403503
+    second: SNES - Nosferatu - Hero_149
+  - first:
+      213: 8385397167908318430
+    second: SNES - Nosferatu - Hero_150
+  - first:
+      213: -2525379844856733379
+    second: SNES - Nosferatu - Hero_151
+  - first:
+      213: -3581371757646828994
+    second: SNES - Nosferatu - Hero_0
+  - first:
+      213: -7231961337724155527
+    second: SNES - Nosferatu - Hero_1
+  - first:
+      213: 7889641554702268768
+    second: SNES - Nosferatu - Hero_2
+  - first:
+      213: 4849863210798537599
+    second: SNES - Nosferatu - Hero_3
+  - first:
+      213: 8204447194079194338
+    second: SNES - Nosferatu - Hero_4
+  - first:
+      213: 1146018168419090498
+    second: SNES - Nosferatu - Hero_5
+  - first:
+      213: 2346886181389134823
+    second: SNES - Nosferatu - Hero_6
+  - first:
+      213: 5370734790447736092
+    second: SNES - Nosferatu - Hero_7
+  - first:
+      213: -5483016437784026974
+    second: SNES - Nosferatu - Hero_8
+  - first:
+      213: -8577404614770324522
+    second: SNES - Nosferatu - Hero_9
+  - first:
+      213: -7559709247273141009
+    second: SNES - Nosferatu - Hero_10
+  - first:
+      213: -6942454617299336348
+    second: SNES - Nosferatu - Hero_11
+  - first:
+      213: 188691710923928968
+    second: SNES - Nosferatu - Hero_12
+  - first:
+      213: 2970884296670379178
+    second: SNES - Nosferatu - Hero_13
+  - first:
+      213: 227061071762379713
+    second: SNES - Nosferatu - Hero_14
+  - first:
+      213: -172265231166706310
+    second: SNES - Nosferatu - Hero_15
+  - first:
+      213: 8160486836094305770
+    second: SNES - Nosferatu - Hero_16
+  - first:
+      213: -8382006657931306765
+    second: SNES - Nosferatu - Hero_17
+  - first:
+      213: -2846634317701993613
+    second: SNES - Nosferatu - Hero_18
+  - first:
+      213: 5286383038361178460
+    second: SNES - Nosferatu - Hero_19
+  - first:
+      213: -4487675246576688898
+    second: SNES - Nosferatu - Hero_20
+  - first:
+      213: 1430910904554675207
+    second: SNES - Nosferatu - Hero_21
+  - first:
+      213: 8356610339395250761
+    second: SNES - Nosferatu - Hero_22
+  - first:
+      213: -5970720385165709263
+    second: SNES - Nosferatu - Hero_23
+  - first:
+      213: 554221636049043751
+    second: SNES - Nosferatu - Hero_24
+  - first:
+      213: -9048941462048637675
+    second: SNES - Nosferatu - Hero_25
+  - first:
+      213: -1351370877752513196
+    second: SNES - Nosferatu - Hero_26
+  - first:
+      213: -4143930275235943658
+    second: SNES - Nosferatu - Hero_27
+  - first:
+      213: -704443906582391322
+    second: SNES - Nosferatu - Hero_28
+  - first:
+      213: 52648929648442153
+    second: SNES - Nosferatu - Hero_29
+  - first:
+      213: 8518896950895038550
+    second: SNES - Nosferatu - Hero_30
+  - first:
+      213: 1451810345617174187
+    second: SNES - Nosferatu - Hero_31
+  - first:
+      213: -278394682757643020
+    second: SNES - Nosferatu - Hero_32
+  - first:
+      213: 1558476332107179045
+    second: SNES - Nosferatu - Hero_33
+  - first:
+      213: -880632508147908856
+    second: SNES - Nosferatu - Hero_34
+  - first:
+      213: -7953135925138314559
+    second: SNES - Nosferatu - Hero_35
+  - first:
+      213: -5878078839060720590
+    second: SNES - Nosferatu - Hero_36
+  - first:
+      213: -5606874779713612130
+    second: SNES - Nosferatu - Hero_37
+  - first:
+      213: 2359858373538899025
+    second: SNES - Nosferatu - Hero_38
+  - first:
+      213: -929953824700943044
+    second: SNES - Nosferatu - Hero_39
+  - first:
+      213: 11518227351282931
+    second: SNES - Nosferatu - Hero_40
+  - first:
+      213: 1113770864013849391
+    second: SNES - Nosferatu - Hero_41
+  - first:
+      213: -3435335956310786753
+    second: SNES - Nosferatu - Hero_42
+  - first:
+      213: -6496657377389335786
+    second: SNES - Nosferatu - Hero_43
+  - first:
+      213: -1929801768900274324
+    second: SNES - Nosferatu - Hero_44
+  - first:
+      213: 1165898744253655680
+    second: SNES - Nosferatu - Hero_45
+  - first:
+      213: -8208456440250254336
+    second: SNES - Nosferatu - Hero_46
+  - first:
+      213: -461023022408271830
+    second: SNES - Nosferatu - Hero_47
+  - first:
+      213: 2376460766494148313
+    second: SNES - Nosferatu - Hero_48
+  - first:
+      213: -9130474791186340450
+    second: SNES - Nosferatu - Hero_49
+  - first:
+      213: -7497831129375889458
+    second: SNES - Nosferatu - Hero_50
+  - first:
+      213: -2460726105519261780
+    second: SNES - Nosferatu - Hero_51
+  - first:
+      213: 405060388904447693
+    second: SNES - Nosferatu - Hero_52
+  - first:
+      213: 5192855806290890872
+    second: SNES - Nosferatu - Hero_53
+  - first:
+      213: -4669298137381946725
+    second: SNES - Nosferatu - Hero_54
+  - first:
+      213: -4427680433626274886
+    second: SNES - Nosferatu - Hero_55
+  - first:
+      213: 7713901476755649237
+    second: SNES - Nosferatu - Hero_56
+  - first:
+      213: 9194202941342628094
+    second: SNES - Nosferatu - Hero_57
+  - first:
+      213: -5648884723253957463
+    second: SNES - Nosferatu - Hero_58
+  - first:
+      213: -2436879787237638671
+    second: SNES - Nosferatu - Hero_59
+  - first:
+      213: -7044928956493873191
+    second: SNES - Nosferatu - Hero_60
+  - first:
+      213: 3061478479293456862
+    second: SNES - Nosferatu - Hero_61
+  - first:
+      213: 393619004901123645
+    second: SNES - Nosferatu - Hero_62
+  - first:
+      213: 6331977559109842140
+    second: SNES - Nosferatu - Hero_63
+  - first:
+      213: 8070751659280961103
+    second: SNES - Nosferatu - Hero_64
+  - first:
+      213: -6462540915548039790
+    second: SNES - Nosferatu - Hero_65
+  - first:
+      213: 6305814408885418559
+    second: SNES - Nosferatu - Hero_66
+  - first:
+      213: -1132688495062487340
+    second: SNES - Nosferatu - Hero_67
+  - first:
+      213: -177413683264993551
+    second: SNES - Nosferatu - Hero_68
+  - first:
+      213: 8109777508600718188
+    second: SNES - Nosferatu - Hero_69
+  - first:
+      213: -1880135213618564830
+    second: SNES - Nosferatu - Hero_70
+  - first:
+      213: 8598269891363139977
+    second: SNES - Nosferatu - Hero_71
+  - first:
+      213: -3414020664735312374
+    second: SNES - Nosferatu - Hero_72
+  - first:
+      213: 4452120109374627791
+    second: SNES - Nosferatu - Hero_73
+  - first:
+      213: -2288186975546694753
+    second: SNES - Nosferatu - Hero_74
+  - first:
+      213: 3100729342482880618
+    second: SNES - Nosferatu - Hero_75
+  - first:
+      213: 2267222946452579675
+    second: SNES - Nosferatu - Hero_76
+  - first:
+      213: 183471822643040319
+    second: SNES - Nosferatu - Hero_77
+  - first:
+      213: -4658326696229511085
+    second: SNES - Nosferatu - Hero_78
+  - first:
+      213: -6648486046979919048
+    second: SNES - Nosferatu - Hero_79
+  - first:
+      213: 5231048477302922577
+    second: SNES - Nosferatu - Hero_80
+  - first:
+      213: 7127384230711364295
+    second: SNES - Nosferatu - Hero_81
+  - first:
+      213: 6502299677343417791
+    second: SNES - Nosferatu - Hero_82
+  - first:
+      213: -768566715771351139
+    second: SNES - Nosferatu - Hero_83
+  - first:
+      213: 7248481487219395358
+    second: SNES - Nosferatu - Hero_84
+  - first:
+      213: 5529529608415690678
+    second: SNES - Nosferatu - Hero_85
+  - first:
+      213: -108301420462246936
+    second: SNES - Nosferatu - Hero_86
+  - first:
+      213: 1697149858058145084
+    second: SNES - Nosferatu - Hero_87
+  - first:
+      213: 3046294056900863204
+    second: SNES - Nosferatu - Hero_88
+  - first:
+      213: -2847169913904891239
+    second: SNES - Nosferatu - Hero_89
+  - first:
+      213: 2106416522411463657
+    second: SNES - Nosferatu - Hero_90
+  - first:
+      213: 1424554360705591431
+    second: SNES - Nosferatu - Hero_91
+  - first:
+      213: 3935401836567598011
+    second: SNES - Nosferatu - Hero_92
+  - first:
+      213: 6613609208322353540
+    second: SNES - Nosferatu - Hero_93
+  - first:
+      213: 8241924867959781312
+    second: SNES - Nosferatu - Hero_94
+  - first:
+      213: 5455968280586437359
+    second: SNES - Nosferatu - Hero_95
+  - first:
+      213: -4076885576050538424
+    second: SNES - Nosferatu - Hero_96
+  - first:
+      213: -2661098623771503604
+    second: SNES - Nosferatu - Hero_97
+  - first:
+      213: 6435204312481702397
+    second: SNES - Nosferatu - Hero_98
+  - first:
+      213: -7992842952007835352
+    second: SNES - Nosferatu - Hero_99
+  - first:
+      213: -3706814715714619204
+    second: SNES - Nosferatu - Hero_100
+  - first:
+      213: -6129799661284336311
+    second: SNES - Nosferatu - Hero_101
+  - first:
+      213: 494682978652750715
+    second: SNES - Nosferatu - Hero_102
+  - first:
+      213: -3126975214836686432
+    second: SNES - Nosferatu - Hero_103
+  - first:
+      213: -8830864003139304813
+    second: SNES - Nosferatu - Hero_104
+  - first:
+      213: 3606497382112184072
+    second: SNES - Nosferatu - Hero_105
+  - first:
+      213: -9077552925263102604
+    second: SNES - Nosferatu - Hero_106
+  - first:
+      213: 3327733006378625650
+    second: SNES - Nosferatu - Hero_107
+  - first:
+      213: 8693337999343717619
+    second: SNES - Nosferatu - Hero_108
+  - first:
+      213: -5709492002631698515
+    second: SNES - Nosferatu - Hero_109
+  - first:
+      213: 1482893713163112080
+    second: SNES - Nosferatu - Hero_110
+  - first:
+      213: 8059874292229262061
+    second: SNES - Nosferatu - Hero_111
+  - first:
+      213: 5261141452881783958
+    second: SNES - Nosferatu - Hero_112
+  - first:
+      213: -8034954994475523068
+    second: SNES - Nosferatu - Hero_113
+  - first:
+      213: 8109787014766959919
+    second: SNES - Nosferatu - Hero_114
+  - first:
+      213: -1432628876123035432
+    second: SNES - Nosferatu - Hero_115
+  - first:
+      213: 58284990679200597
+    second: SNES - Nosferatu - Hero_116
+  - first:
+      213: -7265091887872839052
+    second: SNES - Nosferatu - Hero_117
+  - first:
+      213: -6323946858459416181
+    second: SNES - Nosferatu - Hero_118
+  - first:
+      213: -9117726408547509707
+    second: SNES - Nosferatu - Hero_119
+  - first:
+      213: 1732868863157063789
+    second: SNES - Nosferatu - Hero_120
+  - first:
+      213: 1859852432073265363
+    second: SNES - Nosferatu - Hero_121
+  - first:
+      213: 6999849292975659084
+    second: SNES - Nosferatu - Hero_122
+  - first:
+      213: -2090523588710508949
+    second: SNES - Nosferatu - Hero_123
+  - first:
+      213: -6291799126137275483
+    second: SNES - Nosferatu - Hero_124
+  - first:
+      213: 7439858448102018836
+    second: SNES - Nosferatu - Hero_125
+  - first:
+      213: 6340949632027162829
+    second: SNES - Nosferatu - Hero_126
+  - first:
+      213: 6233658716159006485
+    second: SNES - Nosferatu - Hero_127
+  - first:
+      213: -3641316277841053630
+    second: SNES - Nosferatu - Hero_128
+  - first:
+      213: 8791230362303503351
+    second: SNES - Nosferatu - Hero_129
+  - first:
+      213: -7485758228174300870
+    second: SNES - Nosferatu - Hero_130
+  - first:
+      213: 7665779147742714318
+    second: SNES - Nosferatu - Hero_131
+  - first:
+      213: 3893385319966762888
+    second: SNES - Nosferatu - Hero_132
+  - first:
+      213: -8203735566839195127
+    second: SNES - Nosferatu - Hero_133
+  - first:
+      213: 941752560933177224
+    second: SNES - Nosferatu - Hero_138
+  - first:
+      213: 539748693046470032
+    second: SNES - Nosferatu - Hero_139
+  - first:
+      213: -1700840799235220305
+    second: SNES - Nosferatu - Hero_140
+  - first:
+      213: 5132907380619717867
+    second: SNES - Nosferatu - Hero_141
+  - first:
+      213: -7205582811355080610
+    second: SNES - Nosferatu - Hero_142
+  - first:
+      213: 7433263978628677205
+    second: SNES - Nosferatu - Hero_143
+  - first:
+      213: -9090466250702685142
+    second: SNES - Nosferatu - Hero_144
+  - first:
+      213: -7141689967856707808
+    second: SNES - Nosferatu - Hero_145
+  - first:
+      213: 6046267927035386804
+    second: SNES - Nosferatu - Hero_146
+  - first:
+      213: 957226960526277238
+    second: SNES - Nosferatu - Hero_147
+  - first:
+      213: 8630106191875962754
+    second: SNES - Nosferatu - Hero_148
+  - first:
+      213: -7085394751376735697
+    second: SNES - Nosferatu - Hero_149
+  - first:
+      213: 174362076603771082
+    second: SNES - Nosferatu - Hero_150
+  - first:
+      213: -8588645598767633144
+    second: SNES - Nosferatu - Hero_151
+  - first:
+      213: -5826291259850187802
+    second: SNES - Nosferatu - Hero_134
+  - first:
+      213: 7755582339613974238
+    second: SNES - Nosferatu - Hero_135
+  - first:
+      213: 766136894456570773
+    second: SNES - Nosferatu - Hero_136
+  - first:
+      213: 8271415581595469696
+    second: SNES - Nosferatu - Hero_137
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: SNES - Nosferatu - Hero_0
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 492
+        width: 36
+        height: 41
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3a28d08c596c4ec0800000000000000
+      internalID: -3581371757646828994
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Nosferatu - Hero_1
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 492
+        width: 36
+        height: 41
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 979c79bda79e2ab90800000000000000
+      internalID: -7231961337724155527
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Nosferatu - Hero_2
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 492
+        width: 39
+        height: 19
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06970316133ad7d60800000000000000
+      internalID: 7889641554702268768
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Nosferatu - Hero_3
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 492
+        width: 40
+        height: 27
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7bd1e005ec2e4340800000000000000
+      internalID: 4849863210798537599
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Nosferatu - Hero_4
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 490
+        width: 39
+        height: 26
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ec6a85014d0cd170800000000000000
+      internalID: 8204447194079194338
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Nosferatu - Hero_5
+      rect:
+        serializedVersion: 2
+        x: 253
+        y: 489
+        width: 39
+        height: 23
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24083cac37977ef00800000000000000
+      internalID: 1146018168419090498
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Nosferatu - Hero_6
+      rect:
+        serializedVersion: 2
+        x: 299
+        y: 489
+        width: 38
+        height: 22
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ebe8f13c80d19020800000000000000
+      internalID: 2346886181389134823
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Nosferatu - Hero_7
+      rect:
+        serializedVersion: 2
+        x: 345
+        y: 491
+        width: 42
+        height: 17
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c15287726dea88a40800000000000000
+      internalID: 5370734790447736092
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Nosferatu - Hero_8
+      rect:
+        serializedVersion: 2
+        x: 395
+        y: 490
+        width: 41
+        height: 22
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a06140a99968e3b0800000000000000
+      internalID: -5483016437784026974
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Nosferatu - Hero_9
+      rect:
+        serializedVersion: 2
+        x: 446
+        y: 490
+        width: 31
+        height: 26
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6db81d9a2ffe6f880800000000000000
+      internalID: -8577404614770324522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Nosferatu - Hero_10
+      rect:
+        serializedVersion: 2
+        x: 486
+        y: 490
+        width: 29
+        height: 27
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fec7c0f1e74861790800000000000000
+      internalID: -7559709247273141009
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Nosferatu - Hero_11
+      rect:
+        serializedVersion: 2
+        x: 526
+        y: 492
+        width: 34
+        height: 25
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4634a9aee4277af90800000000000000
+      internalID: -6942454617299336348
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Nosferatu - Hero_12
+      rect:
+        serializedVersion: 2
+        x: 566
+        y: 492
+        width: 35
+        height: 28
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8857ea18c1e5e9200800000000000000
+      internalID: 188691710923928968
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Nosferatu - Hero_13
+      rect:
+        serializedVersion: 2
+        x: 613
+        y: 492
+        width: 24
+        height: 29
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aacf2d30783ba3920800000000000000
+      internalID: 2970884296670379178
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Nosferatu - Hero_14
+      rect:
+        serializedVersion: 2
+        x: 647
+        y: 492
+        width: 19
+        height: 35
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c357bc77dea62300800000000000000
+      internalID: 227061071762379713
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Nosferatu - Hero_15
+      rect:
+        serializedVersion: 2
+        x: 677
+        y: 492
+        width: 17
+        height: 43
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7d68295fadfb9df0800000000000000
+      internalID: -172265231166706310
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Nosferatu - Hero_16
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 492
+        width: 14
+        height: 48
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae507a39a8fdf3170800000000000000
+      internalID: 8160486836094305770
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Nosferatu - Hero_17
+      rect:
+        serializedVersion: 2
+        x: 729
+        y: 492
+        width: 13
+        height: 49
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f89b09ba512dab80800000000000000
+      internalID: -8382006657931306765
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Nosferatu - Hero_18
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 431
+        width: 18
+        height: 47
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37bafef8b29be78d0800000000000000
+      internalID: -2846634317701993613
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Nosferatu - Hero_19
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 431
+        width: 21
+        height: 46
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c511b2c6d510d5940800000000000000
+      internalID: 5286383038361178460
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Nosferatu - Hero_20
+      rect:
+        serializedVersion: 2
+        x: 117
+        y: 431
+        width: 19
+        height: 47
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef0ab74d32398b1c0800000000000000
+      internalID: -4487675246576688898
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Nosferatu - Hero_21
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 431
+        width: 12
+        height: 48
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70cd63be2ed9bd310800000000000000
+      internalID: 1430910904554675207
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Nosferatu - Hero_22
+      rect:
+        serializedVersion: 2
+        x: 218
+        y: 431
+        width: 13
+        height: 48
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94aa20614d4a8f370800000000000000
+      internalID: 8356610339395250761
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Nosferatu - Hero_23
+      rect:
+        serializedVersion: 2
+        x: 243
+        y: 431
+        width: 24
+        height: 47
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 130b305a17db32da0800000000000000
+      internalID: -5970720385165709263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Nosferatu - Hero_24
+      rect:
+        serializedVersion: 2
+        x: 275
+        y: 431
+        width: 24
+        height: 47
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7210a8f34adf0b700800000000000000
+      internalID: 554221636049043751
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Nosferatu - Hero_25
+      rect:
+        serializedVersion: 2
+        x: 309
+        y: 431
+        width: 19
+        height: 48
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51d79410fa3bb6280800000000000000
+      internalID: -9048941462048637675
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Nosferatu - Hero_26
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 431
+        width: 12
+        height: 48
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45de0c7b857fe3de0800000000000000
+      internalID: -1351370877752513196
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Nosferatu - Hero_27
+      rect:
+        serializedVersion: 2
+        x: 361
+        y: 431
+        width: 16
+        height: 48
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61b2392ce5dcd76c0800000000000000
+      internalID: -4143930275235943658
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Nosferatu - Hero_28
+      rect:
+        serializedVersion: 2
+        x: 386
+        y: 431
+        width: 26
+        height: 47
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e5d7ffcfff4936f0800000000000000
+      internalID: -704443906582391322
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Nosferatu - Hero_29
+      rect:
+        serializedVersion: 2
+        x: 421
+        y: 431
+        width: 25
+        height: 47
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92bff7d2ceb0bb000800000000000000
+      internalID: 52648929648442153
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Nosferatu - Hero_30
+      rect:
+        serializedVersion: 2
+        x: 457
+        y: 431
+        width: 18
+        height: 46
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 650d14c44a3393670800000000000000
+      internalID: 8518896950895038550
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Nosferatu - Hero_31
+      rect:
+        serializedVersion: 2
+        x: 560
+        y: 431
+        width: 14
+        height: 48
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: baeafbb31ddd52410800000000000000
+      internalID: 1451810345617174187
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Nosferatu - Hero_32
+      rect:
+        serializedVersion: 2
+        x: 581
+        y: 431
+        width: 16
+        height: 49
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f48fd2d281f22cf0800000000000000
+      internalID: -278394682757643020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Nosferatu - Hero_33
+      rect:
+        serializedVersion: 2
+        x: 607
+        y: 431
+        width: 23
+        height: 47
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5242a1687f1d0a510800000000000000
+      internalID: 1558476332107179045
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Nosferatu - Hero_34
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 431
+        width: 26
+        height: 46
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80fbe2e466d57c3f0800000000000000
+      internalID: -880632508147908856
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Nosferatu - Hero_35
+      rect:
+        serializedVersion: 2
+        x: 678
+        y: 431
+        width: 30
+        height: 46
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1caabbb7309c0a190800000000000000
+      internalID: -7953135925138314559
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Nosferatu - Hero_36
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 373
+        width: 24
+        height: 40
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2349b04707edc6ea0800000000000000
+      internalID: -5878078839060720590
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Nosferatu - Hero_37
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 373
+        width: 31
+        height: 41
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e96d21728116032b0800000000000000
+      internalID: -5606874779713612130
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Nosferatu - Hero_38
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 373
+        width: 38
+        height: 42
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 154640b00b6efb020800000000000000
+      internalID: 2359858373538899025
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Nosferatu - Hero_39
+      rect:
+        serializedVersion: 2
+        x: 172
+        y: 373
+        width: 28
+        height: 43
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c353f2d6ce32813f0800000000000000
+      internalID: -929953824700943044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Nosferatu - Hero_40
+      rect:
+        serializedVersion: 2
+        x: 212
+        y: 373
+        width: 20
+        height: 43
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f427b944cbe82000800000000000000
+      internalID: 11518227351282931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Nosferatu - Hero_41
+      rect:
+        serializedVersion: 2
+        x: 243
+        y: 373
+        width: 23
+        height: 44
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f23b9b623b8e47f00800000000000000
+      internalID: 1113770864013849391
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Nosferatu - Hero_42
+      rect:
+        serializedVersion: 2
+        x: 279
+        y: 373
+        width: 25
+        height: 45
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3df7ff162c3350d0800000000000000
+      internalID: -3435335956310786753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Nosferatu - Hero_43
+      rect:
+        serializedVersion: 2
+        x: 318
+        y: 373
+        width: 31
+        height: 44
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61ba949398c37d5a0800000000000000
+      internalID: -6496657377389335786
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Nosferatu - Hero_44
+      rect:
+        serializedVersion: 2
+        x: 361
+        y: 373
+        width: 27
+        height: 45
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6757c50487f735e0800000000000000
+      internalID: -1929801768900274324
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Nosferatu - Hero_45
+      rect:
+        serializedVersion: 2
+        x: 398
+        y: 373
+        width: 18
+        height: 45
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08a205f0bba1e2010800000000000000
+      internalID: 1165898744253655680
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Nosferatu - Hero_46
+      rect:
+        serializedVersion: 2
+        x: 427
+        y: 373
+        width: 20
+        height: 45
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 00cbd9c9b54b51e80800000000000000
+      internalID: -8208456440250254336
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Nosferatu - Hero_47
+      rect:
+        serializedVersion: 2
+        x: 457
+        y: 373
+        width: 26
+        height: 47
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a28f314f00e1a99f0800000000000000
+      internalID: -461023022408271830
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Nosferatu - Hero_48
+      rect:
+        serializedVersion: 2
+        x: 496
+        y: 373
+        width: 32
+        height: 44
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d64981e972eaf020800000000000000
+      internalID: 2376460766494148313
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Nosferatu - Hero_49
+      rect:
+        serializedVersion: 2
+        x: 595
+        y: 373
+        width: 27
+        height: 45
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e95eda08d890a4180800000000000000
+      internalID: -9130474791186340450
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Nosferatu - Hero_50
+      rect:
+        serializedVersion: 2
+        x: 631
+        y: 373
+        width: 26
+        height: 45
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec72fa3205a52f790800000000000000
+      internalID: -7497831129375889458
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Nosferatu - Hero_51
+      rect:
+        serializedVersion: 2
+        x: 667
+        y: 373
+        width: 24
+        height: 46
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca77efef4aeb9ddd0800000000000000
+      internalID: -2460726105519261780
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Nosferatu - Hero_52
+      rect:
+        serializedVersion: 2
+        x: 703
+        y: 373
+        width: 22
+        height: 47
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dce2b3117401f9500800000000000000
+      internalID: 405060388904447693
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Nosferatu - Hero_53
+      rect:
+        serializedVersion: 2
+        x: 735
+        y: 373
+        width: 17
+        height: 47
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8701bc7c7dab01840800000000000000
+      internalID: 5192855806290890872
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Nosferatu - Hero_54
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 310
+        width: 29
+        height: 46
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9ab4f24512533fb0800000000000000
+      internalID: -4669298137381946725
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Nosferatu - Hero_55
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 310
+        width: 26
+        height: 47
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab322ceba18bd82c0800000000000000
+      internalID: -4427680433626274886
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Nosferatu - Hero_56
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 310
+        width: 26
+        height: 47
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d2b16ae5884d0b60800000000000000
+      internalID: 7713901476755649237
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Nosferatu - Hero_57
+      rect:
+        serializedVersion: 2
+        x: 182
+        y: 310
+        width: 25
+        height: 47
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef83497bcde589f70800000000000000
+      internalID: 9194202941342628094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Nosferatu - Hero_58
+      rect:
+        serializedVersion: 2
+        x: 218
+        y: 310
+        width: 26
+        height: 47
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ac2155f5412b91b0800000000000000
+      internalID: -5648884723253957463
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Nosferatu - Hero_59
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 310
+        width: 26
+        height: 47
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1fdfe51aeb67e2ed0800000000000000
+      internalID: -2436879787237638671
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Nosferatu - Hero_60
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 310
+        width: 25
+        height: 47
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9dfb15090726b3e90800000000000000
+      internalID: -7044928956493873191
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Nosferatu - Hero_61
+      rect:
+        serializedVersion: 2
+        x: 327
+        y: 310
+        width: 24
+        height: 46
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed12acdd47e8c7a20800000000000000
+      internalID: 3061478479293456862
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Nosferatu - Hero_62
+      rect:
+        serializedVersion: 2
+        x: 363
+        y: 310
+        width: 23
+        height: 46
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3669f3466a667500800000000000000
+      internalID: 393619004901123645
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Nosferatu - Hero_63
+      rect:
+        serializedVersion: 2
+        x: 399
+        y: 310
+        width: 25
+        height: 47
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd4bc70ba04bfd750800000000000000
+      internalID: 6331977559109842140
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Nosferatu - Hero_64
+      rect:
+        serializedVersion: 2
+        x: 503
+        y: 310
+        width: 20
+        height: 48
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4e06d99fd1110070800000000000000
+      internalID: 8070751659280961103
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Nosferatu - Hero_65
+      rect:
+        serializedVersion: 2
+        x: 535
+        y: 310
+        width: 24
+        height: 48
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 295d45ef6417056a0800000000000000
+      internalID: -6462540915548039790
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Nosferatu - Hero_66
+      rect:
+        serializedVersion: 2
+        x: 572
+        y: 310
+        width: 31
+        height: 47
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3ab7259bc0c28750800000000000000
+      internalID: 6305814408885418559
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Nosferatu - Hero_67
+      rect:
+        serializedVersion: 2
+        x: 617
+        y: 310
+        width: 33
+        height: 47
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4dee0a2a0d1e740f0800000000000000
+      internalID: -1132688495062487340
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Nosferatu - Hero_68
+      rect:
+        serializedVersion: 2
+        x: 661
+        y: 310
+        width: 28
+        height: 46
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f642bee133b98df0800000000000000
+      internalID: -177413683264993551
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Nosferatu - Hero_69
+      rect:
+        serializedVersion: 2
+        x: 701
+        y: 310
+        width: 25
+        height: 47
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6329973da7bb8070800000000000000
+      internalID: 8109777508600718188
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Nosferatu - Hero_70
+      rect:
+        serializedVersion: 2
+        x: 793
+        y: 310
+        width: 38
+        height: 47
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 221ff8e0cfa68e5e0800000000000000
+      internalID: -1880135213618564830
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Nosferatu - Hero_71
+      rect:
+        serializedVersion: 2
+        x: 845
+        y: 310
+        width: 32
+        height: 47
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 981f2ad19e0335770800000000000000
+      internalID: 8598269891363139977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Nosferatu - Hero_72
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 245
+        width: 15
+        height: 46
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a06db9e2b46fe90d0800000000000000
+      internalID: -3414020664735312374
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Nosferatu - Hero_73
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 245
+        width: 18
+        height: 47
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fcfd5a0b6ab19cd30800000000000000
+      internalID: 4452120109374627791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Nosferatu - Hero_74
+      rect:
+        serializedVersion: 2
+        x: 59
+        y: 245
+        width: 21
+        height: 36
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f932ddea11abe30e0800000000000000
+      internalID: -2288186975546694753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Nosferatu - Hero_75
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 245
+        width: 23
+        height: 50
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a68925b98e0080b20800000000000000
+      internalID: 3100729342482880618
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Nosferatu - Hero_76
+      rect:
+        serializedVersion: 2
+        x: 124
+        y: 260
+        width: 23
+        height: 35
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b55abede14bc67f10800000000000000
+      internalID: 2267222946452579675
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Nosferatu - Hero_77
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 258
+        width: 22
+        height: 38
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f309eee86a2db8200800000000000000
+      internalID: 183471822643040319
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Nosferatu - Hero_78
+      rect:
+        serializedVersion: 2
+        x: 189
+        y: 245
+        width: 19
+        height: 42
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3506587fc8c4a5fb0800000000000000
+      internalID: -4658326696229511085
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Nosferatu - Hero_79
+      rect:
+        serializedVersion: 2
+        x: 219
+        y: 245
+        width: 15
+        height: 46
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 833fe9b5a25dbb3a0800000000000000
+      internalID: -6648486046979919048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Nosferatu - Hero_80
+      rect:
+        serializedVersion: 2
+        x: 310
+        y: 245
+        width: 25
+        height: 41
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15d1d74ffda689840800000000000000
+      internalID: 5231048477302922577
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Nosferatu - Hero_81
+      rect:
+        serializedVersion: 2
+        x: 347
+        y: 245
+        width: 25
+        height: 38
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ca8541023e89e260800000000000000
+      internalID: 7127384230711364295
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Nosferatu - Hero_82
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 245
+        width: 27
+        height: 43
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb5013b1b1fcc3a50800000000000000
+      internalID: 6502299677343417791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Nosferatu - Hero_83
+      rect:
+        serializedVersion: 2
+        x: 420
+        y: 245
+        width: 39
+        height: 50
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9f8240e4a08555f0800000000000000
+      internalID: -768566715771351139
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Nosferatu - Hero_84
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 247
+        width: 39
+        height: 47
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1b05be2287c79460800000000000000
+      internalID: 7248481487219395358
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Nosferatu - Hero_85
+      rect:
+        serializedVersion: 2
+        x: 510
+        y: 257
+        width: 19
+        height: 37
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6bf3f94d1e5dcbc40800000000000000
+      internalID: 5529529608415690678
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Nosferatu - Hero_86
+      rect:
+        serializedVersion: 2
+        x: 539
+        y: 245
+        width: 36
+        height: 49
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e37da09e6c3f7ef0800000000000000
+      internalID: -108301420462246936
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Nosferatu - Hero_87
+      rect:
+        serializedVersion: 2
+        x: 581
+        y: 246
+        width: 36
+        height: 48
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3d0924ddcc7d8710800000000000000
+      internalID: 1697149858058145084
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Nosferatu - Hero_88
+      rect:
+        serializedVersion: 2
+        x: 626
+        y: 248
+        width: 25
+        height: 46
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e4a5f60e4c964a20800000000000000
+      internalID: 3046294056900863204
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Nosferatu - Hero_89
+      rect:
+        serializedVersion: 2
+        x: 661
+        y: 245
+        width: 27
+        height: 38
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99af48a5c02dc78d0800000000000000
+      internalID: -2847169913904891239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Nosferatu - Hero_90
+      rect:
+        serializedVersion: 2
+        x: 698
+        y: 245
+        width: 27
+        height: 38
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e35957baae7b3d10800000000000000
+      internalID: 2106416522411463657
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Nosferatu - Hero_91
+      rect:
+        serializedVersion: 2
+        x: 736
+        y: 245
+        width: 25
+        height: 41
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7882719b4a805c310800000000000000
+      internalID: 1424554360705591431
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Nosferatu - Hero_92
+      rect:
+        serializedVersion: 2
+        x: 772
+        y: 245
+        width: 25
+        height: 45
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb31805ae1b5d9630800000000000000
+      internalID: 3935401836567598011
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Nosferatu - Hero_93
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 179
+        width: 29
+        height: 48
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4896e49d88248cb50800000000000000
+      internalID: 6613609208322353540
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Nosferatu - Hero_94
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 185
+        width: 40
+        height: 42
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c77334fff2316270800000000000000
+      internalID: 8241924867959781312
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Nosferatu - Hero_95
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 188
+        width: 37
+        height: 39
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe247268e3e77bb40800000000000000
+      internalID: 5455968280586437359
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Nosferatu - Hero_96
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 179
+        width: 27
+        height: 43
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84808993b2efb67c0800000000000000
+      internalID: -4076885576050538424
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Nosferatu - Hero_97
+      rect:
+        serializedVersion: 2
+        x: 183
+        y: 179
+        width: 20
+        height: 44
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0491d996e0e11bd0800000000000000
+      internalID: -2661098623771503604
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Nosferatu - Hero_98
+      rect:
+        serializedVersion: 2
+        x: 212
+        y: 179
+        width: 20
+        height: 43
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df1a88e1a307e4950800000000000000
+      internalID: 6435204312481702397
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Nosferatu - Hero_99
+      rect:
+        serializedVersion: 2
+        x: 243
+        y: 179
+        width: 15
+        height: 46
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 821a61cdea7b31190800000000000000
+      internalID: -7992842952007835352
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Nosferatu - Hero_100
+      rect:
+        serializedVersion: 2
+        x: 337
+        y: 179
+        width: 12
+        height: 48
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb8b3a5d7afbe8cc0800000000000000
+      internalID: -3706814715714619204
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Nosferatu - Hero_101
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 179
+        width: 18
+        height: 45
+      alignment: 9
+      pivot: {x: -0.36, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94d56d46fa39eeaa0800000000000000
+      internalID: -6129799661284336311
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Nosferatu - Hero_102
+      rect:
+        serializedVersion: 2
+        x: 392
+        y: 179
+        width: 15
+        height: 45
+      alignment: 9
+      pivot: {x: -0.36, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7387035c877dd600800000000000000
+      internalID: 494682978652750715
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Nosferatu - Hero_103
+      rect:
+        serializedVersion: 2
+        x: 419
+        y: 179
+        width: 15
+        height: 46
+      alignment: 9
+      pivot: {x: -0.36, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a1653a0c90ca94d0800000000000000
+      internalID: -3126975214836686432
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Nosferatu - Hero_104
+      rect:
+        serializedVersion: 2
+        x: 447
+        y: 179
+        width: 19
+        height: 45
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39209112af7727580800000000000000
+      internalID: -8830864003139304813
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Nosferatu - Hero_105
+      rect:
+        serializedVersion: 2
+        x: 479
+        y: 179
+        width: 23
+        height: 45
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8074c20d24adc0230800000000000000
+      internalID: 3606497382112184072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Nosferatu - Hero_106
+      rect:
+        serializedVersion: 2
+        x: 513
+        y: 179
+        width: 22
+        height: 46
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47d72eb95bd060280800000000000000
+      internalID: -9077552925263102604
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Nosferatu - Hero_107
+      rect:
+        serializedVersion: 2
+        x: 548
+        y: 179
+        width: 23
+        height: 44
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27a6a88c98b7e2e20800000000000000
+      internalID: 3327733006378625650
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Nosferatu - Hero_108
+      rect:
+        serializedVersion: 2
+        x: 583
+        y: 179
+        width: 22
+        height: 44
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3fc8943e9d0f4a870800000000000000
+      internalID: 8693337999343717619
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Nosferatu - Hero_109
+      rect:
+        serializedVersion: 2
+        x: 618
+        y: 179
+        width: 20
+        height: 43
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da73437164fc3c0b0800000000000000
+      internalID: -5709492002631698515
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Nosferatu - Hero_110
+      rect:
+        serializedVersion: 2
+        x: 652
+        y: 179
+        width: 19
+        height: 46
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09e4fb4b9fb449410800000000000000
+      internalID: 1482893713163112080
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Nosferatu - Hero_111
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 83
+        width: 18
+        height: 47
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: deac0aa37fc6adf60800000000000000
+      internalID: 8059874292229262061
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Nosferatu - Hero_112
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 83
+        width: 16
+        height: 52
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69ce914d644530940800000000000000
+      internalID: 5261141452881783958
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Nosferatu - Hero_113
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 84
+        width: 11
+        height: 58
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4042908e00b1e7090800000000000000
+      internalID: -8034954994475523068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Nosferatu - Hero_114
+      rect:
+        serializedVersion: 2
+        x: 113
+        y: 84
+        width: 15
+        height: 61
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2d924b8250cb8070800000000000000
+      internalID: 8109787014766959919
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Nosferatu - Hero_115
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 83
+        width: 19
+        height: 62
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d828b7a0a74e1ce0800000000000000
+      internalID: -1432628876123035432
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Nosferatu - Hero_116
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 83
+        width: 16
+        height: 62
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 553bb25e3e11fc000800000000000000
+      internalID: 58284990679200597
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Nosferatu - Hero_117
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 87
+        width: 12
+        height: 58
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47274ca8b653d2b90800000000000000
+      internalID: -7265091887872839052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Nosferatu - Hero_118
+      rect:
+        serializedVersion: 2
+        x: 214
+        y: 86
+        width: 14
+        height: 50
+      alignment: 9
+      pivot: {x: 0, y: -0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b89341386d3dc38a0800000000000000
+      internalID: -6323946858459416181
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Nosferatu - Hero_119
+      rect:
+        serializedVersion: 2
+        x: 235
+        y: 85
+        width: 18
+        height: 50
+      alignment: 9
+      pivot: {x: 0, y: -0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53ad353a324577180800000000000000
+      internalID: -9117726408547509707
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Nosferatu - Hero_120
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 86
+        width: 16
+        height: 50
+      alignment: 9
+      pivot: {x: 0, y: -0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d60dfc6cc036c0810800000000000000
+      internalID: 1732868863157063789
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Nosferatu - Hero_121
+      rect:
+        serializedVersion: 2
+        x: 283
+        y: 90
+        width: 16
+        height: 49
+      alignment: 9
+      pivot: {x: 0, y: -0.45}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d09f5cdee58fc910800000000000000
+      internalID: 1859852432073265363
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Nosferatu - Hero_122
+      rect:
+        serializedVersion: 2
+        x: 305
+        y: 96
+        width: 15
+        height: 46
+      alignment: 9
+      pivot: {x: 0, y: -0.6}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c48551d58d5742160800000000000000
+      internalID: 6999849292975659084
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Nosferatu - Hero_123
+      rect:
+        serializedVersion: 2
+        x: 327
+        y: 100
+        width: 20
+        height: 45
+      alignment: 9
+      pivot: {x: 0, y: -0.69}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b66d5544fd7fcf2e0800000000000000
+      internalID: -2090523588710508949
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Nosferatu - Hero_124
+      rect:
+        serializedVersion: 2
+        x: 355
+        y: 102
+        width: 22
+        height: 45
+      alignment: 9
+      pivot: {x: 0, y: -0.7}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ab7978b70a0fa8a0800000000000000
+      internalID: -6291799126137275483
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Nosferatu - Hero_125
+      rect:
+        serializedVersion: 2
+        x: 385
+        y: 102
+        width: 21
+        height: 46
+      alignment: 9
+      pivot: {x: 0, y: -0.7}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41f4f4a27dfaf3760800000000000000
+      internalID: 7439858448102018836
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Nosferatu - Hero_126
+      rect:
+        serializedVersion: 2
+        x: 417
+        y: 108
+        width: 22
+        height: 39
+      alignment: 9
+      pivot: {x: 0, y: -1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc87f9338149ff750800000000000000
+      internalID: 6340949632027162829
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Nosferatu - Hero_127
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 113
+        width: 30
+        height: 32
+      alignment: 9
+      pivot: {x: 0, y: -1.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 517dca33397628650800000000000000
+      internalID: 6233658716159006485
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Nosferatu - Hero_128
+      rect:
+        serializedVersion: 2
+        x: 487
+        y: 121
+        width: 28
+        height: 25
+      alignment: 9
+      pivot: {x: 0, y: -2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 248bf684322777dc0800000000000000
+      internalID: -3641316277841053630
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Nosferatu - Hero_129
+      rect:
+        serializedVersion: 2
+        x: 523
+        y: 123
+        width: 27
+        height: 25
+      alignment: 9
+      pivot: {x: 0, y: -2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7fb9ab3cf69b00a70800000000000000
+      internalID: 8791230362303503351
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Nosferatu - Hero_130
+      rect:
+        serializedVersion: 2
+        x: 559
+        y: 124
+        width: 24
+        height: 24
+      alignment: 9
+      pivot: {x: 0, y: -2.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a39963f7d8e3d1890800000000000000
+      internalID: -7485758228174300870
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Nosferatu - Hero_131
+      rect:
+        serializedVersion: 2
+        x: 589
+        y: 124
+        width: 24
+        height: 30
+      alignment: 9
+      pivot: {x: 0, y: -1.75}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec91dc31581526a60800000000000000
+      internalID: 7665779147742714318
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Nosferatu - Hero_132
+      rect:
+        serializedVersion: 2
+        x: 621
+        y: 124
+        width: 19
+        height: 42
+      alignment: 9
+      pivot: {x: 0, y: -1.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 887e65a0255180630800000000000000
+      internalID: 3893385319966762888
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Nosferatu - Hero_133
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 83
+        width: 21
+        height: 36
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90adf4b97f9762e80800000000000000
+      internalID: -8203735566839195127
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Nosferatu - Hero_138
+      rect:
+        serializedVersion: 2
+        x: 552
+        y: 3
+        width: 13
+        height: 62
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8878cbce6f6c11d00800000000000000
+      internalID: 941752560933177224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Nosferatu - Hero_139
+      rect:
+        serializedVersion: 2
+        x: 573
+        y: 3
+        width: 15
+        height: 62
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 095240d93929d7700800000000000000
+      internalID: 539748693046470032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Nosferatu - Hero_140
+      rect:
+        serializedVersion: 2
+        x: 596
+        y: 3
+        width: 13
+        height: 62
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: facd716fd466568e0800000000000000
+      internalID: -1700840799235220305
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Nosferatu - Hero_141
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 4
+        width: 20
+        height: 43
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: beca1de3110cb3740800000000000000
+      internalID: 5132907380619717867
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Nosferatu - Hero_142
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 4
+        width: 26
+        height: 31
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5815812c90a00c90800000000000000
+      internalID: -7205582811355080610
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Nosferatu - Hero_143
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 4
+        width: 32
+        height: 32
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55e7ed79432482760800000000000000
+      internalID: 7433263978628677205
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Nosferatu - Hero_144
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 4
+        width: 49
+        height: 20
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2c703cbb1d28d180800000000000000
+      internalID: -9090466250702685142
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Nosferatu - Hero_145
+      rect:
+        serializedVersion: 2
+        x: 214
+        y: 5
+        width: 31
+        height: 42
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0271ee100de93ec90800000000000000
+      internalID: -7141689967856707808
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Nosferatu - Hero_146
+      rect:
+        serializedVersion: 2
+        x: 289
+        y: 5
+        width: 31
+        height: 38
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4bb18c725a8a8e350800000000000000
+      internalID: 6046267927035386804
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Nosferatu - Hero_147
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 9
+        width: 35
+        height: 38
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67a789759d0c84d00800000000000000
+      internalID: 957226960526277238
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Nosferatu - Hero_148
+      rect:
+        serializedVersion: 2
+        x: 425
+        y: 5
+        width: 16
+        height: 60
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2877aa47bdb44c770800000000000000
+      internalID: 8630106191875962754
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Nosferatu - Hero_149
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 4
+        width: 10
+        height: 61
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f22c5ce730f9bad90800000000000000
+      internalID: -7085394751376735697
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Nosferatu - Hero_150
+      rect:
+        serializedVersion: 2
+        x: 471
+        y: 4
+        width: 12
+        height: 61
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac8644682657b6200800000000000000
+      internalID: 174362076603771082
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Nosferatu - Hero_151
+      rect:
+        serializedVersion: 2
+        x: 495
+        y: 4
+        width: 14
+        height: 61
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80dabbf15500fc880800000000000000
+      internalID: -8588645598767633144
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
