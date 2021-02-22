@@ -56,8 +56,7 @@ public class PlayerLedgeClimbState : PlayerState
         isHanging = false;
 
         if (isClimbing)
-        {
-            player.transform.position = stopPos;
+        {   
             isClimbing = false;
         }
     }
@@ -68,6 +67,7 @@ public class PlayerLedgeClimbState : PlayerState
 
         if (isAnimationFinished)
         {
+            player.transform.position = stopPos;
             if (isTouchingCeiling)
             {
                 stateMachine.ChangeState(player.CrouchIdleState);

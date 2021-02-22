@@ -1,0 +1,416 @@
+fileFormatVersion: 2
+guid: db6ffa36c5e94e7478ed30dc6fa7427a
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -2361476268848234920
+    second: Rising Ledge Climb clone_0
+  - first:
+      213: -314930484765170633
+    second: Rising Ledge Climb clone_1
+  - first:
+      213: 2134117888111650223
+    second: Rising Ledge Climb clone_2
+  - first:
+      213: 2638756112587752844
+    second: Rising Ledge Climb clone_3
+  - first:
+      213: -3685930161196179470
+    second: Rising Ledge Climb clone_4
+  - first:
+      213: -3546707920920586867
+    second: Rising Ledge Climb clone_5
+  - first:
+      213: 7237502286090122213
+    second: Rising Ledge Climb clone_6
+  - first:
+      213: -6807221483767084333
+    second: Rising Ledge Climb clone_7
+  - first:
+      213: -6925875349544751613
+    second: Rising Ledge Climb clone_8
+  - first:
+      213: -3449687615182156295
+    second: Rising Ledge Climb clone_9
+  - first:
+      213: 9105887778484199820
+    second: Rising Ledge Climb clone_10
+  - first:
+      213: 3607968667546151655
+    second: Rising Ledge Climb clone_11
+  - first:
+      213: 5199257579873307902
+    second: Rising Ledge Climb clone_12
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Rising Ledge Climb clone_0
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 196
+        width: 31
+        height: 59
+      alignment: 9
+      pivot: {x: 0.75, y: 0.45}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85e39c958d95a3fd0800000000000000
+      internalID: -2361476268848234920
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rising Ledge Climb clone_1
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 197
+        width: 24
+        height: 58
+      alignment: 9
+      pivot: {x: 0.75, y: 0.45}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73461a6846421abf0800000000000000
+      internalID: -314930484765170633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rising Ledge Climb clone_2
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 194
+        width: 8
+        height: 61
+      alignment: 9
+      pivot: {x: 0.25, y: 0.475}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa5a3b589e8ed9d10800000000000000
+      internalID: 2134117888111650223
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rising Ledge Climb clone_3
+      rect:
+        serializedVersion: 2
+        x: 213
+        y: 198
+        width: 21
+        height: 57
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c850fa324bebe9420800000000000000
+      internalID: 2638756112587752844
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rising Ledge Climb clone_4
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 135
+        width: 21
+        height: 55
+      alignment: 9
+      pivot: {x: 0.5, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ffd00b1c02f8dcc0800000000000000
+      internalID: -3685930161196179470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rising Ledge Climb clone_5
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 130
+        width: 21
+        height: 57
+      alignment: 9
+      pivot: {x: 0.5, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d85d67befef87cec0800000000000000
+      internalID: -3546707920920586867
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rising Ledge Climb clone_6
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 132
+        width: 23
+        height: 44
+      alignment: 9
+      pivot: {x: 0.6194909, y: 0.20220913}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e3ba77bbf5c07460800000000000000
+      internalID: 7237502286090122213
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rising Ledge Climb clone_7
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 137
+        width: 25
+        height: 37
+      alignment: 9
+      pivot: {x: 0.5, y: 0.16}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3dac7a07024e781a0800000000000000
+      internalID: -6807221483767084333
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rising Ledge Climb clone_8
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 79
+        width: 18
+        height: 34
+      alignment: 9
+      pivot: {x: 0.5, y: -0.48}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30e20cf701952ef90800000000000000
+      internalID: -6925875349544751613
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rising Ledge Climb clone_9
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 73
+        width: 21
+        height: 40
+      alignment: 9
+      pivot: {x: 0.5, y: -0.3}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9fdc007246f3020d0800000000000000
+      internalID: -3449687615182156295
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rising Ledge Climb clone_10
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 72
+        width: 33
+        height: 38
+      alignment: 9
+      pivot: {x: 0.5, y: -0.3}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c812f1180bc9e5e70800000000000000
+      internalID: 9105887778484199820
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rising Ledge Climb clone_11
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 81
+        width: 30
+        height: 26
+      alignment: 9
+      pivot: {x: 0.5, y: -0.3}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7eae3d52364121230800000000000000
+      internalID: 3607968667546151655
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rising Ledge Climb clone_12
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 10
+        width: 20
+        height: 25
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: efc0b18d839772840800000000000000
+      internalID: 5199257579873307902
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
