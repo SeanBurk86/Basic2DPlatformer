@@ -66,8 +66,6 @@ public class PlayerInputHandler : MonoBehaviour
             InputYNormalized = 0;
         }
         
-        
-        Debug.Log(RawMovementInput);
     }
 
     public void OnJumpInput(InputAction.CallbackContext context)

@@ -12,6 +12,7 @@ public class Player : MonoBehaviour
     public PlayerMoveState MoveState { get; private set; }
     public PlayerJumpState JumpState { get; private set; }
     public PlayerInAirState InAirState { get; private set; }
+    public InjuredState InjuredState { get; private set; }
     public PlayerLandState LandState { get; private set; }
     public PlayerWallSlideState WallSlideState { get; private set; }
     public PlayerWallGrabState WallGrabState { get; private set; }
@@ -71,6 +72,7 @@ public class Player : MonoBehaviour
         DashState = new PlayerDashState(this, StateMachine, playerData, "inAir");
         CrouchIdleState = new PlayerCrouchIdleState(this, StateMachine, playerData, "crouchIdle");
         CrouchMoveState = new PlayerCrouchMoveState(this, StateMachine, playerData, "crouchMove");
+        InjuredState = new InjuredState(this, StateMachine, playerData, "injured");
     }
 
     private void Start()
@@ -99,9 +101,13 @@ public class Player : MonoBehaviour
 
     private void OnDrawGizmos()
     {
-        Gizmos.DrawWireSphere(groundCheck.position, playerData.groundCheckRadius);
-        Gizmos.DrawLine(wallCheck.position, new Vector3(wallCheck.position.x + playerData.wallCheckDistance, wallCheck.position.y, wallCheck.position.z));
-        Gizmos.DrawLine(ledgeCheck.position, new Vector3(ledgeCheck.position.x + playerData.ledgeCheckDistance, ledgeCheck.position.y, ledgeCheck.position.z));
+        Gizmos.color = Color.green;
+        Gizmos.DrawWireSphere(new Vector3(groundCheck.position.x, groundCheck.position.y, groundCheck.position.z), playerData.groundCheckRadius);
+        Gizmos.DrawLine(new Vector3(wallCheck.position.x, wallCheck.position.y, wallCheck.position.z), new Vector3((wallCheck.position.x + playerData.wallCheckDistance * FacingDirection), wallCheck.position.y, wallCheck.position.z));
+        Gizmos.color = Color.blue;
+        Gizmos.DrawWireSphere(ceilingCheck.position, playerData.groundCheckRadius);
+        Gizmos.color = Color.red;
+        Gizmos.DrawLine(ledgeCheck.position, new Vector3((ledgeCheck.position.x + playerData.ledgeCheckDistance*FacingDirection), ledgeCheck.position.y, ledgeCheck.position.z));
     }
     #endregion
 
@@ -175,6 +181,8 @@ public class Player : MonoBehaviour
             Flip();
         }
     }
+
+
     #endregion
 
     #region Misc Functions
