@@ -7,7 +7,10 @@ public class PlayerCombatController : MonoBehaviour
     private AttackDetails attackDetails;
 
     [SerializeField]
-    private float inputTimer, attack1Radius, attack1Damage, stunDamageAmount = 1f;
+    private float inputTimer, attack1Radius = 1f;
+
+    [SerializeField]
+    private int attack1Damage, stunDamageAmount = 1;
 
     [SerializeField]
     private bool combatEnabled;

@@ -12,7 +12,8 @@ public class Player : MonoBehaviour
     public PlayerMoveState MoveState { get; private set; }
     public PlayerJumpState JumpState { get; private set; }
     public PlayerInAirState InAirState { get; private set; }
-    public InjuredState InjuredState { get; private set; }
+    public PlayerInjuredState InjuredState { get; private set; }
+    public PlayerDeadState DeadState { get; private set; }
     public PlayerLandState LandState { get; private set; }
     public PlayerWallSlideState WallSlideState { get; private set; }
     public PlayerWallGrabState WallGrabState { get; private set; }
@@ -25,6 +26,13 @@ public class Player : MonoBehaviour
 
     [SerializeField]
     private PlayerData playerData;
+
+    [SerializeField]
+    private GameObject deathChunkParticle,
+        deathBloodParticle;
+
+    private GameManager GM;
+
     #endregion
 
     #region Components
@@ -49,7 +57,8 @@ public class Player : MonoBehaviour
     #region Misc Variables
     public Vector2 CurrentVelocity { get; private set; }
     public int FacingDirection { get; private set; }
-
+    public int CurrentHealth { get; private set; }
+    public bool CanBeHurt { get; private set; }
     private Vector2 workspace;
     #endregion
 
@@ -72,11 +81,14 @@ public class Player : MonoBehaviour
         DashState = new PlayerDashState(this, StateMachine, playerData, "inAir");
         CrouchIdleState = new PlayerCrouchIdleState(this, StateMachine, playerData, "crouchIdle");
         CrouchMoveState = new PlayerCrouchMoveState(this, StateMachine, playerData, "crouchMove");
-        InjuredState = new InjuredState(this, StateMachine, playerData, "injured");
+        InjuredState = new PlayerInjuredState(this, StateMachine, playerData, "injured");
+        DeadState = new PlayerDeadState(this, StateMachine, playerData, "dead");
+
     }
 
     private void Start()
     {
+        GM = GameObject.Find("GameManager").GetComponent<GameManager>();
         Anim = GetComponent<Animator>();
         InputHandler = GetComponent<PlayerInputHandler>();
         RB = GetComponent<Rigidbody2D>();
@@ -84,6 +96,8 @@ public class Player : MonoBehaviour
         MovementCollider = GetComponent<CapsuleCollider2D>();
 
         FacingDirection = 1;
+        CanBeHurt = true;
+        CurrentHealth = playerData.startingHealth;
 
         StateMachine.Initialize(IdleState);
     }
@@ -91,6 +105,10 @@ public class Player : MonoBehaviour
     private void Update()
     {
         CurrentVelocity = RB.velocity;
+        if(CurrentHealth <= 0)
+        {
+            Die();
+        }
         StateMachine.CurrentState.LogicUpdate();
     }
 
@@ -187,6 +205,16 @@ public class Player : MonoBehaviour
 
     #region Misc Functions
 
+    public void CheckIfDamage(AttackDetails attackDetails)
+    {
+        if (CanBeHurt)
+        {
+            CurrentHealth -= attackDetails.damageAmount;
+            Debug.Log("Current Health is " + CurrentHealth);
+        }
+        
+    }
+
     public void SetColliderHeightAndOffset(float height, float yOffset)
     {
         workspace.Set(MovementCollider.size.x, height);
@@ -216,5 +244,13 @@ public class Player : MonoBehaviour
         transform.Rotate(0.0f, 180.0f, 0.0f);
     }
 
+    private void Die()
+    {
+        Instantiate(deathBloodParticle, transform.position, deathBloodParticle.transform.rotation);
+        Instantiate(deathChunkParticle, transform.position, deathChunkParticle.transform.rotation);
+        GM.Respawn();
+        Destroy(gameObject);
+    }
+
     #endregion
- }
+}

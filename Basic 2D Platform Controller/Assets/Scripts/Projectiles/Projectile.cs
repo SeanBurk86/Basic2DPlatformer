@@ -61,7 +61,7 @@ public class Projectile : MonoBehaviour
 
             if (damageHit)
             {
-                damageHit.transform.SendMessage("Damage", attackDetails);
+                damageHit.transform.SendMessage("CheckIfDamage", attackDetails);
                 Destroy(gameObject);
             }
 
@@ -80,7 +80,7 @@ public class Projectile : MonoBehaviour
         }
     }
 
-    public void FireProjectile(float speed, float travelDistance, float damage)
+    public void FireProjectile(float speed, float travelDistance, int damage)
     {
         this.speed = speed;
         this.travelDistance = travelDistance;

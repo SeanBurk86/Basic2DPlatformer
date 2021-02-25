@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class InjuredState : PlayerState
+public class PlayerInjuredState : PlayerState
 {
     private bool isGrounded,
         isTouchingWall,
@@ -19,7 +19,7 @@ public class InjuredState : PlayerState
         hasTakenDamage,
         dashInput;
 
-    public InjuredState(Player player, PlayerStateMachine stateMachine, PlayerData playerData, string animBoolName) : base(player, stateMachine, playerData, animBoolName)
+    public PlayerInjuredState(Player player, PlayerStateMachine stateMachine, PlayerData playerData, string animBoolName) : base(player, stateMachine, playerData, animBoolName)
     {
     }
 

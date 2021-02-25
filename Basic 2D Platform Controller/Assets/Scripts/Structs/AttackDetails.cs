@@ -5,6 +5,6 @@ using UnityEngine;
 public struct AttackDetails
 {
     public Vector2 hitCollisionPosition;
-    public float damageAmount,
+    public int damageAmount,
         stunDamageAmount;
 }

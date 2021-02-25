@@ -117,7 +117,6 @@ public class Entity : MonoBehaviour
         lastDamageTime = Time.time;
 
         currentHealth -= attackDetails.damageAmount;
-        Debug.Log("Enemy is taking " + attackDetails.damageAmount + " damage");
 
         currentStunResistance -= attackDetails.stunDamageAmount;
 
