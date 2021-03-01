@@ -12,9 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5313d6c93f4f80845af2798bb58a74bd, type: 3}
   m_Name: PlayerBaseData
   m_EditorClassIdentifier: 
+  startingHealth: 5
   movementVelocity: 10
   jumpVelocity: 15
-  amountOfJumps: 2
+  amountOfJumps: 1
   coyoteTime: 0.2
   variableJumpHeightMultiplier: 0.5
   wallSlideVelocity: 1.5
@@ -48,3 +49,6 @@ MonoBehaviour:
   whatIsCeiling:
     serializedVersion: 2
     m_Bits: 256
+  kickCheckRadius: 0.29
+  kickThrustVelocity: 20
+  kickDamage: 100

@@ -8,6 +8,12 @@ public class PlayerWallSlideState : PlayerTouchingWallState
     {
     }
 
+    public override void Enter()
+    {
+        player.KickState.ResetAmountOfKicksLeft();
+        base.Enter();
+    }
+
     public override void LogicUpdate()
     {
         base.LogicUpdate();

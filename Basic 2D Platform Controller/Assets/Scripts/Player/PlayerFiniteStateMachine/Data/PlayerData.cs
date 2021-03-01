@@ -57,4 +57,10 @@ public class PlayerData : ScriptableObject
     public LayerMask whatIsGround;
     public LayerMask whatIsWall;
     public LayerMask whatIsCeiling;
+
+    [Header("Combat Variables")]
+    public float kickCheckRadius = 0.3f;
+    public float kickThrustVelocity = 15f;
+    public int kickDamage = 100;
+    public int amountOfKicks = 1;
 }

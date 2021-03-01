@@ -25,10 +25,15 @@ public class PlayerInputHandler : MonoBehaviour
 
     public bool DashInputStop { get; private set; }
 
+    public bool AttackInput { get; private set; }
+
+    public bool AttackInputStop { get; private set; }
+
     [SerializeField]
     private float inputHoldTime = 0.2f;
 
     private float jumpInputStartTime,
+        attackInputStartTime,
         dashInputStartTime;
 
     private void Start()
@@ -41,6 +46,7 @@ public class PlayerInputHandler : MonoBehaviour
     {
         CheckJumpInputHoldTime();
         CheckDashInputHoldTime();
+        CheckAttackInputHoldTime();
     }
 
     public void OnMoveInput(InputAction.CallbackContext context)
@@ -72,7 +78,6 @@ public class PlayerInputHandler : MonoBehaviour
     {
         if (context.started)
         {
-          
             JumpInput = true;
             JumpInputStop = false;
             jumpInputStartTime = Time.time;
@@ -81,6 +86,22 @@ public class PlayerInputHandler : MonoBehaviour
         if (context.canceled)
         {
             JumpInputStop = true;
+        }
+    }
+
+    public void OnAttackInput(InputAction.CallbackContext context)
+    {
+        if (context.started)
+        {
+            Debug.Log("Attack Input detected");
+            AttackInput = true;
+            AttackInputStop = false;
+            attackInputStartTime = Time.time;
+        }
+
+        if (context.canceled)
+        {
+            AttackInputStop = true;
         }
     }
 
@@ -126,6 +147,7 @@ public class PlayerInputHandler : MonoBehaviour
 
     public void UseJumpInput() => JumpInput = false;
     public void UseDashInput() => DashInput = false;
+    public void UseAttackInput() => AttackInput = false;
 
     private void CheckJumpInputHoldTime()
     {
@@ -140,6 +162,14 @@ public class PlayerInputHandler : MonoBehaviour
         if(Time.time >= dashInputStartTime + inputHoldTime)
         {
             DashInput = false;
+        }
+    }
+
+    private void CheckAttackInputHoldTime()
+    {
+        if(Time.time >= attackInputStartTime + inputHoldTime)
+        {
+            AttackInput = false;
         }
     }
 }

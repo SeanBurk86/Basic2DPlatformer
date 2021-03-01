@@ -23,6 +23,7 @@ public class Player : MonoBehaviour
     public PlayerDashState DashState { get; private set; }
     public PlayerCrouchIdleState CrouchIdleState { get; private set; }
     public PlayerCrouchMoveState CrouchMoveState { get; private set; }
+    public PlayerKickState KickState { get; private set; }
 
     [SerializeField]
     private PlayerData playerData;
@@ -50,7 +51,8 @@ public class Player : MonoBehaviour
     private Transform groundCheck,
         wallCheck,
         ledgeCheck,
-        ceilingCheck;
+        ceilingCheck,
+        kickCheck;
 
     #endregion
 
@@ -59,6 +61,7 @@ public class Player : MonoBehaviour
     public int FacingDirection { get; private set; }
     public int CurrentHealth { get; private set; }
     public bool CanBeHurt { get; private set; }
+    public bool CanFlip { get; private set; }
     private Vector2 workspace;
     #endregion
 
@@ -83,6 +86,7 @@ public class Player : MonoBehaviour
         CrouchMoveState = new PlayerCrouchMoveState(this, StateMachine, playerData, "crouchMove");
         InjuredState = new PlayerInjuredState(this, StateMachine, playerData, "injured");
         DeadState = new PlayerDeadState(this, StateMachine, playerData, "dead");
+        KickState = new PlayerKickState(this, StateMachine, playerData, "kick");
 
     }
 
@@ -97,6 +101,7 @@ public class Player : MonoBehaviour
 
         FacingDirection = 1;
         CanBeHurt = true;
+        EnableFlip();
         CurrentHealth = playerData.startingHealth;
 
         StateMachine.Initialize(IdleState);
@@ -126,6 +131,7 @@ public class Player : MonoBehaviour
         Gizmos.DrawWireSphere(ceilingCheck.position, playerData.groundCheckRadius);
         Gizmos.color = Color.red;
         Gizmos.DrawLine(ledgeCheck.position, new Vector3((ledgeCheck.position.x + playerData.ledgeCheckDistance*FacingDirection), ledgeCheck.position.y, ledgeCheck.position.z));
+        Gizmos.DrawWireSphere(kickCheck.position, playerData.kickCheckRadius);
     }
     #endregion
 
@@ -194,10 +200,15 @@ public class Player : MonoBehaviour
     }
     public void CheckIfShouldFlip(int xInput)
     {
-        if (xInput != 0 && xInput != FacingDirection)
+        if (xInput != 0 && xInput != FacingDirection && CanFlip)
         {
             Flip();
         }
+    }
+
+    public Collider2D[] CheckIfKickbox()
+    {
+        return Physics2D.OverlapCircleAll(kickCheck.position, playerData.kickCheckRadius);
     }
 
 
@@ -242,6 +253,21 @@ public class Player : MonoBehaviour
     {
         FacingDirection *= -1;
         transform.Rotate(0.0f, 180.0f, 0.0f);
+    }
+
+    public void DisableFlip()
+    {
+        CanFlip = false;
+    }
+
+    public void EnableFlip()
+    {
+        CanFlip = true;
+    }
+
+    public void ApplyKickThrust()
+    {
+        SetVelocityX(playerData.kickThrustVelocity*FacingDirection);
     }
 
     private void Die()

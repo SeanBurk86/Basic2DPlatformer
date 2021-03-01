@@ -29,6 +29,7 @@ public class PlayerWallGrabState : PlayerTouchingWallState
     {
         base.Enter();
 
+        player.KickState.ResetAmountOfKicksLeft();
         holdPosition = player.transform.position;
 
         HoldPosition();

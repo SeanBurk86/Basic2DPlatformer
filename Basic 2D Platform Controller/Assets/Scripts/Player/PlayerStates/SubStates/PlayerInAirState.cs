@@ -11,6 +11,7 @@ public class PlayerInAirState : PlayerState
         isJumping,
         jumpInput,
         grabInput,
+        attackInput,
         jumpInputStop,
         isOnCoyoteTime,
         isOnWallJumpCoyoteTime,
@@ -78,6 +79,7 @@ public class PlayerInAirState : PlayerState
         jumpInputStop = player.InputHandler.JumpInputStop;
         grabInput = player.InputHandler.GrabInput;
         dashInput = player.InputHandler.DashInput;
+        attackInput = player.InputHandler.AttackInput;
 
         CheckJumpMultiplier();
 
@@ -99,6 +101,10 @@ public class PlayerInAirState : PlayerState
         {
             isOnCoyoteTime = false;
             stateMachine.ChangeState(player.JumpState);
+        }
+        else if (attackInput && player.KickState.CanKick())
+        {
+            stateMachine.ChangeState(player.KickState);
         }
         else if (isTouchingWall && grabInput && isTouchingLedge)
         {
