@@ -51,4 +51,5 @@ MonoBehaviour:
     m_Bits: 256
   kickCheckRadius: 0.29
   kickThrustVelocity: 20
-  kickDamage: 100
+  kickDamage: 5
+  amountOfKicks: 1
