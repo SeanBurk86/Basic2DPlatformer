@@ -3786,7 +3786,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   position2: {x: 5, y: 32, z: 0}
-  platformMovementSpeed: 0.125
+  platformMovementSpeed: 0.15
 --- !u!61 &1490467777
 BoxCollider2D:
   m_ObjectHideFlags: 0

@@ -13,6 +13,8 @@ public class PlayerLedgeClimbState : PlayerState
         isClimbing,
         isTouchingWall,
         isTouchingLedge,
+        isGrounded,
+        isTouchingMovingPlatform,
         jumpInput;
 
     private int xInput,
@@ -41,6 +43,8 @@ public class PlayerLedgeClimbState : PlayerState
         base.DoChecks();
         isTouchingWall = player.CheckIfTouchingWall();
         isTouchingLedge = player.CheckIfTouchingLedge();
+        isGrounded = player.CheckIfGrounded();
+        isTouchingMovingPlatform = player.CheckIfTouchingMovingPlatform();
         player.UpdateMovingPlatformPositionOffset();
         if (isTouchingWall && !isTouchingLedge)
         {
@@ -115,6 +119,10 @@ public class PlayerLedgeClimbState : PlayerState
             {
                 player.WallJumpState.DetermineWallJumpDirection(true);
                 stateMachine.ChangeState(player.WallJumpState);
+            }
+            else if (!isTouchingMovingPlatform && !isGrounded && !isTouchingLedge && !isTouchingWall)
+            {
+                stateMachine.ChangeState(player.InAirState);
             }
         }
     }
