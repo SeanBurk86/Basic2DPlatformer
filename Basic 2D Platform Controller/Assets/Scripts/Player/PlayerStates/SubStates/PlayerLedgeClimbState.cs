@@ -11,8 +11,9 @@ public class PlayerLedgeClimbState : PlayerState
 
     private bool isHanging,
         isClimbing,
-        jumpInput,
-        isSpaceForLedgeClimb;
+        isTouchingWall,
+        isTouchingLedge,
+        jumpInput;
 
     private int xInput,
         yInput;
@@ -35,19 +36,28 @@ public class PlayerLedgeClimbState : PlayerState
         isHanging = true;
     }
 
+    public override void DoChecks()
+    {
+        base.DoChecks();
+        isTouchingWall = player.CheckIfTouchingWall();
+        isTouchingLedge = player.CheckIfTouchingLedge();
+        player.UpdateMovingPlatformPositionOffset();
+        if (isTouchingWall && !isTouchingLedge)
+        {
+            player.LedgeClimbState.SetDetectedPosition(player.transform.position);
+        }
+    }
+
     public override void Enter()
     {
         base.Enter();
-
-        player.SetVelocityZero();
         player.transform.position = detectedPos;
-        cornerPos = player.DetermineCornerPosition();
-
-        startPos.Set(cornerPos.x - (player.FacingDirection * playerData.startOffset.x), cornerPos.y - playerData.startOffset.y);
-        stopPos.Set(cornerPos.x + (player.FacingDirection * playerData.stopOffset.x), cornerPos.y + playerData.stopOffset.y);
-
-        player.transform.position = startPos;
+        player.UpdateAndSetMovingPlatformOffsetPosition();
+        SetDetectedPosition(player.transform.position);
+        player.SetVelocityZero();
     }
+
+    
 
     public override void Exit()
     {
@@ -63,6 +73,7 @@ public class PlayerLedgeClimbState : PlayerState
 
     public override void LogicUpdate()
     {
+        player.transform.position = detectedPos;
         base.LogicUpdate();
 
         if (isAnimationFinished)
@@ -83,12 +94,16 @@ public class PlayerLedgeClimbState : PlayerState
             yInput = player.InputHandler.InputYNormalized;
             jumpInput = player.InputHandler.JumpInput;
 
+            player.SetMovingPlatformOffsetPosition();
+            SetDetectedPosition(player.transform.position);
             player.SetVelocityZero();
+
+            cornerPos = player.DetermineCornerPosition();
+            SetStartAndStopPositions();
             player.transform.position = startPos;
 
             if (xInput == player.FacingDirection && isHanging && !isClimbing)
             {
-                CheckForSpace();
                 isClimbing = true;
                 player.Anim.SetBool("climbLedge", true);
             }
@@ -102,14 +117,15 @@ public class PlayerLedgeClimbState : PlayerState
                 stateMachine.ChangeState(player.WallJumpState);
             }
         }
-
-        
     }
+
 
     public void SetDetectedPosition(Vector2 pos) => detectedPos = pos;
 
-    private void CheckForSpace()
+
+    private void SetStartAndStopPositions()
     {
-        isSpaceForLedgeClimb = Physics2D.Raycast(cornerPos + (Vector2.up * 0.015f) + (Vector2.right * player.FacingDirection * 0.015f), Vector2.up, playerData.standColliderHeight, playerData.whatIsGround);
+        startPos.Set(cornerPos.x - (player.FacingDirection * playerData.startOffset.x), cornerPos.y - playerData.startOffset.y);
+        stopPos.Set(cornerPos.x + (player.FacingDirection * playerData.stopOffset.x), cornerPos.y + playerData.stopOffset.y);
     }
 }

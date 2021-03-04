@@ -10,9 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 968030848781045070}
   - component: {fileID: 968030848781045071}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Enemy2
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -73,7 +73,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 968030848849892762}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Player Check
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -133,7 +133,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 968030849335336588}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Ground Check
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -333,7 +333,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 968030849690824011}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Wall Check
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -363,7 +363,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 968030850335996111}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Ledge Check
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -393,7 +393,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 968030850462339080}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Melee Attack Position
   m_TagString: Untagged
   m_Icon: {fileID: 0}

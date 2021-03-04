@@ -62,6 +62,7 @@ public class Player : MonoBehaviour
     public int CurrentHealth { get; private set; }
     public bool CanBeHurt { get; private set; }
     public bool CanFlip { get; private set; }
+    public Vector3 MovingPlatformPositionOffset { get; private set; }
     private Vector2 workspace;
     #endregion
 
@@ -120,22 +121,6 @@ public class Player : MonoBehaviour
     private void FixedUpdate()
     {
         StateMachine.CurrentState.PhysicsUpdate();
-    }
-
-    private void OnCollisionEnter2D(Collision2D other)
-    {
-        if (other.gameObject.CompareTag("Moving Platform"))
-        {
-            this.transform.parent = other.transform;
-        }
-    }
-
-    private void OnCollisionExit2D(Collision2D other)
-    {
-        if (other.gameObject.CompareTag("Moving Platform"))
-        {
-            this.transform.parent = null;
-        }
     }
 
     private void OnDrawGizmos()
@@ -227,10 +212,16 @@ public class Player : MonoBehaviour
         return Physics2D.OverlapCircleAll(kickCheck.position, playerData.kickCheckRadius);
     }
 
+    public bool CheckIfTouchingMovingPlatform()
+    {
+        return transform.parent != null && transform.parent.CompareTag("Moving Platform");
+    }
 
-    #endregion
 
-    #region Misc Functions
+
+#endregion
+
+#region Misc Functions
 
     public void CheckIfDamage(AttackDetails attackDetails)
     {
@@ -258,6 +249,7 @@ public class Player : MonoBehaviour
         float yDist = yHit.distance;
 
         workspace.Set(wallCheck.position.x + (xDist * FacingDirection), ledgeCheck.position.y - yDist);
+        Debug.Log("Corner position is: " + workspace);
         return workspace;
     }
 
@@ -292,6 +284,33 @@ public class Player : MonoBehaviour
         Instantiate(deathChunkParticle, transform.position, deathChunkParticle.transform.rotation);
         GM.Respawn();
         Destroy(gameObject);
+    }
+
+    public void UpdateMovingPlatformPositionOffset()
+    {
+        if (CheckIfTouchingMovingPlatform())
+        {
+            float movingPlatformPositionOffsetX = transform.position.x - transform.parent.transform.position.x;
+            float movingPlatformPositionOffsetY = transform.position.y - transform.parent.transform.position.y;
+            MovingPlatformPositionOffset = new Vector3(movingPlatformPositionOffsetX, movingPlatformPositionOffsetY);
+        }
+    }
+
+    public void SetMovingPlatformOffsetPosition()
+    {
+        if (CheckIfTouchingMovingPlatform())
+        {
+            Debug.Log("Updating dynamic transform position to " + new Vector3(transform.parent.transform.position.x + MovingPlatformPositionOffset.x,
+                transform.parent.transform.position.y + MovingPlatformPositionOffset.y));
+            transform.position = new Vector3(transform.parent.transform.position.x + MovingPlatformPositionOffset.x, 
+                transform.parent.transform.position.y + MovingPlatformPositionOffset.y);
+        }
+    }
+
+    public void UpdateAndSetMovingPlatformOffsetPosition()
+    {
+        UpdateMovingPlatformPositionOffset();
+        SetMovingPlatformOffsetPosition();
     }
 
     #endregion

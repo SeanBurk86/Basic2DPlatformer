@@ -8,7 +8,8 @@ public class PlayerTouchingWallState : PlayerState
         isTouchingWall,
         grabInput,
         jumpInput,
-        isTouchingLedge;
+        isTouchingLedge,
+        isTouchingMovingPlatform;
 
     protected int xInput,
         yInput;
@@ -34,6 +35,8 @@ public class PlayerTouchingWallState : PlayerState
         isGrounded = player.CheckIfGrounded();
         isTouchingWall = player.CheckIfTouchingWall();
         isTouchingLedge = player.CheckIfTouchingLedge();
+        isTouchingMovingPlatform = player.CheckIfTouchingMovingPlatform();
+
 
         if(isTouchingWall && !isTouchingLedge)
         {

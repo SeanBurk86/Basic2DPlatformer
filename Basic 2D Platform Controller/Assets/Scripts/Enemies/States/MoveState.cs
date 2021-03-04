@@ -32,23 +32,5 @@ public class MoveState : State
         
     }
 
-    public override bool Equals(object obj)
-    {
-        return base.Equals(obj);
-    }
-
-    public override void Exit()
-    {
-        base.Exit();
-    }
-
-    public override void LogicUpdate()
-    {
-        base.LogicUpdate();
-    }
-
-    public override void PhysicsUpdate()
-    {
-        base.PhysicsUpdate();
-    }
+    
 }

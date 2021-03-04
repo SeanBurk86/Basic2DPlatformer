@@ -18,7 +18,7 @@ public class PlayerInAirState : PlayerState
         oldIsTouchinghWall,
         oldIsTouchingWallBack,
         isTouchingLedge,
-        isTouchingCeiling,
+        isTouchingMovingPlatform,
         dashInput;
 
     private int xInput;
@@ -40,7 +40,7 @@ public class PlayerInAirState : PlayerState
         isTouchingWall = player.CheckIfTouchingWall();
         isTouchingWallBack = player.CheckIfTouchingWallBack();
         isTouchingLedge = player.CheckIfTouchingLedge();
-        isTouchingCeiling = player.CheckForCeiling();
+        isTouchingMovingPlatform = player.CheckIfTouchingMovingPlatform();
 
         if(isTouchingWall && !isTouchingLedge)
         {

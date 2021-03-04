@@ -55,6 +55,11 @@ PrefabInstance:
     - target: {fileID: 7013576862163536077, guid: 094ba1d4246dde3488534450a6b6b3f6,
         type: 3}
       propertyPath: m_Name
+      value: Player Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 7013576862163536077, guid: 094ba1d4246dde3488534450a6b6b3f6,
+        type: 3}
+      propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 7013576862163536078, guid: 094ba1d4246dde3488534450a6b6b3f6,

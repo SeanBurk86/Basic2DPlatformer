@@ -23,8 +23,8 @@ MonoBehaviour:
   wallJumpVelocity: 20
   wallJumpTime: 0.4
   wallJumpAngle: {x: 1, y: 2}
-  startOffset: {x: 0.125, y: 1}
-  stopOffset: {x: 0.5, y: 1}
+  startOffset: {x: 0.125, y: 0.75}
+  stopOffset: {x: 0.3, y: 1}
   dashCooldown: 0.5
   maxHoldTime: 1
   holdTimeScale: 0.25
@@ -37,9 +37,9 @@ MonoBehaviour:
   crouchColliderYOffset: -0.3
   standColliderHeight: 1.58
   standColliderYOffset: 0
-  groundCheckRadius: 0.3
-  wallCheckDistance: 0.4
-  ledgeCheckDistance: 0.75
+  groundCheckRadius: 0.26
+  wallCheckDistance: 0.5
+  ledgeCheckDistance: 0.6
   whatIsGround:
     serializedVersion: 2
     m_Bits: 256

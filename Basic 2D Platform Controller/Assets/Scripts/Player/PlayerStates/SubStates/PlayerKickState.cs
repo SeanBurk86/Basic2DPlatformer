@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class PlayerKickState : PlayerAbilityState
 {
-    private bool isKicking;
 
     private AttackDetails attackDetails;
 
@@ -17,7 +16,7 @@ public class PlayerKickState : PlayerAbilityState
 
     public override void AnimationFinishTrigger()
     {
-        isKicking = false;
+        isAbilityDone = true;
         player.EnableFlip();
         player.Anim.SetBool("kick", false);
         base.AnimationFinishTrigger();
@@ -25,7 +24,7 @@ public class PlayerKickState : PlayerAbilityState
 
     public override void AnimationTrigger()
     {
-        isKicking = true;
+        isAbilityDone = false;
         player.DisableFlip();
         base.AnimationTrigger();
     }
@@ -63,7 +62,7 @@ public class PlayerKickState : PlayerAbilityState
             }
         }
 
-        if (isKicking) 
+        if (!isAbilityDone) 
         {
             attackDetails.damageAmount = playerData.kickDamage;
             attackDetails.hitCollisionPosition = player.transform.position;

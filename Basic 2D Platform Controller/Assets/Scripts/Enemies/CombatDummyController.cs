@@ -17,7 +17,7 @@ public class CombatDummyController : MonoBehaviour
 
     private int playerFacingDirection;
 
-    private bool playerOnLeft, knockback;
+    private bool knockback;
 
     private PlayerController pc;
     private GameObject aliveGO, brokenTopGO, brokenBotGO;
@@ -66,7 +66,7 @@ public class CombatDummyController : MonoBehaviour
             playerFacingDirection = -1;
         }
 
-        aliveAnim.SetBool("playerOnLeft", playerOnLeft);
+        aliveAnim.SetBool("playerOnLeft", true);
         aliveAnim.SetTrigger("damage");
 
         if (applyKnockBack && currentHealth > 0.0f)
