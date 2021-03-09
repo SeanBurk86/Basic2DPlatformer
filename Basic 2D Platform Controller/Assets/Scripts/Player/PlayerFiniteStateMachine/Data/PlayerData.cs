@@ -63,4 +63,8 @@ public class PlayerData : ScriptableObject
     public float kickThrustVelocity = 15f;
     public int kickDamage = 100;
     public int amountOfKicks = 1;
+
+    [Header("Roll Variables")]
+    public float rollThrustVelocity = 15f;
+    public int amountOfRolls = 1;
 }

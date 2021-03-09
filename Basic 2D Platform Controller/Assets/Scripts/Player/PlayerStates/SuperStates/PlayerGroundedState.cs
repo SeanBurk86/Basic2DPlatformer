@@ -12,6 +12,7 @@ public class PlayerGroundedState : PlayerState
     private bool jumpInput,
         grabInput,
         attackInput,
+        rollInput,
         isGrounded,
         isTouchingWall,
         isTouchingLedge,
@@ -36,6 +37,7 @@ public class PlayerGroundedState : PlayerState
         base.Enter();
         player.JumpState.ResetAmountOfJumpsLeft();
         player.KickState.ResetAmountOfKicksLeft();
+        player.RollState.ResetAmountOfRollsLeft();
         player.DashState.ResetCanDash();
     }
 
@@ -54,6 +56,7 @@ public class PlayerGroundedState : PlayerState
         grabInput = player.InputHandler.GrabInput;
         dashInput = player.InputHandler.DashInput;
         attackInput = player.InputHandler.AttackInput;
+        rollInput = player.InputHandler.RollInput;
 
         if (jumpInput && player.JumpState.CanJump() && !isTouchingCeiling)
         {
@@ -62,6 +65,10 @@ public class PlayerGroundedState : PlayerState
         else if (attackInput && player.KickState.CanKick() && !isTouchingCeiling)
         {
             stateMachine.ChangeState(player.KickState);
+        }
+        else if (rollInput && player.RollState.CanRoll())
+        {
+            stateMachine.ChangeState(player.RollState);
         }
         else if (!isGrounded)
         {

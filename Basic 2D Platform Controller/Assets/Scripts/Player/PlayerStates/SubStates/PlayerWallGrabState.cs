@@ -30,6 +30,7 @@ public class PlayerWallGrabState : PlayerTouchingWallState
     {
         base.Enter();
         player.KickState.ResetAmountOfKicksLeft();
+        player.RollState.ResetAmountOfRollsLeft();
 
         staticHoldPosition = player.transform.position;
         if (player.CheckIfTouchingMovingPlatform())

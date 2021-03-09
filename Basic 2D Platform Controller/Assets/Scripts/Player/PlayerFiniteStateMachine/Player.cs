@@ -24,6 +24,7 @@ public class Player : MonoBehaviour
     public PlayerCrouchIdleState CrouchIdleState { get; private set; }
     public PlayerCrouchMoveState CrouchMoveState { get; private set; }
     public PlayerKickState KickState { get; private set; }
+    public PlayerRollState RollState { get; private set; }
 
     [SerializeField]
     private PlayerData playerData;
@@ -88,6 +89,7 @@ public class Player : MonoBehaviour
         InjuredState = new PlayerInjuredState(this, StateMachine, playerData, "injured");
         DeadState = new PlayerDeadState(this, StateMachine, playerData, "dead");
         KickState = new PlayerKickState(this, StateMachine, playerData, "kick");
+        RollState = new PlayerRollState(this, StateMachine, playerData, "roll");
 
     }
 
@@ -221,7 +223,7 @@ public class Player : MonoBehaviour
 
 #endregion
 
-#region Misc Functions
+    #region Misc Functions
 
     public void CheckIfDamage(AttackDetails attackDetails)
     {
@@ -266,16 +268,33 @@ public class Player : MonoBehaviour
     public void DisableFlip()
     {
         CanFlip = false;
+        Debug.Log("Flip disabled");
     }
 
     public void EnableFlip()
     {
         CanFlip = true;
+        Debug.Log("Flip re-enabled");
+    }
+
+    public void EnablePlayerDamage()
+    {
+        CanBeHurt = true;
+    }
+
+    public void DisablePlayerDamage()
+    {
+        CanBeHurt = false;
     }
 
     public void ApplyKickThrust()
     {
         SetVelocityX(playerData.kickThrustVelocity*FacingDirection);
+    }
+
+    public void ApplyRollThrust()
+    {
+        SetVelocityX(playerData.rollThrustVelocity * FacingDirection);
     }
 
     private void Die()

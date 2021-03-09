@@ -15,7 +15,8 @@ public class PlayerLedgeClimbState : PlayerState
         isTouchingLedge,
         isGrounded,
         isTouchingMovingPlatform,
-        jumpInput;
+        jumpInput,
+        attackInput;
 
     private int xInput,
         yInput;
@@ -97,6 +98,7 @@ public class PlayerLedgeClimbState : PlayerState
             xInput = player.InputHandler.InputXNormalized;
             yInput = player.InputHandler.InputYNormalized;
             jumpInput = player.InputHandler.JumpInput;
+            attackInput = player.InputHandler.AttackInput;
 
             player.SetMovingPlatformOffsetPosition();
             SetDetectedPosition(player.transform.position);

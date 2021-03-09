@@ -11,6 +11,7 @@ public class PlayerWallSlideState : PlayerTouchingWallState
     public override void Enter()
     {
         player.KickState.ResetAmountOfKicksLeft();
+        player.RollState.ResetAmountOfRollsLeft();
         base.Enter();
     }
 

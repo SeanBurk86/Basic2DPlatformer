@@ -61,8 +61,7 @@ public class PlayerKickState : PlayerAbilityState
                 stateMachine.ChangeState(player.InAirState);
             }
         }
-
-        if (!isAbilityDone) 
+        else if (!isAbilityDone) 
         {
             attackDetails.damageAmount = playerData.kickDamage;
             attackDetails.hitCollisionPosition = player.transform.position;
