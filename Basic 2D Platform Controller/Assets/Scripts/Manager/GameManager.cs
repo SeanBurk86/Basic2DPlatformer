@@ -20,9 +20,13 @@ public class GameManager : MonoBehaviour
 
     private CinemachineVirtualCamera CVC;
 
+    public bool IsGamePaused { get; private set; }
+
+
     private void Start()
     {
         CVC = GameObject.Find("Player Camera").GetComponent<CinemachineVirtualCamera>();
+        IsGamePaused = false;
     }
 
     private void Update()
@@ -43,6 +47,18 @@ public class GameManager : MonoBehaviour
             var playerTemp = Instantiate(player, respawnPoint);
             CVC.m_Follow = playerTemp.transform;
             respawn = false;
+        }
+    }
+
+    public void TogglePause()
+    {
+        if (IsGamePaused)
+        {
+            IsGamePaused = false;
+        }
+        else
+        {
+            IsGamePaused = true;
         }
     }
 }

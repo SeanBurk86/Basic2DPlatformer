@@ -8,6 +8,9 @@ public class PlayerInputHandler : MonoBehaviour
     private PlayerInput playerInput;
     private Camera cam;
 
+    [SerializeField]
+    public GameManager GM;
+
     public Vector2 RawMovementInput { get; private set; }
     public Vector2 RawDashDirectionInput { get; private set; }
     public Vector2Int DashDirectionInput { get; private set; }
@@ -32,6 +35,8 @@ public class PlayerInputHandler : MonoBehaviour
     public bool RollInput { get; private set; }
 
     public bool RollInputStop { get; private set; }
+
+    public bool PauseInput { get; private set; }
 
     [SerializeField]
     private float inputHoldTime = 0.2f;
@@ -165,6 +170,14 @@ public class PlayerInputHandler : MonoBehaviour
         }
 
         DashDirectionInput = Vector2Int.RoundToInt(RawDashDirectionInput.normalized);
+    }
+
+    public void OnPauseInput(InputAction.CallbackContext context)
+    {
+        if (context.started)
+        {
+            GM.TogglePause();
+        }
     }
 
     public void UseJumpInput() => JumpInput = false;
