@@ -18,6 +18,9 @@ public class PlayerGroundedState : PlayerState
         isTouchingLedge,
         dashInput;
 
+    private float shotDirectionInputX,
+        shotDirectionInputY;
+
     public PlayerGroundedState(Player player, PlayerStateMachine stateMachine, PlayerData playerData, string animBoolName) : base(player, stateMachine, playerData, animBoolName)
     {
     }
@@ -52,6 +55,9 @@ public class PlayerGroundedState : PlayerState
 
         xInput = player.InputHandler.InputXNormalized;
         yInput = player.InputHandler.InputYNormalized;
+        shotDirectionInputX = player.InputHandler.ShotDirectionInput.x;
+        shotDirectionInputY = player.InputHandler.ShotDirectionInput.y;
+
         jumpInput = player.InputHandler.JumpInput;
         grabInput = player.InputHandler.GrabInput;
         dashInput = player.InputHandler.DashInput;

@@ -14,6 +14,8 @@ public class PlayerInputHandler : MonoBehaviour
     public Vector2 RawMovementInput { get; private set; }
     public Vector2 RawDashDirectionInput { get; private set; }
     public Vector2Int DashDirectionInput { get; private set; }
+    public Vector2 RawShotDirectionInput { get; private set; }
+    public Vector2Int ShotDirectionInput { get; private set; }
     public int InputXNormalized { get; private set; }
 
     public int InputYNormalized { get; private set; }
@@ -50,6 +52,7 @@ public class PlayerInputHandler : MonoBehaviour
     {
         playerInput = GetComponent<PlayerInput>();
         cam = Camera.main;
+        AttackInputStop = true;
     }
 
     private void Update()
@@ -120,7 +123,6 @@ public class PlayerInputHandler : MonoBehaviour
     {
         if (context.started)
         {
-            Debug.Log("Roll Input detected");
             RollInput = true;
             RollInputStop = false;
             rollInputStartTime = Time.time;
@@ -170,6 +172,13 @@ public class PlayerInputHandler : MonoBehaviour
         }
 
         DashDirectionInput = Vector2Int.RoundToInt(RawDashDirectionInput.normalized);
+    }
+
+    public void OnShotDirectionInput(InputAction.CallbackContext context)
+    {
+        RawShotDirectionInput = context.ReadValue<Vector2>();
+
+        ShotDirectionInput = Vector2Int.RoundToInt(RawShotDirectionInput.normalized);
     }
 
     public void OnPauseInput(InputAction.CallbackContext context)

@@ -43,7 +43,12 @@ public class Player : MonoBehaviour
     public PlayerInputHandler InputHandler { get; private set; }
     public Rigidbody2D RB { get; private set; }
     public Transform DashDirectionIndicator { get; private set; }
+    public Transform ShotDirectionIndicator { get; private set; }
     public CapsuleCollider2D MovementCollider { get; private set; }
+    public GameObject PsychicBullet;
+    public Transform EmissionPoint;
+    private float lastShotTime;
+    public float timeBetweenFiring = .0625f;
     #endregion
 
     #region Check Transforms
@@ -62,9 +67,12 @@ public class Player : MonoBehaviour
     public int FacingDirection { get; private set; }
     public int CurrentHealth { get; private set; }
     public bool CanBeHurt { get; private set; }
+    public bool CanMelee { get; private set; }
     public bool CanFlip { get; private set; }
+    public bool CanShoot { get; private set; }
     public Vector3 MovingPlatformPositionOffset { get; private set; }
     private Vector2 workspace;
+    private Vector2 shotDirection;
     #endregion
 
     #region Unity Callback Functions
@@ -100,10 +108,13 @@ public class Player : MonoBehaviour
         InputHandler = GetComponent<PlayerInputHandler>();
         RB = GetComponent<Rigidbody2D>();
         DashDirectionIndicator = transform.Find("DashDirectionIndicator");
+        ShotDirectionIndicator = transform.Find("ShotDirectionIndicator");
         MovementCollider = GetComponent<CapsuleCollider2D>();
+        EmissionPoint = ShotDirectionIndicator.Find("IndicatorPoint");
 
         FacingDirection = 1;
         CanBeHurt = true;
+        CanShoot = true;
         EnableFlip();
         CurrentHealth = playerData.startingHealth;
 
@@ -118,6 +129,32 @@ public class Player : MonoBehaviour
             Die();
         }
         StateMachine.CurrentState.LogicUpdate();
+        Debug.Log("Shot Direction vector is :" + InputHandler.ShotDirectionInput + " Can Fire is :" + CanShoot);
+        if (InputHandler.ShotDirectionInput != Vector2.zero)
+        {
+            DisableMelee();
+            ShotDirectionIndicator.gameObject.SetActive(true);
+            Vector2Int shotDirectionInput = InputHandler.ShotDirectionInput;
+            bool isFiring = !InputHandler.AttackInputStop;
+            shotDirection = shotDirectionInput;
+            shotDirection.Normalize();
+            float angleWorkspace = Vector2.SignedAngle(Vector2.right, shotDirection);
+            ShotDirectionIndicator.rotation = Quaternion.Euler(0f, 0f, angleWorkspace - 45f);
+            if (isFiring && shotDirectionInput != Vector2.zero)
+            {
+                Shoot();
+            }
+        }
+        else
+        {
+            EnableMelee();
+            ShotDirectionIndicator.gameObject.SetActive(false);
+        }
+        if (Time.time >= lastShotTime + timeBetweenFiring)
+        {
+            CanShoot = true;
+        }
+
     }
 
     private void FixedUpdate()
@@ -287,6 +324,16 @@ public class Player : MonoBehaviour
         CanBeHurt = false;
     }
 
+    private void EnableMelee()
+    {
+        CanMelee = true;
+    }
+
+    private void DisableMelee()
+    {
+        CanMelee = false;
+    }
+
     public void ApplyKickThrust()
     {
         SetVelocityX(playerData.kickThrustVelocity*FacingDirection);
@@ -330,6 +377,20 @@ public class Player : MonoBehaviour
     {
         UpdateMovingPlatformPositionOffset();
         SetMovingPlatformOffsetPosition();
+    }
+
+    private void Shoot()
+    {
+        if (CanShoot)
+        {
+            float angleWorkspace = Vector2.SignedAngle(Vector2.right, shotDirection);
+            GameObject emittedBullet = GameObject.Instantiate(PsychicBullet, EmissionPoint.position, Quaternion.Euler(0f, 0f, angleWorkspace));
+            Rigidbody2D emittedBulletRB = emittedBullet.GetComponent<Rigidbody2D>();
+            emittedBulletRB.AddForce(shotDirection * 20f, ForceMode2D.Impulse);
+            CanShoot = false;
+            lastShotTime = Time.time;
+            Debug.Log("Last shot time was " + lastShotTime);
+        }
     }
 
     #endregion

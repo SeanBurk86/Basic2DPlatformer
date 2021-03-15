@@ -17,7 +17,8 @@ public class Projectile : MonoBehaviour
 
     [SerializeField]
     private float gravityScale,
-        damageRadius;
+        damageRadius,
+        projectileLifeTime = 5f;
 
     [SerializeField]
     private LayerMask whatIsGround,
@@ -36,6 +37,7 @@ public class Projectile : MonoBehaviour
         isGravityOn = false;
 
         xStartPos = transform.position.x;
+        StartCoroutine(DestroyProjectile());
     }
 
     private void Update()
@@ -85,6 +87,12 @@ public class Projectile : MonoBehaviour
         this.speed = speed;
         this.travelDistance = travelDistance;
         attackDetails.damageAmount = damage;
+    }
+
+    IEnumerator DestroyProjectile()
+    {
+        yield return new WaitForSeconds(projectileLifeTime);
+        Destroy(gameObject);
     }
 
     private void OnDrawGizmos()

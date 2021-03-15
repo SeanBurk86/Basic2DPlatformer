@@ -85,7 +85,7 @@ public class PlayerKickState : PlayerAbilityState
 
     public bool CanKick()
     {
-        if(amountOfKicksLeft > 0)
+        if(amountOfKicksLeft > 0 && player.CanMelee)
         {
             return true;
         }

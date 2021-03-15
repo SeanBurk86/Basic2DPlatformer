@@ -53,3 +53,6 @@ MonoBehaviour:
   kickThrustVelocity: 20
   kickDamage: 5
   amountOfKicks: 1
+  bullet: {fileID: 4823691381090673184, guid: bda40a7b5245291409de33e61dffe3ea, type: 3}
+  rollThrustVelocity: 15
+  amountOfRolls: 1
