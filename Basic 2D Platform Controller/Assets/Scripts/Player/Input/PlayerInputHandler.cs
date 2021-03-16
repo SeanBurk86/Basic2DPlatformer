@@ -40,6 +40,8 @@ public class PlayerInputHandler : MonoBehaviour
 
     public bool PauseInput { get; private set; }
 
+    public bool KeyboardAimToggle { get; private set; }
+
     [SerializeField]
     private float inputHoldTime = 0.2f;
 
@@ -66,7 +68,6 @@ public class PlayerInputHandler : MonoBehaviour
     public void OnMoveInput(InputAction.CallbackContext context)
     {
         RawMovementInput = context.ReadValue<Vector2>();
-
         if (Mathf.Abs(RawMovementInput.x) > 0.5f)
         {
             InputXNormalized = (int)(RawMovementInput * Vector2.right).normalized.x;
@@ -107,7 +108,6 @@ public class PlayerInputHandler : MonoBehaviour
     {
         if (context.started)
         {
-            Debug.Log("Attack Input detected");
             AttackInput = true;
             AttackInputStop = false;
             attackInputStartTime = Time.time;
@@ -176,9 +176,23 @@ public class PlayerInputHandler : MonoBehaviour
 
     public void OnShotDirectionInput(InputAction.CallbackContext context)
     {
-        RawShotDirectionInput = context.ReadValue<Vector2>();
+        if (playerInput.currentControlScheme == "Keyboard" && KeyboardAimToggle)
+        {
+            RawShotDirectionInput = context.ReadValue<Vector2>();
+            RawShotDirectionInput = cam.ScreenToWorldPoint((Vector3)RawShotDirectionInput) - transform.position;
+            ShotDirectionInput = Vector2Int.RoundToInt(RawShotDirectionInput.normalized);
 
-        ShotDirectionInput = Vector2Int.RoundToInt(RawShotDirectionInput.normalized);
+        }
+        else if(playerInput.currentControlScheme == "Keyboard" && !KeyboardAimToggle)
+        {
+            RawShotDirectionInput = Vector2.zero;
+            ShotDirectionInput = Vector2Int.RoundToInt(RawShotDirectionInput.normalized);
+        }
+        else if (playerInput.currentControlScheme == "Gamepad")
+        {
+            RawShotDirectionInput = context.ReadValue<Vector2>();
+            ShotDirectionInput = Vector2Int.RoundToInt(RawShotDirectionInput.normalized);
+        }
     }
 
     public void OnPauseInput(InputAction.CallbackContext context)
@@ -186,6 +200,20 @@ public class PlayerInputHandler : MonoBehaviour
         if (context.started)
         {
             GM.TogglePause();
+        }
+    }
+
+    public void OnKeyboardAimToggle(InputAction.CallbackContext context)
+    {
+        if (context.started)
+        {
+            KeyboardAimToggle = true;
+            Debug.Log("Keyboard Aim toggle on");
+        }
+        if (context.canceled)
+        {
+            KeyboardAimToggle = false;
+            Debug.Log("Keyboard Aim toggle on");
         }
     }
 

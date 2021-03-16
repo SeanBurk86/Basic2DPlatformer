@@ -55,8 +55,6 @@ public class PlayerGroundedState : PlayerState
 
         xInput = player.InputHandler.InputXNormalized;
         yInput = player.InputHandler.InputYNormalized;
-        shotDirectionInputX = player.InputHandler.ShotDirectionInput.x;
-        shotDirectionInputY = player.InputHandler.ShotDirectionInput.y;
 
         jumpInput = player.InputHandler.JumpInput;
         grabInput = player.InputHandler.GrabInput;

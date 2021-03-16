@@ -130,7 +130,6 @@ public class Player : MonoBehaviour
             Die();
         }
         StateMachine.CurrentState.LogicUpdate();
-        Debug.Log("Shot Direction vector is :" + InputHandler.ShotDirectionInput + " Can Fire is :" + CanShoot);
         if (InputHandler.ShotDirectionInput != Vector2.zero)
         {
             DisableMelee();

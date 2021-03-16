@@ -76,7 +76,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1724092499
 Transform:
   m_ObjectHideFlags: 0
@@ -85,7 +85,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1724092498}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.5, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.75, y: 0.75, z: 1}
   m_Children:
   - {fileID: 1650201525}
@@ -129,7 +129,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 21916855
-  m_SortingLayer: 4
+  m_SortingLayer: 5
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 7f953ec1a9fb54245b3069fe78cbcebf, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -198,12 +198,12 @@ PrefabInstance:
     - target: {fileID: 7013576862163536078, guid: 094ba1d4246dde3488534450a6b6b3f6,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -27.39
+      value: -28.35
       objectReference: {fileID: 0}
     - target: {fileID: 7013576862163536078, guid: 094ba1d4246dde3488534450a6b6b3f6,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 27.72
+      value: 27.4
       objectReference: {fileID: 0}
     - target: {fileID: 7013576862163536078, guid: 094ba1d4246dde3488534450a6b6b3f6,
         type: 3}
@@ -253,7 +253,7 @@ PrefabInstance:
     - target: {fileID: 7013576862163536079, guid: 094ba1d4246dde3488534450a6b6b3f6,
         type: 3}
       propertyPath: m_ActionEvents.Array.size
-      value: 9
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7013576862163536079, guid: 094ba1d4246dde3488534450a6b6b3f6,
         type: 3}
@@ -273,6 +273,11 @@ PrefabInstance:
     - target: {fileID: 7013576862163536079, guid: 094ba1d4246dde3488534450a6b6b3f6,
         type: 3}
       propertyPath: m_ActionEvents.Array.data[8].m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7013576862163536079, guid: 094ba1d4246dde3488534450a6b6b3f6,
+        type: 3}
+      propertyPath: m_ActionEvents.Array.data[9].m_PersistentCalls.m_Calls.Array.size
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7013576862163536079, guid: 094ba1d4246dde3488534450a6b6b3f6,
@@ -399,6 +404,36 @@ PrefabInstance:
         type: 3}
       propertyPath: m_ActionEvents.Array.data[8].m_ActionName
       value: Gameplay/ShotAim[/XInputControllerWindows/rightStick,/Mouse/position]
+      objectReference: {fileID: 0}
+    - target: {fileID: 7013576862163536079, guid: 094ba1d4246dde3488534450a6b6b3f6,
+        type: 3}
+      propertyPath: m_ActionEvents.Array.data[9].m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 8341170474860747837}
+    - target: {fileID: 7013576862163536079, guid: 094ba1d4246dde3488534450a6b6b3f6,
+        type: 3}
+      propertyPath: m_ActionEvents.Array.data[9].m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnKeyboardAimToggle
+      objectReference: {fileID: 0}
+    - target: {fileID: 7013576862163536079, guid: 094ba1d4246dde3488534450a6b6b3f6,
+        type: 3}
+      propertyPath: m_ActionEvents.Array.data[9].m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 7013576862163536079, guid: 094ba1d4246dde3488534450a6b6b3f6,
+        type: 3}
+      propertyPath: m_ActionEvents.Array.data[9].m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7013576862163536079, guid: 094ba1d4246dde3488534450a6b6b3f6,
+        type: 3}
+      propertyPath: m_ActionEvents.Array.data[9].m_ActionId
+      value: 3f9fe010-1d96-44de-b644-54636a25eb2e
+      objectReference: {fileID: 0}
+    - target: {fileID: 7013576862163536079, guid: 094ba1d4246dde3488534450a6b6b3f6,
+        type: 3}
+      propertyPath: m_ActionEvents.Array.data[9].m_ActionName
+      value: Gameplay/KeyboardAimToggle[/Mouse/rightButton]
       objectReference: {fileID: 0}
     - target: {fileID: 7013576862422897101, guid: 094ba1d4246dde3488534450a6b6b3f6,
         type: 3}
