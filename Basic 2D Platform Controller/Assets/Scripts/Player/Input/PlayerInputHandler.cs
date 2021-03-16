@@ -8,9 +8,6 @@ public class PlayerInputHandler : MonoBehaviour
     private PlayerInput playerInput;
     private Camera cam;
 
-    [SerializeField]
-    public GameManager GM;
-
     public Vector2 RawMovementInput { get; private set; }
     public Vector2 RawDashDirectionInput { get; private set; }
     public Vector2Int DashDirectionInput { get; private set; }
@@ -41,6 +38,8 @@ public class PlayerInputHandler : MonoBehaviour
     public bool PauseInput { get; private set; }
 
     public bool KeyboardAimToggle { get; private set; }
+
+    public bool PauseToggle { get; private set; }
 
     [SerializeField]
     private float inputHoldTime = 0.2f;
@@ -74,7 +73,7 @@ public class PlayerInputHandler : MonoBehaviour
         }
         else if (Mathf.Abs(RawMovementInput.x) < 0.5f && Mathf.Abs(RawMovementInput.x) > 0.25f)
         {
-            InputXNormalized = ((RawMovementInput * Vector2.right).normalized.x)/2;
+            InputXNormalized = ((RawMovementInput * Vector2.right).normalized.x)/3;
         }
         else
         {
@@ -203,7 +202,8 @@ public class PlayerInputHandler : MonoBehaviour
     {
         if (context.started)
         {
-            GM.TogglePause();
+            if (PauseToggle) PauseToggle = false;
+            else PauseToggle = true;
         }
     }
 

@@ -8,26 +8,46 @@ public class PauseMenu : MonoBehaviour
     private GameObject pauseMenuUI;
 
     [SerializeField]
-    private GameManager GM;
+    private PlayerInputHandler playerInputHandler;
 
-    private void Update()
+    private bool gameIsPaused;
+
+    private void Start()
     {
-        
-        if (GM.IsGamePaused)
+        gameIsPaused = false;
+    }
+    void Update()
+    {
+        CheckPauseToggle();
+    }
+
+    private void CheckPauseToggle()
+    {
+        if (playerInputHandler.PauseToggle && !gameIsPaused)
         {
-            pauseMenuUI.SetActive(true);
-            Time.timeScale = 0f;
+            PauseGame();
         }
-        else
+        else if(!playerInputHandler.PauseToggle && gameIsPaused)
         {
-            pauseMenuUI.SetActive(false);
-            Time.timeScale = 1f;
+            ContinueGame();
         }
+    }
+    private void PauseGame()
+    {
+        Time.timeScale = 0;
+        pauseMenuUI.SetActive(true);
+        gameIsPaused = true;
+    }
+    private void ContinueGame()
+    {
+        Time.timeScale = 1;
+        pauseMenuUI.SetActive(false);
+        gameIsPaused = false;
     }
 
     public void QuitGame()
     {
-        Debug.Log("I'll quit here");
         Application.Quit();
+        Debug.Log("I should've quit... you're probably in the editor");
     }
 }
