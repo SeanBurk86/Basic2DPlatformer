@@ -32,6 +32,8 @@ MonoBehaviour:
   dashVelocity: 30
   drag: 10
   dashEndYMultiplier: 0.2
+  ghost: {fileID: 5818086017336920969, guid: eb8c5029f5e10ef4e9760a558c3fa53c, type: 3}
+  ghostDelaySeconds: 0.01
   crouchMovementVelocity: 5
   crouchColliderHeight: 1
   crouchColliderYOffset: -0.3

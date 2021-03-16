@@ -15,8 +15,11 @@ public class PlayerDashState : PlayerAbilityState
         dashDirectionInput,
         lastAfterImagePos;
 
+    private GameObject ghost;
+
     public PlayerDashState(Player player, PlayerStateMachine stateMachine, PlayerData playerData, string animBoolName) : base(player, stateMachine, playerData, animBoolName)
     {
+        ghost = playerData.ghost;
     }
 
     public override void Enter()
@@ -33,6 +36,7 @@ public class PlayerDashState : PlayerAbilityState
         startTime = Time.unscaledTime;
 
         player.DashDirectionIndicator.gameObject.SetActive(true);
+        player.ghostDelaySeconds = playerData.ghostDelaySeconds;
     }
 
     public override void Exit()
@@ -48,6 +52,8 @@ public class PlayerDashState : PlayerAbilityState
     public override void LogicUpdate()
     {
         base.LogicUpdate();
+
+        player.CreateGhostTrail();
 
         if (!isExitingState)
         {

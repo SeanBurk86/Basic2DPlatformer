@@ -45,6 +45,7 @@ public class Player : MonoBehaviour
     public Transform DashDirectionIndicator { get; private set; }
     public Transform ShotDirectionIndicator { get; private set; }
     public CapsuleCollider2D MovementCollider { get; private set; }
+    public float ghostDelaySeconds;
     public GameObject PsychicBullet;
     public Transform EmissionPoint;
     private float lastShotTime;
@@ -390,6 +391,20 @@ public class Player : MonoBehaviour
             CanShoot = false;
             lastShotTime = Time.time;
             Debug.Log("Last shot time was " + lastShotTime);
+        }
+    }
+
+    public void CreateGhostTrail()
+    {
+        if (ghostDelaySeconds > 0)
+        {
+            ghostDelaySeconds -= Time.deltaTime;
+        }
+        else
+        {
+            GameObject currentGhost = GameObject.Instantiate(playerData.ghost, transform.position, transform.rotation);
+            ghostDelaySeconds = playerData.ghostDelaySeconds;
+            Destroy(currentGhost, 1f);
         }
     }
 

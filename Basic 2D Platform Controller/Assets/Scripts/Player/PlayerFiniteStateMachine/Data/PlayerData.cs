@@ -42,6 +42,8 @@ public class PlayerData : ScriptableObject
     public float dashVelocity = 30f;
     public float drag = 10f;
     public float dashEndYMultiplier = 0.2f;
+    public GameObject ghost;
+    public float ghostDelaySeconds = 0.1f;
 
     [Header("Crouch States")]
     public float crouchMovementVelocity = 5.0f;

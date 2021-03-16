@@ -169,6 +169,17 @@
                 },
                 {
                     "name": "",
+                    "id": "b47e1271-c503-4d4f-96de-fc873247c9a5",
+                    "path": "<Gamepad>/leftShoulder",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Gamepad",
+                    "action": "Jump",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "c94ac422-f44f-49b7-a5e4-e46a0abe0a45",
                     "path": "<Keyboard>/leftCtrl",
                     "interactions": "",
