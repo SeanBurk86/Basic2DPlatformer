@@ -50,6 +50,9 @@ TagManager:
   - name: Decor
     uniqueID: 1726651813
     locked: 0
+  - name: Hazard
+    uniqueID: 2856949417
+    locked: 0
   - name: Platforms
     uniqueID: 900361133
     locked: 0
