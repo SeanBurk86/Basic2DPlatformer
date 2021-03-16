@@ -18,7 +18,8 @@ public class PlayerLedgeClimbState : PlayerState
         jumpInput,
         attackInput;
 
-    private int xInput,
+    private float xInput;
+    private int xInputNormalized,
         yInput;
 
     public PlayerLedgeClimbState(Player player, PlayerStateMachine stateMachine, PlayerData playerData, string animBoolName) : base(player, stateMachine, playerData, animBoolName)
@@ -95,7 +96,7 @@ public class PlayerLedgeClimbState : PlayerState
         }
         else
         {
-            xInput = player.InputHandler.InputXNormalized;
+            xInputNormalized = (int)(player.InputHandler.InputXNormalized * Vector2.right).normalized.x;
             yInput = player.InputHandler.InputYNormalized;
             jumpInput = player.InputHandler.JumpInput;
             attackInput = player.InputHandler.AttackInput;
@@ -108,7 +109,7 @@ public class PlayerLedgeClimbState : PlayerState
             SetStartAndStopPositions();
             player.transform.position = startPos;
 
-            if (xInput == player.FacingDirection && isHanging && !isClimbing)
+            if (xInputNormalized == player.FacingDirection && isHanging && !isClimbing)
             {
                 isClimbing = true;
                 player.Anim.SetBool("climbLedge", true);

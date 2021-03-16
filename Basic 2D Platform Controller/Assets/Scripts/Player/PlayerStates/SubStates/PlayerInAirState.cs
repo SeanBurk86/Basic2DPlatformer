@@ -22,7 +22,8 @@ public class PlayerInAirState : PlayerState
         isTouchingMovingPlatform,
         dashInput;
 
-    private int xInput;
+    private float xInput;
+    private int xInputNormalized;
 
     private float startWallJumpCoyoteTime;
 
@@ -78,6 +79,7 @@ public class PlayerInAirState : PlayerState
         CheckWallJumpCoyoteTime();
 
         xInput = player.InputHandler.InputXNormalized;
+        xInputNormalized = (int)(player.InputHandler.InputXNormalized * Vector2.right).normalized.x;
         jumpInput = player.InputHandler.JumpInput;
         jumpInputStop = player.InputHandler.JumpInputStop;
         grabInput = player.InputHandler.GrabInput;
@@ -118,7 +120,7 @@ public class PlayerInAirState : PlayerState
         {
             stateMachine.ChangeState(player.WallGrabState);
         }
-        else if (isTouchingWall && xInput == player.FacingDirection && player.CurrentVelocity.y <= 0 )
+        else if (isTouchingWall && xInputNormalized == player.FacingDirection && player.CurrentVelocity.y <= 0 )
         {
             stateMachine.ChangeState(player.WallSlideState);
         }
@@ -128,7 +130,7 @@ public class PlayerInAirState : PlayerState
         }
         else
         {
-            player.CheckIfShouldFlip(xInput);
+            player.CheckIfShouldFlip(xInputNormalized);
             player.SetVelocityX(playerData.movementVelocity * xInput);
 
             player.Anim.SetFloat("yVelocity", player.CurrentVelocity.y);

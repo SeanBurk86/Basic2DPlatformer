@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class PlayerGroundedState : PlayerState
 {
-    protected int xInput,
+    protected int xInputNormalized,
         yInput;
-
+    protected float xInput;
     protected bool isTouchingCeiling;
 
     private bool jumpInput,
@@ -54,6 +54,7 @@ public class PlayerGroundedState : PlayerState
         base.LogicUpdate();
 
         xInput = player.InputHandler.InputXNormalized;
+        xInputNormalized = (int)(player.InputHandler.InputXNormalized * Vector2.right).normalized.x;
         yInput = player.InputHandler.InputYNormalized;
 
         jumpInput = player.InputHandler.JumpInput;

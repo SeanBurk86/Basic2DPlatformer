@@ -16,7 +16,7 @@ public class PlayerInputHandler : MonoBehaviour
     public Vector2Int DashDirectionInput { get; private set; }
     public Vector2 RawShotDirectionInput { get; private set; }
     public Vector2Int ShotDirectionInput { get; private set; }
-    public int InputXNormalized { get; private set; }
+    public float InputXNormalized { get; private set; }
 
     public int InputYNormalized { get; private set; }
 
@@ -71,6 +71,10 @@ public class PlayerInputHandler : MonoBehaviour
         if (Mathf.Abs(RawMovementInput.x) > 0.5f)
         {
             InputXNormalized = (int)(RawMovementInput * Vector2.right).normalized.x;
+        }
+        else if (Mathf.Abs(RawMovementInput.x) < 0.5f && Mathf.Abs(RawMovementInput.x) > 0.25f)
+        {
+            InputXNormalized = ((RawMovementInput * Vector2.right).normalized.x)/2;
         }
         else
         {

@@ -11,8 +11,10 @@ public class PlayerTouchingWallState : PlayerState
         isTouchingLedge,
         isTouchingMovingPlatform;
 
-    protected int xInput,
+    protected int xInputNormalized,
         yInput;
+
+    protected float xInput;
 
     public PlayerTouchingWallState(Player player, PlayerStateMachine stateMachine, PlayerData playerData, string animBoolName) : base(player, stateMachine, playerData, animBoolName)
     {
@@ -58,7 +60,7 @@ public class PlayerTouchingWallState : PlayerState
     {
         base.LogicUpdate();
 
-        xInput = player.InputHandler.InputXNormalized;
+        xInputNormalized = (int)(player.InputHandler.InputXNormalized * Vector2.right).normalized.x;
         yInput = player.InputHandler.InputYNormalized;
         grabInput = player.InputHandler.GrabInput;
         jumpInput = player.InputHandler.JumpInput;
@@ -72,7 +74,7 @@ public class PlayerTouchingWallState : PlayerState
         {
             stateMachine.ChangeState(player.IdleState);
         }
-        else if (!isTouchingWall || (xInput != player.FacingDirection && !grabInput))
+        else if (!isTouchingWall || (xInputNormalized != player.FacingDirection && !grabInput))
         {
             stateMachine.ChangeState(player.InAirState);
         }
