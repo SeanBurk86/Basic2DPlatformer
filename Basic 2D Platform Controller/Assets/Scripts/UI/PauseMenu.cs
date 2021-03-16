@@ -10,11 +10,10 @@ public class PauseMenu : MonoBehaviour
     [SerializeField]
     private PlayerInputHandler playerInputHandler;
 
-    private bool gameIsPaused;
+    private bool pauseToggle;
 
     private void Start()
     {
-        gameIsPaused = false;
     }
     void Update()
     {
@@ -23,31 +22,31 @@ public class PauseMenu : MonoBehaviour
 
     private void CheckPauseToggle()
     {
-        if (playerInputHandler.PauseToggle && !gameIsPaused)
+        pauseToggle = playerInputHandler.PauseToggle;
+        if (pauseToggle)
         {
             PauseGame();
         }
-        else if(!playerInputHandler.PauseToggle && gameIsPaused)
+        else if(!pauseToggle)
         {
             ContinueGame();
         }
     }
     private void PauseGame()
     {
-        Time.timeScale = 0;
         pauseMenuUI.SetActive(true);
-        gameIsPaused = true;
+        Time.timeScale = 0;
     }
-    private void ContinueGame()
+    public void ContinueGame()
     {
-        Time.timeScale = 1;
+        playerInputHandler.UsePauseToggle();
         pauseMenuUI.SetActive(false);
-        gameIsPaused = false;
+        Time.timeScale = 1;
     }
 
     public void QuitGame()
     {
+        Debug.Log("I should quit... you're probably in the editor");
         Application.Quit();
-        Debug.Log("I should've quit... you're probably in the editor");
     }
 }

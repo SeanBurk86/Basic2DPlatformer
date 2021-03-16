@@ -226,6 +226,8 @@ public class PlayerInputHandler : MonoBehaviour
     public void UseAttackInput() => AttackInput = false;
     public void UseRollInput() => RollInput = false;
 
+    public void UsePauseToggle() => PauseToggle = false;
+
     private void CheckJumpInputHoldTime()
     {
         if(Time.time >= jumpInputStartTime + inputHoldTime)
