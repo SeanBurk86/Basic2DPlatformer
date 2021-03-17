@@ -64,13 +64,15 @@ public class PlayerKickState : PlayerAbilityState
         else if (!isAbilityDone) 
         {
             attackDetails.damageAmount = playerData.kickDamage;
-            attackDetails.hitCollisionPosition = player.transform.position;
+            attackDetails.hitCollisionPosition = player.kickCheck.position;
             attackDetails.stunDamageAmount = 10;
+            attackDetails.attackerFacingDirection = player.FacingDirection;
             Collider2D[] detectedObjects = player.CheckIfKickbox();
 
             foreach(Collider2D collider2D in detectedObjects)
             {
                 collider2D.transform.parent.SendMessage("Damage", attackDetails);
+                
             }
         }
 

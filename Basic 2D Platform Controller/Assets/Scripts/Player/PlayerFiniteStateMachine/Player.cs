@@ -47,7 +47,8 @@ public class Player : MonoBehaviour
     public CapsuleCollider2D MovementCollider { get; private set; }
     public float ghostDelaySeconds;
     public GameObject PsychicBullet;
-    public Transform EmissionPoint;
+    public Transform EmissionPoint,
+        kickCheck;
     private float lastShotTime;
     public float timeBetweenFiring = .0625f;
     #endregion
@@ -58,8 +59,7 @@ public class Player : MonoBehaviour
     private Transform groundCheck,
         wallCheck,
         ledgeCheck,
-        ceilingCheck,
-        kickCheck;
+        ceilingCheck;
 
     #endregion
 
@@ -288,7 +288,6 @@ public class Player : MonoBehaviour
         float yDist = yHit.distance;
 
         workspace.Set(wallCheck.position.x + (xDist * FacingDirection), ledgeCheck.position.y - yDist);
-        Debug.Log("Corner position is: " + workspace);
         return workspace;
     }
 

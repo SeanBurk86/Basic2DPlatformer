@@ -6,5 +6,6 @@ public struct AttackDetails
 {
     public Vector2 hitCollisionPosition;
     public int damageAmount,
-        stunDamageAmount;
+        stunDamageAmount,
+        attackerFacingDirection;
 }

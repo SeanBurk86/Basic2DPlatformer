@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: PlayerBaseData
   m_EditorClassIdentifier: 
   startingHealth: 5
-  movementVelocity: 10
+  movementVelocity: 15
   jumpVelocity: 15
   amountOfJumps: 1
   coyoteTime: 0.2
@@ -55,5 +55,5 @@ MonoBehaviour:
   kickThrustVelocity: 20
   kickDamage: 15
   amountOfKicks: 1
-  rollThrustVelocity: 15
+  rollThrustVelocity: 20
   amountOfRolls: 1

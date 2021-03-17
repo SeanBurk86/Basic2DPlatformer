@@ -25,7 +25,6 @@ public class PsychicBullet : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log(collision.name);
         if (collision.gameObject.CompareTag("Enemy"))
         {
             collision.transform.parent.SendMessage("Damage", attackDetails);

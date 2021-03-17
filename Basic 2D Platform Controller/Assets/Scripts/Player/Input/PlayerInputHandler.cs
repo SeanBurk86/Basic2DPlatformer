@@ -225,7 +225,6 @@ public class PlayerInputHandler : MonoBehaviour
     public void UseDashInput() => DashInput = false;
     public void UseAttackInput() => AttackInput = false;
     public void UseRollInput() => RollInput = false;
-
     public void UsePauseToggle() => PauseToggle = false;
 
     private void CheckJumpInputHoldTime()
