@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: PlayerBaseData
   m_EditorClassIdentifier: 
   startingHealth: 5
-  movementVelocity: 15
+  movementVelocity: 13
   jumpVelocity: 15
   amountOfJumps: 1
   coyoteTime: 0.2

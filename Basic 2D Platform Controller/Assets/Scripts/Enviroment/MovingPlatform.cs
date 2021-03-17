@@ -26,19 +26,29 @@ public class MovingPlatform : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Player") || collision.gameObject.CompareTag("Enemy"))
+        if (collision.gameObject.CompareTag("Player"))
         {
             Debug.Log("Player entering moving plat collision");
             collision.collider.transform.SetParent(transform);
+        }
+        else if (collision.gameObject.CompareTag("Enemy"))
+        {
+            Debug.Log("Player entering moving plat collision");
+            collision.collider.transform.parent.SetParent(transform);
         }
     }
 
     private void OnCollisionExit2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Player") || collision.gameObject.CompareTag("Enemy"))
+        if (collision.gameObject.CompareTag("Player"))
         {
             Debug.Log("Player exiting moving plat collision");
             collision.collider.transform.SetParent(null);
+        }
+        else if (collision.gameObject.CompareTag("Enemy"))
+        {
+            Debug.Log("Player entering moving plat collision");
+            collision.collider.transform.parent.SetParent(transform);
         }
     }
 
