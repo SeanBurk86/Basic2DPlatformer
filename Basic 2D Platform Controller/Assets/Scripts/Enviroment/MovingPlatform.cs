@@ -31,7 +31,7 @@ public class MovingPlatform : MonoBehaviour
             Debug.Log("Player entering moving plat collision");
             collision.collider.transform.SetParent(transform);
         }
-        else if (collision.gameObject.CompareTag("Enemy"))
+        else if (collision.gameObject.CompareTag("Enemy") || collision.gameObject.CompareTag("Kickable"))
         {
             Debug.Log("Player entering moving plat collision");
             collision.collider.transform.parent.SetParent(transform);
@@ -45,10 +45,10 @@ public class MovingPlatform : MonoBehaviour
             Debug.Log("Player exiting moving plat collision");
             collision.collider.transform.SetParent(null);
         }
-        else if (collision.gameObject.CompareTag("Enemy"))
+        else if (collision.gameObject.CompareTag("Enemy") || collision.gameObject.CompareTag("Kickable"))
         {
             Debug.Log("Player entering moving plat collision");
-            collision.collider.transform.parent.SetParent(transform);
+            collision.collider.transform.parent.SetParent(null);
         }
     }
 

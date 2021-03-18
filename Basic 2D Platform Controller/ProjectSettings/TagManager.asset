@@ -21,8 +21,8 @@ TagManager:
   - Damageable
   - Dead
   - Player
-  - 
-  - 
+  - Kickable
+  - Grabber
   - 
   - 
   - 

@@ -31,9 +31,11 @@ public class Player : MonoBehaviour
 
     [SerializeField]
     private GameObject deathChunkParticle,
-        deathBloodParticle;
+        deathBloodParticle,
+        playerGrabber;
 
     private GameManager GM;
+
 
     #endregion
 
@@ -74,6 +76,7 @@ public class Player : MonoBehaviour
     public Vector3 MovingPlatformPositionOffset { get; private set; }
     private Vector2 workspace;
     private Vector2 shotDirection;
+    private bool isHoldingBox;
     #endregion
 
     #region Unity Callback Functions
@@ -116,6 +119,7 @@ public class Player : MonoBehaviour
         FacingDirection = 1;
         CanBeHurt = true;
         CanShoot = true;
+        isHoldingBox = false;
         EnableFlip();
         CurrentHealth = playerData.startingHealth;
 
@@ -129,7 +133,11 @@ public class Player : MonoBehaviour
         {
             Die();
         }
+        
         StateMachine.CurrentState.LogicUpdate();
+
+        isHoldingBox = CheckIfHoldingBox();
+        
         if (InputHandler.ShotDirectionInput != Vector2.zero)
         {
             DisableMelee();
@@ -226,7 +234,15 @@ public class Player : MonoBehaviour
 
     public bool CheckIfTouchingWall()
     {
-        return Physics2D.Raycast(wallCheck.position, Vector2.right * FacingDirection, playerData.wallCheckDistance, playerData.whatIsWall);
+        if (isHoldingBox)
+        {
+            return false;
+        }
+        else
+        {
+            return Physics2D.Raycast(wallCheck.position, Vector2.right * FacingDirection, playerData.wallCheckDistance, playerData.whatIsWall);
+        }
+        
     }
 
     public bool CheckIfTouchingLedge()
@@ -254,6 +270,19 @@ public class Player : MonoBehaviour
     public bool CheckIfTouchingMovingPlatform()
     {
         return transform.parent != null && transform.parent.CompareTag("Moving Platform");
+    }
+
+    public bool CheckIfHoldingBox()
+    {
+        Kickable[] ts = GetComponentsInChildren<Kickable>();
+        if(ts.Length == 0)
+        {
+            return false;
+        }
+        else
+        {
+            return true;
+        }
     }
 
 
@@ -404,6 +433,16 @@ public class Player : MonoBehaviour
             ghostDelaySeconds = playerData.ghostDelaySeconds;
             Destroy(currentGhost, 1f);
         }
+    }
+
+    public void EnableGrabber()
+    {
+        playerGrabber.SetActive(true);
+    }
+
+    public void DisableGrabber()
+    {
+        playerGrabber.SetActive(false);
     }
 
     #endregion

@@ -701,6 +701,87 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &2068409405
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2068409406}
+  - component: {fileID: 2068409408}
+  - component: {fileID: 2068409407}
+  - component: {fileID: 2068409409}
+  m_Layer: 13
+  m_Name: Grabber
+  m_TagString: Player
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2068409406
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2068409405}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.82, y: 0.3, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 8341170474860747839}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!58 &2068409408
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2068409405}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 1
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.35
+--- !u!250 &2068409407
+PointEffector2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2068409405}
+  m_Enabled: 1
+  m_UseColliderMask: 1
+  m_ColliderMask:
+    serializedVersion: 2
+    m_Bits: 256
+  m_ForceMagnitude: -100
+  m_ForceVariation: 0
+  m_DistanceScale: 1
+  m_ForceSource: 1
+  m_ForceTarget: 0
+  m_ForceMode: 0
+  m_Drag: 0
+  m_AngularDrag: 0
+--- !u!114 &2068409409
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2068409405}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4cfe8719c152bcf41ab4d5c8367b2b3b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2141189112
 GameObject:
   m_ObjectHideFlags: 0
@@ -833,10 +914,20 @@ PrefabInstance:
       propertyPath: ghostDelaySeconds
       value: 0.1
       objectReference: {fileID: 0}
+    - target: {fileID: 7013576862163536069, guid: 094ba1d4246dde3488534450a6b6b3f6,
+        type: 3}
+      propertyPath: playerGrabber
+      value: 
+      objectReference: {fileID: 2068409405}
     - target: {fileID: 7013576862163536072, guid: 094ba1d4246dde3488534450a6b6b3f6,
         type: 3}
       propertyPath: m_GravityScale
       value: 4.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7013576862163536073, guid: 094ba1d4246dde3488534450a6b6b3f6,
+        type: 3}
+      propertyPath: m_Material
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 7013576862163536074, guid: 094ba1d4246dde3488534450a6b6b3f6,
         type: 3}
@@ -861,7 +952,7 @@ PrefabInstance:
     - target: {fileID: 7013576862163536078, guid: 094ba1d4246dde3488534450a6b6b3f6,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -33.5
+      value: -37.87
       objectReference: {fileID: 0}
     - target: {fileID: 7013576862163536078, guid: 094ba1d4246dde3488534450a6b6b3f6,
         type: 3}

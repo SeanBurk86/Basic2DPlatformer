@@ -63,6 +63,9 @@ public class PlayerGroundedState : PlayerState
         attackInput = player.InputHandler.AttackInput;
         rollInput = player.InputHandler.RollInput;
 
+        if (grabInput){player.EnableGrabber();}
+        else { player.DisableGrabber();}
+
         if (jumpInput && player.JumpState.CanJump() && !isTouchingCeiling)
         {
             stateMachine.ChangeState(player.JumpState);
