@@ -34,12 +34,10 @@ public class Kickable : MonoBehaviour
         if(Mathf.Abs(currentVelocity.x) > 14.9f || Mathf.Abs(currentVelocity.y) > 14.9f)
         {
             painfulKickable.canHurt = true;
-            Debug.Log("Pain on");
         }
         else
         {
             painfulKickable.canHurt = false;
-            Debug.Log("Pain off");
         }
         
     }
