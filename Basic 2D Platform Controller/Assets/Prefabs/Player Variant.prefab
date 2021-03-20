@@ -1101,6 +1101,76 @@ MonoBehaviour:
   m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
   m_EffectDistance: {x: 8, y: -8}
   m_UseGraphicAlpha: 1
+--- !u!1 &8735386046506471678
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3658505815318571379}
+  - component: {fileID: 878246922182144730}
+  - component: {fileID: 1600734516817170588}
+  m_Layer: 0
+  m_Name: UseBox
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3658505815318571379
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8735386046506471678}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 8341170474860747839}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &878246922182144730
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8735386046506471678}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.85, y: 1.56}
+  m_EdgeRadius: 0
+--- !u!114 &1600734516817170588
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8735386046506471678}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c03224013ab654544971470d6a8ed560, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1338959582292415729
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1144,6 +1214,11 @@ PrefabInstance:
       propertyPath: playerGrabber
       value: 
       objectReference: {fileID: 2068409405}
+    - target: {fileID: 7013576862163536069, guid: 094ba1d4246dde3488534450a6b6b3f6,
+        type: 3}
+      propertyPath: useBox
+      value: 
+      objectReference: {fileID: 8735386046506471678}
     - target: {fileID: 7013576862163536072, guid: 094ba1d4246dde3488534450a6b6b3f6,
         type: 3}
       propertyPath: m_GravityScale
@@ -1167,7 +1242,7 @@ PrefabInstance:
     - target: {fileID: 7013576862163536077, guid: 094ba1d4246dde3488534450a6b6b3f6,
         type: 3}
       propertyPath: m_Name
-      value: Player
+      value: Player Variant
       objectReference: {fileID: 0}
     - target: {fileID: 7013576862163536077, guid: 094ba1d4246dde3488534450a6b6b3f6,
         type: 3}
@@ -1232,7 +1307,7 @@ PrefabInstance:
     - target: {fileID: 7013576862163536079, guid: 094ba1d4246dde3488534450a6b6b3f6,
         type: 3}
       propertyPath: m_ActionEvents.Array.size
-      value: 10
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 7013576862163536079, guid: 094ba1d4246dde3488534450a6b6b3f6,
         type: 3}
@@ -1257,6 +1332,11 @@ PrefabInstance:
     - target: {fileID: 7013576862163536079, guid: 094ba1d4246dde3488534450a6b6b3f6,
         type: 3}
       propertyPath: m_ActionEvents.Array.data[9].m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7013576862163536079, guid: 094ba1d4246dde3488534450a6b6b3f6,
+        type: 3}
+      propertyPath: m_ActionEvents.Array.data[10].m_PersistentCalls.m_Calls.Array.size
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7013576862163536079, guid: 094ba1d4246dde3488534450a6b6b3f6,
@@ -1413,6 +1493,41 @@ PrefabInstance:
         type: 3}
       propertyPath: m_ActionEvents.Array.data[9].m_ActionName
       value: Gameplay/KeyboardAimToggle[/Mouse/rightButton]
+      objectReference: {fileID: 0}
+    - target: {fileID: 7013576862163536079, guid: 094ba1d4246dde3488534450a6b6b3f6,
+        type: 3}
+      propertyPath: m_ActionEvents.Array.data[10].m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7013576862163536079, guid: 094ba1d4246dde3488534450a6b6b3f6,
+        type: 3}
+      propertyPath: m_ActionEvents.Array.data[10].m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7013576862163536079, guid: 094ba1d4246dde3488534450a6b6b3f6,
+        type: 3}
+      propertyPath: m_ActionEvents.Array.data[10].m_ActionId
+      value: 093141d2-21ac-46ed-a559-653e3c02b631
+      objectReference: {fileID: 0}
+    - target: {fileID: 7013576862163536079, guid: 094ba1d4246dde3488534450a6b6b3f6,
+        type: 3}
+      propertyPath: m_ActionEvents.Array.data[10].m_ActionName
+      value: Gameplay/Use[/XInputControllerWindows/buttonNorth,/XInputControllerWindows/buttonNorth,/Keyboard/f]
+      objectReference: {fileID: 0}
+    - target: {fileID: 7013576862163536079, guid: 094ba1d4246dde3488534450a6b6b3f6,
+        type: 3}
+      propertyPath: m_ActionEvents.Array.data[10].m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 8341170474860747837}
+    - target: {fileID: 7013576862163536079, guid: 094ba1d4246dde3488534450a6b6b3f6,
+        type: 3}
+      propertyPath: m_ActionEvents.Array.data[10].m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnInteractInput
+      objectReference: {fileID: 0}
+    - target: {fileID: 7013576862163536079, guid: 094ba1d4246dde3488534450a6b6b3f6,
+        type: 3}
+      propertyPath: m_ActionEvents.Array.data[10].m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 7013576862422897101, guid: 094ba1d4246dde3488534450a6b6b3f6,
         type: 3}

@@ -13,14 +13,14 @@ MonoBehaviour:
   m_Name: PlayerBaseData
   m_EditorClassIdentifier: 
   startingHealth: 5
-  movementVelocity: 13
+  movementVelocity: 10
   jumpVelocity: 15
   amountOfJumps: 1
   coyoteTime: 0.2
   variableJumpHeightMultiplier: 0.5
-  wallSlideVelocity: 1.5
+  wallSlideVelocity: 4
   wallClimbVelocity: 4
-  wallJumpVelocity: 20
+  wallJumpVelocity: 18.5
   wallJumpTime: 0.4
   wallJumpAngle: {x: 1, y: 2}
   startOffset: {x: 0.125, y: 0.75}
@@ -35,8 +35,8 @@ MonoBehaviour:
   ghost: {fileID: 5818086017336920969, guid: eb8c5029f5e10ef4e9760a558c3fa53c, type: 3}
   ghostDelaySeconds: 0.01
   crouchMovementVelocity: 5
-  crouchColliderHeight: 1
-  crouchColliderYOffset: -0.3
+  crouchColliderHeight: 0.9
+  crouchColliderYOffset: -0.4
   standColliderHeight: 1.58
   standColliderYOffset: 0
   groundCheckRadius: 0.26
@@ -44,16 +44,16 @@ MonoBehaviour:
   ledgeCheckDistance: 0.7
   whatIsGround:
     serializedVersion: 2
-    m_Bits: 256
+    m_Bits: 4352
   whatIsWall:
     serializedVersion: 2
-    m_Bits: 256
+    m_Bits: 4352
   whatIsCeiling:
     serializedVersion: 2
-    m_Bits: 256
+    m_Bits: 4352
   kickCheckRadius: 0.29
   kickThrustVelocity: 20
   kickDamage: 15
   amountOfKicks: 1
-  rollThrustVelocity: 20
+  rollThrustVelocity: 15
   amountOfRolls: 1

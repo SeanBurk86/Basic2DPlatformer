@@ -46,6 +46,4 @@ public class GameManager : MonoBehaviour
             respawn = false;
         }
     }
-
-    
 }

@@ -1,0 +1,15 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: BloodFade
+  m_Controller: {fileID: 9100000, guid: 71a6c0f95c2a5ee44aa2c6eff4dab860, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: 84f2aef1c2f35b246a5d68456a816e6f, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 53a7eeb2bf46ea54bbcba89128dc6772, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: d272fec2479a9fb40a5a983d2417cca9, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 4a16521ae9396df4da652e6c782068fb, type: 2}

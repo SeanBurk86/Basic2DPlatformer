@@ -42,9 +42,19 @@ public class Kickable : MonoBehaviour
         
     }
 
+    public void MakeFriction()
+    {
+        RB.sharedMaterial.friction = 1;
+    }
+
+    public void MakeFrictionless()
+    {
+        RB.sharedMaterial.friction = 0;
+    }
+
     public void Damage(AttackDetails attackDetails)
     {
-        RB.AddForce(new Vector2(attackDetails.attackerFacingDirection,0.58f) * 5, ForceMode2D.Impulse);
+        RB.AddForce(new Vector2(attackDetails.attackerFacingDirection,0.25f) * 4, ForceMode2D.Impulse);
         currentHealth -= attackDetails.damageAmount;
     }
 

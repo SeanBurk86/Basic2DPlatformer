@@ -8,6 +8,7 @@ TagManager:
   - Moving Platform
   - Ground
   - Kickable
+  - Switch
   layers:
   - Default
   - TransparentFX
@@ -21,7 +22,7 @@ TagManager:
   - Damageable
   - Dead
   - Player
-  - Kickable
+  - Corners
   - Grabber
   - 
   - 
@@ -62,4 +63,10 @@ TagManager:
     locked: 0
   - name: Player
     uniqueID: 21916855
+    locked: 0
+  - name: UI
+    uniqueID: 2913814039
+    locked: 0
+  - name: Screen Transitions
+    uniqueID: 149748567
     locked: 0

@@ -35,7 +35,7 @@ public class PlayerInputHandler : MonoBehaviour
 
     public bool RollInputStop { get; private set; }
 
-    public bool PauseInput { get; private set; }
+    public bool InteractButtonInput { get; private set; }
 
     public bool KeyboardAimToggle { get; private set; }
 
@@ -47,7 +47,8 @@ public class PlayerInputHandler : MonoBehaviour
     private float jumpInputStartTime,
         attackInputStartTime,
         rollInputStartTime,
-        dashInputStartTime;
+        dashInputStartTime,
+        interactButtonInputStartTime;
 
     private void Start()
     {
@@ -62,6 +63,7 @@ public class PlayerInputHandler : MonoBehaviour
         CheckDashInputHoldTime();
         CheckAttackInputHoldTime();
         CheckRollInputHoldTime();
+        //CheckUseButtonInputholdTime();
     }
 
     public void OnMoveInput(InputAction.CallbackContext context)
@@ -164,6 +166,21 @@ public class PlayerInputHandler : MonoBehaviour
         }
     }
 
+    public void OnInteractInput(InputAction.CallbackContext context)
+    {
+        if (context.started)
+        {
+            InteractButtonInput = true;
+            Debug.Log("Interact button pressed");
+
+        }
+        else if (context.canceled)
+        {
+            InteractButtonInput = false;
+            Debug.Log("Interact button released");
+        }
+    }
+
     public void OnDashDirectionInput(InputAction.CallbackContext context)
     {
         RawDashDirectionInput = context.ReadValue<Vector2>();
@@ -256,6 +273,14 @@ public class PlayerInputHandler : MonoBehaviour
         if(Time.time >= rollInputStartTime + inputHoldTime)
         {
             RollInput = false;
+        }
+    }
+
+    private void CheckUseButtonInputholdTime()
+    {
+        if (Time.time >= interactButtonInputStartTime + inputHoldTime)
+        {
+            InteractButtonInput = false;
         }
     }
 }

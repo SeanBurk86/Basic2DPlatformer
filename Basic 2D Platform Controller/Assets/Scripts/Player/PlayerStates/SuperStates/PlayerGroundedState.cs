@@ -16,7 +16,8 @@ public class PlayerGroundedState : PlayerState
         isGrounded,
         isTouchingWall,
         isTouchingLedge,
-        dashInput;
+        dashInput,
+        interactInput;
 
     private float shotDirectionInputX,
         shotDirectionInputY;
@@ -62,9 +63,13 @@ public class PlayerGroundedState : PlayerState
         dashInput = player.InputHandler.DashInput;
         attackInput = player.InputHandler.AttackInput;
         rollInput = player.InputHandler.RollInput;
+        interactInput = player.InputHandler.InteractButtonInput;
 
         if (grabInput){player.EnableGrabber();}
         else { player.DisableGrabber();}
+
+        if (interactInput) { player.EnableUseBox(); }
+        else { player.DisableUseBox(); }
 
         if (jumpInput && player.JumpState.CanJump() && !isTouchingCeiling)
         {

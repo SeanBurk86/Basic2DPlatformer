@@ -32,7 +32,8 @@ public class Player : MonoBehaviour
     [SerializeField]
     private GameObject deathChunkParticle,
         deathBloodParticle,
-        playerGrabber;
+        playerGrabber,
+        useBox;
 
     private GameManager GM;
 
@@ -121,6 +122,7 @@ public class Player : MonoBehaviour
         CanShoot = true;
         isHoldingBox = false;
         EnableFlip();
+        DisableUseBox();
         CurrentHealth = playerData.startingHealth;
 
         StateMachine.Initialize(IdleState);
@@ -225,7 +227,7 @@ public class Player : MonoBehaviour
 
     public bool CheckForCeiling()
     {
-        return Physics2D.OverlapCircle(ceilingCheck.position, playerData.groundCheckRadius, playerData.whatIsCeiling);
+        return Physics2D.OverlapCircle(ceilingCheck.position, playerData.groundCheckRadius, playerData.whatIsGround);
     }
     public bool CheckIfGrounded()
     {
@@ -240,19 +242,19 @@ public class Player : MonoBehaviour
         }
         else
         {
-            return Physics2D.Raycast(wallCheck.position, Vector2.right * FacingDirection, playerData.wallCheckDistance, playerData.whatIsWall);
+            return Physics2D.Raycast(wallCheck.position, Vector2.right * FacingDirection, playerData.wallCheckDistance, playerData.whatIsGround);
         }
         
     }
 
     public bool CheckIfTouchingLedge()
     {
-        return Physics2D.Raycast(ledgeCheck.position, Vector2.right * FacingDirection, playerData.ledgeCheckDistance, playerData.whatIsWall);
+        return Physics2D.Raycast(ledgeCheck.position, Vector2.right * FacingDirection, playerData.ledgeCheckDistance, playerData.whatIsGround);
     }
 
     public bool CheckIfTouchingWallBack()
     {
-        return Physics2D.Raycast(wallCheck.position, Vector2.right * -FacingDirection, playerData.wallCheckDistance, playerData.whatIsWall);
+        return Physics2D.Raycast(wallCheck.position, Vector2.right * -FacingDirection, playerData.wallCheckDistance, playerData.whatIsGround);
     }
     public void CheckIfShouldFlip(int xInput)
     {
@@ -310,7 +312,7 @@ public class Player : MonoBehaviour
 
     public Vector2 DetermineCornerPosition()
     {
-        RaycastHit2D xHit = Physics2D.Raycast(wallCheck.position, Vector2.right * FacingDirection, playerData.wallCheckDistance, playerData.whatIsWall);
+        RaycastHit2D xHit = Physics2D.Raycast(wallCheck.position, Vector2.right * FacingDirection, playerData.wallCheckDistance, playerData.whatIsGround);
         float xDist = xHit.distance;
         workspace.Set(xDist * FacingDirection, 0f);
         RaycastHit2D yHit = Physics2D.Raycast(ledgeCheck.position + (Vector3)(workspace), Vector2.down, ledgeCheck.position.y - wallCheck.position.y, playerData.whatIsGround);
@@ -443,6 +445,16 @@ public class Player : MonoBehaviour
     public void DisableGrabber()
     {
         playerGrabber.SetActive(false);
+    }
+
+    public void EnableUseBox()
+    {
+        useBox.SetActive(true);
+    }
+
+    public void DisableUseBox()
+    {
+        useBox.SetActive(false);
     }
 
     #endregion
