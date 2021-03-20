@@ -22,8 +22,7 @@ public class PlayerInAirState : PlayerState
         isTouchingMovingPlatform,
         dashInput;
 
-    private float xInput,
-        presetFriction;
+    private float xInput;
     private int xInputNormalized;
 
     private float startWallJumpCoyoteTime;
@@ -59,14 +58,12 @@ public class PlayerInAirState : PlayerState
     public override void Enter()
     {
         base.Enter();
-        presetFriction = player.RB.sharedMaterial.friction;
-        player.RB.sharedMaterial.friction = 0;
+        player.RB.sharedMaterial.friction = 0f;
     }
 
     public override void Exit()
     {
         base.Exit();
-        player.RB.sharedMaterial.friction = presetFriction;
         oldIsTouchinghWall = false;
         oldIsTouchinghWall = false;
         isTouchingWall = false;

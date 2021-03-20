@@ -100,7 +100,7 @@ Rigidbody2D:
   m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDrag: 0
-  m_AngularDrag: 0.05
+  m_AngularDrag: 20
   m_GravityScale: 4.5
   m_Material: {fileID: 6200000, guid: 0ead7b00c32d86f45a020127309cf24c, type: 2}
   m_Interpolate: 0
@@ -228,4 +228,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   RB: {fileID: 1881888814929686181}
   painfulKickable: {fileID: 1881888814929686177}
-  baseHealth: 300
+  baseHealth: 1000

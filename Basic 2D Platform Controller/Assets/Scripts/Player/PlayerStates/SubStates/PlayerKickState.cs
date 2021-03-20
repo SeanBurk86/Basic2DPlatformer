@@ -71,7 +71,10 @@ public class PlayerKickState : PlayerAbilityState
 
             foreach(Collider2D collider2D in detectedObjects)
             {
-                collider2D.transform.parent.SendMessage("Damage", attackDetails);
+                if (collider2D.transform.parent.CompareTag("Enemy") || collider2D.transform.parent.CompareTag("Kickable"))
+                {
+                    collider2D.transform.parent.SendMessage("Damage", attackDetails);
+                }
                 
             }
         }

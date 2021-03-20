@@ -9,7 +9,8 @@ public class PlayerGrabber : MonoBehaviour
         if (collision.gameObject.CompareTag("Kickable"))
         {
             collision.transform.parent.SetParent(transform.parent.transform);
-            collision.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+            collision.transform.GetComponent<Rigidbody2D>().sharedMaterial.friction = 100f;
+
         }
     }
 

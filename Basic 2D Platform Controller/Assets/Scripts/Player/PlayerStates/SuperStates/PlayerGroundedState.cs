@@ -65,8 +65,16 @@ public class PlayerGroundedState : PlayerState
         rollInput = player.InputHandler.RollInput;
         interactInput = player.InputHandler.InteractButtonInput;
 
-        if (grabInput){player.EnableGrabber();}
-        else { player.DisableGrabber();}
+        if (grabInput)
+        {
+            player.EnableGrabber();
+            player.RB.sharedMaterial.friction = 10f;
+        }
+        else 
+        {
+            player.RB.sharedMaterial.friction = 0f;
+            player.DisableGrabber();
+        }
 
         if (interactInput) { player.EnableUseBox(); }
         else { player.DisableUseBox(); }
