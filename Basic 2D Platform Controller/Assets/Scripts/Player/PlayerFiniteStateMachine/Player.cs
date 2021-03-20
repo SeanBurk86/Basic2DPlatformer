@@ -62,7 +62,14 @@ public class Player : MonoBehaviour
     private Transform groundCheck,
         wallCheck,
         ledgeCheck,
-        ceilingCheck;
+        ceilingCheck,
+        squishChecksTransform;
+
+    [SerializeField]
+    private SquishCheck topSquishCheck,
+        bottomSquishCheck,
+        frontSquishCheck,
+        backSquishCheck;
 
     #endregion
 
@@ -131,6 +138,12 @@ public class Player : MonoBehaviour
     private void Update()
     {
         CurrentVelocity = RB.velocity;
+
+        if((topSquishCheck.isSquished == true && bottomSquishCheck.isSquished == true) 
+            || (frontSquishCheck.isSquished == true && backSquishCheck.isSquished == true)) {
+            CurrentHealth -= 10;
+        }
+
         if(CurrentHealth <= 0)
         {
             Die();
@@ -227,7 +240,7 @@ public class Player : MonoBehaviour
 
     public bool CheckForCeiling()
     {
-        return Physics2D.OverlapCircle(ceilingCheck.position, playerData.groundCheckRadius, playerData.whatIsGround);
+        return Physics2D.OverlapCircle(ceilingCheck.position, playerData.groundCheckRadius, playerData.whatIsCeiling);
     }
     public bool CheckIfGrounded()
     {
@@ -242,19 +255,19 @@ public class Player : MonoBehaviour
         }
         else
         {
-            return Physics2D.Raycast(wallCheck.position, Vector2.right * FacingDirection, playerData.wallCheckDistance, playerData.whatIsGround);
+            return Physics2D.Raycast(wallCheck.position, Vector2.right * FacingDirection, playerData.wallCheckDistance, playerData.whatIsWall);
         }
         
     }
 
     public bool CheckIfTouchingLedge()
     {
-        return Physics2D.Raycast(ledgeCheck.position, Vector2.right * FacingDirection, playerData.ledgeCheckDistance, playerData.whatIsGround);
+        return Physics2D.Raycast(ledgeCheck.position, Vector2.right * FacingDirection, playerData.ledgeCheckDistance, playerData.whatIsWall);
     }
 
     public bool CheckIfTouchingWallBack()
     {
-        return Physics2D.Raycast(wallCheck.position, Vector2.right * -FacingDirection, playerData.wallCheckDistance, playerData.whatIsGround);
+        return Physics2D.Raycast(wallCheck.position, Vector2.right * -FacingDirection, playerData.wallCheckDistance, playerData.whatIsWall);
     }
     public void CheckIfShouldFlip(int xInput)
     {
@@ -310,12 +323,19 @@ public class Player : MonoBehaviour
         MovementCollider.offset = new Vector2(MovementCollider.offset.x, yOffset);
     }
 
+    public void SetSquishChecksYScaleAndYPosition(float yScale, float yPosition)
+    {
+        workspace.Set(squishChecksTransform.localScale.x, yScale);
+        squishChecksTransform.localScale = workspace;
+        squishChecksTransform.localPosition = new Vector3(squishChecksTransform.localPosition.x, yPosition, squishChecksTransform.localPosition.z);
+    }
+
     public Vector2 DetermineCornerPosition()
     {
-        RaycastHit2D xHit = Physics2D.Raycast(wallCheck.position, Vector2.right * FacingDirection, playerData.wallCheckDistance, playerData.whatIsGround);
+        RaycastHit2D xHit = Physics2D.Raycast(wallCheck.position, Vector2.right * FacingDirection, playerData.wallCheckDistance, playerData.whatIsWall);
         float xDist = xHit.distance;
         workspace.Set(xDist * FacingDirection, 0f);
-        RaycastHit2D yHit = Physics2D.Raycast(ledgeCheck.position + (Vector3)(workspace), Vector2.down, ledgeCheck.position.y - wallCheck.position.y, playerData.whatIsGround);
+        RaycastHit2D yHit = Physics2D.Raycast(ledgeCheck.position + (Vector3)(workspace), Vector2.down, ledgeCheck.position.y - wallCheck.position.y, playerData.whatIsWall);
         float yDist = yHit.distance;
 
         workspace.Set(wallCheck.position.x + (xDist * FacingDirection), ledgeCheck.position.y - yDist);
@@ -326,7 +346,7 @@ public class Player : MonoBehaviour
 
     private void AnimationFinishTrigger() => StateMachine.CurrentState.AnimationFinishTrigger();
 
-    private void Flip()
+    public void Flip()
     {
         FacingDirection *= -1;
         transform.Rotate(0.0f, 180.0f, 0.0f);

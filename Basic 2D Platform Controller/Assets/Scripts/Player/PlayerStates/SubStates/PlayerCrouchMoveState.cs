@@ -11,6 +11,7 @@ public class PlayerCrouchMoveState : PlayerGroundedState
     public override void Enter()
     {
         base.Enter();
+        player.SetSquishChecksYScaleAndYPosition(playerData.crouchSquishCheckScale, playerData.crouchSquishCheckPosition);
         player.SetColliderHeightAndOffset(playerData.crouchColliderHeight, playerData.crouchColliderYOffset);
     }
 
@@ -18,6 +19,7 @@ public class PlayerCrouchMoveState : PlayerGroundedState
     {
         base.Exit();
         player.SetColliderHeightAndOffset(playerData.standColliderHeight, playerData.standColliderYOffset);
+        player.SetSquishChecksYScaleAndYPosition(playerData.standSquishCheckScale, playerData.standSquishCheckPosition);
     }
 
     public override void LogicUpdate()

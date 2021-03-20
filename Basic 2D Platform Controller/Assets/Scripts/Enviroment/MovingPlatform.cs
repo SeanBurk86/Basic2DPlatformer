@@ -8,6 +8,7 @@ public class MovingPlatform : MonoBehaviour
     public Vector3 position2;
     public float platformMovementSpeed = .25f;
     public Rigidbody2D RB { get; private set; }
+    public bool isRidable;
 
     private void Start()
     {
@@ -26,25 +27,32 @@ public class MovingPlatform : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Player"))
+        if (isRidable)
         {
-            collision.collider.transform.SetParent(transform);
+            if (collision.gameObject.CompareTag("Player"))
+            {
+                collision.collider.transform.SetParent(transform);
+            }
+            else if (collision.gameObject.CompareTag("Enemy") || collision.gameObject.CompareTag("Kickable"))
+            {
+                collision.collider.transform.parent.SetParent(transform);
+            }
         }
-        else if (collision.gameObject.CompareTag("Enemy") || collision.gameObject.CompareTag("Kickable"))
-        {
-            collision.collider.transform.parent.SetParent(transform);
-        }
+        
     }
 
     private void OnCollisionExit2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Player"))
+        if (isRidable)
         {
-            collision.collider.transform.SetParent(null);
-        }
-        else if (collision.gameObject.CompareTag("Enemy") || collision.gameObject.CompareTag("Kickable"))
-        {
-            collision.collider.transform.parent.SetParent(null);
+            if (collision.gameObject.CompareTag("Player"))
+            {
+                collision.collider.transform.SetParent(null);
+            }
+            else if (collision.gameObject.CompareTag("Enemy") || collision.gameObject.CompareTag("Kickable"))
+            {
+                collision.collider.transform.parent.SetParent(null);
+            }
         }
     }
 

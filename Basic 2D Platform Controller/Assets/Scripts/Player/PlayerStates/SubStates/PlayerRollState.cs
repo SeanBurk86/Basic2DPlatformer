@@ -33,12 +33,14 @@ public class PlayerRollState : PlayerAbilityState
         amountOfRollsLeft--;
         base.Enter();
         player.DisablePlayerDamage();
+        player.SetSquishChecksYScaleAndYPosition(playerData.crouchSquishCheckScale, playerData.crouchSquishCheckPosition);
         player.SetColliderHeightAndOffset(playerData.crouchColliderHeight, playerData.crouchColliderYOffset);
     }
 
     public override void Exit()
     {
         player.SetColliderHeightAndOffset(playerData.standColliderHeight, playerData.standColliderYOffset);
+        player.SetSquishChecksYScaleAndYPosition(playerData.standSquishCheckScale, playerData.standSquishCheckPosition);
         player.EnablePlayerDamage();
         base.Exit();
         

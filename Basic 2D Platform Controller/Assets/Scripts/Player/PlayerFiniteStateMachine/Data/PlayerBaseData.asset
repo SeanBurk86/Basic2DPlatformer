@@ -18,8 +18,8 @@ MonoBehaviour:
   amountOfJumps: 1
   coyoteTime: 0.2
   variableJumpHeightMultiplier: 0.5
-  wallSlideVelocity: 4
-  wallClimbVelocity: 4
+  wallSlideVelocity: 3
+  wallClimbVelocity: 3
   wallJumpVelocity: 18.5
   wallJumpTime: 0.4
   wallJumpAngle: {x: 1, y: 2}
@@ -39,6 +39,10 @@ MonoBehaviour:
   crouchColliderYOffset: -0.4
   standColliderHeight: 1.58
   standColliderYOffset: 0
+  crouchSquishCheckScale: 0.5
+  crouchSquishCheckPosition: -0.5
+  standSquishCheckScale: 1
+  standSquishCheckPosition: 0
   groundCheckRadius: 0.26
   wallCheckDistance: 0.5
   ledgeCheckDistance: 0.7
@@ -47,7 +51,7 @@ MonoBehaviour:
     m_Bits: 4352
   whatIsWall:
     serializedVersion: 2
-    m_Bits: 4352
+    m_Bits: 256
   whatIsCeiling:
     serializedVersion: 2
     m_Bits: 4352

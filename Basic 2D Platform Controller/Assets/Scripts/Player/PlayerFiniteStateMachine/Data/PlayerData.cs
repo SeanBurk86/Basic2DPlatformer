@@ -51,6 +51,10 @@ public class PlayerData : ScriptableObject
     public float crouchColliderYOffset = 0.35f;
     public float standColliderHeight = 1.3f;
     public float standColliderYOffset = 0.75f;
+    public float crouchSquishCheckScale = 0.5f;
+    public float crouchSquishCheckPosition = 0.25f;
+    public float standSquishCheckScale = 1f;
+    public float standSquishCheckPosition = 0f;
 
     [Header("Check Variables")]
     public float groundCheckRadius = 0.3f;

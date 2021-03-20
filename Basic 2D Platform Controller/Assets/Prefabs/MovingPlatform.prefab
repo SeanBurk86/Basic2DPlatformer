@@ -74,6 +74,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   position2: {x: 2.26, y: 32, z: 0}
   platformMovementSpeed: 0.14
+  isRidable: 1
 --- !u!50 &5441787512487684137
 Rigidbody2D:
   serializedVersion: 4

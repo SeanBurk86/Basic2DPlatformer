@@ -22,7 +22,7 @@ TagManager:
   - Damageable
   - Dead
   - Player
-  - Corners
+  - Slippery
   - Grabber
   - 
   - 

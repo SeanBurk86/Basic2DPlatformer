@@ -116,6 +116,7 @@ public class PlayerLedgeClimbState : PlayerState
             }
             else if (yInput == -1 && isHanging && !isClimbing)
             {
+                player.Flip();
                 stateMachine.ChangeState(player.InAirState);
             }
             else if (jumpInput && !isClimbing)
