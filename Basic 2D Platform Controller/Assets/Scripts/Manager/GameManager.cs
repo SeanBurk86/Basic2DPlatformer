@@ -42,6 +42,7 @@ public class GameManager : MonoBehaviour
         if(Time.time >= respawnTimeStart + respawnTime && respawn)
         {
             var playerTemp = Instantiate(player, respawnPoint);
+            playerTemp.gameObject.transform.SetParent(null);
             CVC.m_Follow = playerTemp.transform;
             respawn = false;
         }

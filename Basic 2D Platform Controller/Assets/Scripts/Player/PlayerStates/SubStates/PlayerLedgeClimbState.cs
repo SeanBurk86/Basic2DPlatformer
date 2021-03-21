@@ -60,6 +60,8 @@ public class PlayerLedgeClimbState : PlayerState
         player.transform.position = detectedPos;
         player.UpdateAndSetMovingPlatformOffsetPosition();
         SetDetectedPosition(player.transform.position);
+        player.SetVelocityZero();
+
     }
 
     

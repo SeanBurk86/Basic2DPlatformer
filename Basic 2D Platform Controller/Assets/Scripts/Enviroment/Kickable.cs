@@ -7,6 +7,7 @@ public class Kickable : MonoBehaviour
     [SerializeField]
     private Rigidbody2D RB;
 
+
     [SerializeField]
     private PainfulKickable painfulKickable;
 
@@ -25,11 +26,6 @@ public class Kickable : MonoBehaviour
     private void Update()
     {
         
-        if (currentHealth <= 0)
-        {
-            Destroy(gameObject);
-        }
-
         currentVelocity = RB.velocity;
         if(Mathf.Abs(currentVelocity.x) > 14.9f || Mathf.Abs(currentVelocity.y) > 14.9f)
         {
@@ -47,5 +43,4 @@ public class Kickable : MonoBehaviour
         RB.AddForce(new Vector2(attackDetails.attackerFacingDirection,0.25f) * 4, ForceMode2D.Impulse);
         currentHealth -= attackDetails.damageAmount;
     }
-
 }

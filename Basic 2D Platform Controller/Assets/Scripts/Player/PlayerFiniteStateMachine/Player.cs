@@ -49,11 +49,11 @@ public class Player : MonoBehaviour
     public Transform ShotDirectionIndicator { get; private set; }
     public CapsuleCollider2D MovementCollider { get; private set; }
     public float ghostDelaySeconds;
-    public GameObject PsychicBullet;
+    public PsychicBullet LoadedBullet;
     public Transform EmissionPoint,
         kickCheck;
     private float lastShotTime;
-    public float timeBetweenFiring = .0625f;
+    
     #endregion
 
     #region Check Transforms
@@ -157,13 +157,11 @@ public class Player : MonoBehaviour
         {
             DisableMelee();
             ShotDirectionIndicator.gameObject.SetActive(true);
-            Vector2Int shotDirectionInput = InputHandler.ShotDirectionInput;
+            shotDirection = InputHandler.ShotDirectionInput;
             bool isFiring = !InputHandler.AttackInputStop;
-            shotDirection = shotDirectionInput;
-            shotDirection.Normalize();
             float angleWorkspace = Vector2.SignedAngle(Vector2.right, shotDirection);
             ShotDirectionIndicator.rotation = Quaternion.Euler(0f, 0f, angleWorkspace - 45f);
-            if (isFiring && shotDirectionInput != Vector2.zero)
+            if (isFiring && shotDirection != Vector2.zero && CanShoot)
             {
                 Shoot();
             }
@@ -173,7 +171,7 @@ public class Player : MonoBehaviour
             EnableMelee();
             ShotDirectionIndicator.gameObject.SetActive(false);
         }
-        if (Time.time >= lastShotTime + timeBetweenFiring)
+        if (Time.time >= lastShotTime + LoadedBullet.timeBetweenFiring)
         {
             CanShoot = true;
         }
@@ -431,16 +429,22 @@ public class Player : MonoBehaviour
 
     private void Shoot()
     {
-        if (CanShoot)
+        float angleWorkspace = Vector2.SignedAngle(Vector2.right, shotDirection) + 22.5f;
+
+        for(int i = 0; i < 8; i++)
         {
-            float angleWorkspace = Vector2.SignedAngle(Vector2.right, shotDirection);
-            GameObject emittedBullet = GameObject.Instantiate(PsychicBullet, EmissionPoint.position, Quaternion.Euler(0f, 0f, angleWorkspace));
+            
+            Vector2 angleWorkspaceVector = new Vector2(Mathf.Cos(angleWorkspace * Mathf.Deg2Rad), Mathf.Sin(angleWorkspace * Mathf.Deg2Rad));
+
+            GameObject emittedBullet = GameObject.Instantiate(LoadedBullet.gameObject, EmissionPoint.position, Quaternion.Euler(0f, 0f, angleWorkspace));
             Rigidbody2D emittedBulletRB = emittedBullet.GetComponent<Rigidbody2D>();
-            emittedBulletRB.AddForce(shotDirection * 20f, ForceMode2D.Impulse);
-            CanShoot = false;
-            lastShotTime = Time.time;
-            Debug.Log("Last shot time was " + lastShotTime);
+            emittedBulletRB.AddForce(angleWorkspaceVector * LoadedBullet.BulletForce, ForceMode2D.Impulse);
+            angleWorkspace -= 5.625f;
         }
+        
+        
+        CanShoot = false;
+        lastShotTime = Time.time;
     }
 
     public void CreateGhostTrail()

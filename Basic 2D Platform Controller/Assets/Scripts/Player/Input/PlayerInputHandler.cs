@@ -63,7 +63,6 @@ public class PlayerInputHandler : MonoBehaviour
         CheckDashInputHoldTime();
         CheckAttackInputHoldTime();
         CheckRollInputHoldTime();
-        //CheckUseButtonInputholdTime();
     }
 
     public void OnMoveInput(InputAction.CallbackContext context)
@@ -73,7 +72,7 @@ public class PlayerInputHandler : MonoBehaviour
         {
             InputXNormalized = (int)(RawMovementInput * Vector2.right).normalized.x;
         }
-        else if (Mathf.Abs(RawMovementInput.x) < 0.5f && Mathf.Abs(RawMovementInput.x) > 0.25f)
+        else if (Mathf.Abs(RawMovementInput.x) < 0.5f && Mathf.Abs(RawMovementInput.x) > 0.1f)
         {
             InputXNormalized = ((RawMovementInput * Vector2.right).normalized.x)/3;
         }
@@ -276,12 +275,5 @@ public class PlayerInputHandler : MonoBehaviour
         }
     }
 
-    private void CheckUseButtonInputholdTime()
-    {
-        if (Time.time >= interactButtonInputStartTime + inputHoldTime)
-        {
-            InteractButtonInput = false;
-        }
-    }
 }
    

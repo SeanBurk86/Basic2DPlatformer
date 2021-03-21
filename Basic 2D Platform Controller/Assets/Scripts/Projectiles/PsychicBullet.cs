@@ -6,6 +6,9 @@ public class PsychicBullet : MonoBehaviour
 {
     public float projectileLifeTime;
     public int bulletDamage = 5;
+    public int stunDamage = 10;
+    public float BulletForce = 20f;
+    public float timeBetweenFiring = .0625f;
 
     private AttackDetails attackDetails;
     public Vector3 moveVector { get; private set; }
@@ -14,7 +17,7 @@ public class PsychicBullet : MonoBehaviour
     {
         attackDetails.damageAmount = bulletDamage;
         attackDetails.hitCollisionPosition = transform.position;
-        attackDetails.stunDamageAmount = 10;
+        attackDetails.stunDamageAmount = stunDamage;
         StartCoroutine(DestroyProjectile());
     }
     private void FixedUpdate()

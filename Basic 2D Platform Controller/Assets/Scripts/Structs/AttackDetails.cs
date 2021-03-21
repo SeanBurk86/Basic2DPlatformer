@@ -8,4 +8,12 @@ public struct AttackDetails
     public int damageAmount,
         stunDamageAmount,
         attackerFacingDirection;
+
+    public AttackDetails(Vector2 hitCollisionPosition, int damageAmount, int stunDamageAmount, int attackerFacingDirection)
+    {
+        this.hitCollisionPosition = hitCollisionPosition;
+        this.damageAmount = damageAmount;
+        this.stunDamageAmount = stunDamageAmount;
+        this.attackerFacingDirection = attackerFacingDirection;
+    }
 }

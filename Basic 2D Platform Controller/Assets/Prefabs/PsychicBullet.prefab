@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 4823691381090673214}
   - component: {fileID: 4823691381090673215}
   - component: {fileID: -2320102016967439563}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: PsychicBullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29,8 +29,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4823691381090673184}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 5}
-  m_LocalScale: {x: 0.3, y: 0.23, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -121,7 +121,7 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 0
-  m_Material: {fileID: 6200000, guid: 57fb511e41b3ca9448f1a527ebaa49ad, type: 2}
+  m_Material: {fileID: 6200000, guid: fcad282e0a51f0441a8ef92299b27ba2, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 1
@@ -155,4 +155,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   projectileLifeTime: 2
-  bulletDamage: 25
+  bulletDamage: 5
+  stunDamage: 10
+  BulletForce: 20
+  timeBetweenFiring: 0.3
