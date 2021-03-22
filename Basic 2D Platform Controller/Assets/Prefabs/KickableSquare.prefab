@@ -192,7 +192,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1881888816622719604}
   - component: {fileID: 1881888816622719563}
-  m_Layer: 8
+  m_Layer: 12
   m_Name: KickableSquare
   m_TagString: Kickable
   m_Icon: {fileID: 0}
@@ -229,3 +229,4 @@ MonoBehaviour:
   RB: {fileID: 1881888814929686181}
   painfulKickable: {fileID: 1881888814929686177}
   baseHealth: 1000
+  indestructible: 0

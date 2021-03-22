@@ -2,25 +2,24 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerKickState : PlayerAbilityState
+public class PlayerSlideKickState : PlayerAbilityState
 {
-
     private AttackDetails attackDetails;
+    private int amountOfKicksLeft,
+        yInput;
 
-    private int amountOfKicksLeft;
 
-    private float lastKickTime;
+    private float lastSlideKickTime;
 
-    public PlayerKickState(Player player, PlayerStateMachine stateMachine, PlayerData playerData, string animBoolName) : base(player, stateMachine, playerData, animBoolName)
+    public PlayerSlideKickState(Player player, PlayerStateMachine stateMachine, PlayerData playerData, string animBoolName) : base(player, stateMachine, playerData, animBoolName)
     {
-        amountOfKicksLeft = playerData.amountOfKicks;
     }
 
     public override void AnimationFinishTrigger()
     {
         isAbilityDone = true;
         player.EnableFlip();
-        player.Anim.SetBool("kick", false);
+        player.Anim.SetBool("slideKick", false);
         base.AnimationFinishTrigger();
     }
 
@@ -31,31 +30,36 @@ public class PlayerKickState : PlayerAbilityState
         base.AnimationTrigger();
     }
 
-    public override void DoChecks()
-    {
-        base.DoChecks();
-    }
-
     public override void Enter()
     {
         player.InputHandler.UseAttackInput();
         amountOfKicksLeft--;
-        lastKickTime = Time.time;
+        lastSlideKickTime = Time.time;
         base.Enter();
+        player.SetSquishChecksYScaleAndYPosition(playerData.crouchSquishCheckScale, playerData.crouchSquishCheckPosition);
+        player.SetColliderHeightAndOffset(playerData.crouchColliderHeight, playerData.crouchColliderYOffset);
     }
 
     public override void Exit()
     {
+        player.SetColliderHeightAndOffset(playerData.standColliderHeight, playerData.standColliderYOffset);
+        player.SetSquishChecksYScaleAndYPosition(playerData.standSquishCheckScale, playerData.standSquishCheckPosition);
         base.Exit();
-        
     }
 
     public override void LogicUpdate()
     {
         base.LogicUpdate();
+
+        yInput = player.InputHandler.InputYNormalized;
+
         if (isAnimationFinished)
         {
-            if (player.CheckIfGrounded())
+            if (player.CheckIfGrounded() && (yInput == -1 || player.CheckForCeiling()))
+            {
+                stateMachine.ChangeState(player.CrouchIdleState);
+            }
+            else if(player.CheckIfGrounded())
             {
                 stateMachine.ChangeState(player.IdleState);
             }
@@ -64,49 +68,27 @@ public class PlayerKickState : PlayerAbilityState
                 stateMachine.ChangeState(player.InAirState);
             }
         }
-        else if (!isAbilityDone) 
+        else if (!isAbilityDone)
         {
             attackDetails.damageAmount = playerData.kickDamage;
             attackDetails.hitCollisionPosition = player.kickCheck.position;
             attackDetails.stunDamageAmount = 10;
             attackDetails.attackerFacingDirection = player.FacingDirection;
-            Collider2D[] detectedObjects = player.CheckIfKickbox();
+            Collider2D[] detectedObjects = player.CheckIfSlideKickbox();
 
-            foreach(Collider2D collider2D in detectedObjects)
+            foreach (Collider2D collider2D in detectedObjects)
             {
                 if (collider2D.transform.parent.CompareTag("Enemy") || collider2D.transform.parent.CompareTag("Kickable"))
                 {
                     collider2D.transform.parent.SendMessage("Damage", attackDetails);
                 }
-                
+
             }
         }
-
-        
-        
     }
 
-    public override void PhysicsUpdate()
+    public bool CheckIfCanSlideKick()
     {
-        base.PhysicsUpdate();
+        return Time.time >= lastSlideKickTime + playerData.slideKickCooldown;
     }
-
-    public bool CanKick()
-    {
-        if(amountOfKicksLeft > 0 && player.CanMelee)
-        {
-            return true;
-        }
-        else
-        {
-            return false;
-        }
-    }
-
-    public bool isKickCooledDown()
-    {
-        return Time.time >= lastKickTime + playerData.kickCooldown;
-    }
-
-    public void ResetAmountOfKicksLeft() => amountOfKicksLeft = playerData.amountOfKicks;
 }

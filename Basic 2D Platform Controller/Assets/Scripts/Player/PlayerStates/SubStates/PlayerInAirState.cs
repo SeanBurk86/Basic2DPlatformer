@@ -58,7 +58,6 @@ public class PlayerInAirState : PlayerState
     public override void Enter()
     {
         base.Enter();
-        player.RB.sharedMaterial.friction = 0f;
     }
 
     public override void Exit()
@@ -111,7 +110,7 @@ public class PlayerInAirState : PlayerState
             isOnCoyoteTime = false;
             stateMachine.ChangeState(player.JumpState);
         }
-        else if (attackInput && player.KickState.CanKick())
+        else if (attackInput && player.KickState.CanKick() && player.KickState.isKickCooledDown())
         {
             stateMachine.ChangeState(player.KickState);
         }

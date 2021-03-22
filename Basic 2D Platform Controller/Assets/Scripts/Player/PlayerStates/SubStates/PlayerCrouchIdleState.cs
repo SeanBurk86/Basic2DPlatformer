@@ -15,11 +15,13 @@ public class PlayerCrouchIdleState : PlayerGroundedState
         player.SetVelocityZero();
         player.SetSquishChecksYScaleAndYPosition(playerData.crouchSquishCheckScale, playerData.crouchSquishCheckPosition);
         player.SetColliderHeightAndOffset(playerData.crouchColliderHeight, playerData.crouchColliderYOffset);
+        player.RB.sharedMaterial = player.fullFrictionMaterial;
     }
 
     public override void Exit()
     {
         base.Exit();
+        player.RB.sharedMaterial = player.frictionlessMaterial;
         player.SetColliderHeightAndOffset(playerData.standColliderHeight, playerData.standColliderYOffset);
         player.SetSquishChecksYScaleAndYPosition(playerData.standSquishCheckScale, playerData.standSquishCheckPosition);
     }

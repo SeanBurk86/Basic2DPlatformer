@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: PlayerBaseData
   m_EditorClassIdentifier: 
   startingHealth: 5
-  movementVelocity: 10
+  movementVelocity: 12
   jumpVelocity: 15
   amountOfJumps: 1
   coyoteTime: 0.2
@@ -43,7 +43,8 @@ MonoBehaviour:
   crouchSquishCheckPosition: -0.5
   standSquishCheckScale: 0.75
   standSquishCheckPosition: 0
-  groundCheckRadius: 0.26
+  ceilingCheckRadius: 0.31
+  groundChecksRadius: 0.29
   wallCheckDistance: 0.5
   ledgeCheckDistance: 0.7
   whatIsGround:
@@ -57,7 +58,11 @@ MonoBehaviour:
     m_Bits: 4352
   kickCheckRadius: 0.29
   kickThrustVelocity: 20
+  kickCooldown: 0.5
   kickDamage: 15
   amountOfKicks: 1
+  slideKickCheckRadius: 0.3
+  slideKickThrustVelocity: 20
+  slideKickCooldown: 0.5
   rollThrustVelocity: 15
   amountOfRolls: 1

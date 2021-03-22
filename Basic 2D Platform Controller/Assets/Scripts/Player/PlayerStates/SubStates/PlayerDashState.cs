@@ -12,8 +12,7 @@ public class PlayerDashState : PlayerAbilityState
     private float lastDashTime;
 
     private Vector2 dashDirection,
-        dashDirectionInput,
-        lastAfterImagePos;
+        dashDirectionInput;
 
     private GameObject ghost;
 

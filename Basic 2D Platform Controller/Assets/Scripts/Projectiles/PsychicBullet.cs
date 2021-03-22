@@ -4,11 +4,13 @@ using UnityEngine;
 
 public class PsychicBullet : MonoBehaviour
 {
-    public float projectileLifeTime;
     public int bulletDamage = 5;
     public int stunDamage = 10;
     public float BulletForce = 20f;
     public float timeBetweenFiring = .0625f;
+    public float spread = 30f;
+    public float projectileLifeTime = 2f;
+    public int numberOfBullets = 7;
 
     private AttackDetails attackDetails;
     public Vector3 moveVector { get; private set; }

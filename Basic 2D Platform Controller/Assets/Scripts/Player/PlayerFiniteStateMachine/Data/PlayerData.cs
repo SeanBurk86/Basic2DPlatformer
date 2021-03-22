@@ -57,7 +57,8 @@ public class PlayerData : ScriptableObject
     public float standSquishCheckPosition = 0f;
 
     [Header("Check Variables")]
-    public float groundCheckRadius = 0.3f;
+    public float ceilingCheckRadius = 0.3f;
+    public float groundChecksRadius = 0.2f;
     public float wallCheckDistance = 0.5f;
     public float ledgeCheckDistance = 0.75f;
     public LayerMask whatIsGround;
@@ -67,8 +68,12 @@ public class PlayerData : ScriptableObject
     [Header("Combat Variables")]
     public float kickCheckRadius = 0.3f;
     public float kickThrustVelocity = 15f;
+    public float kickCooldown = 0.75f;
     public int kickDamage = 100;
     public int amountOfKicks = 1;
+    public float slideKickCheckRadius = 0.3f;
+    public float slideKickThrustVelocity = 15f;
+    public float slideKickCooldown = 0.5f;
 
     [Header("Roll Variables")]
     public float rollThrustVelocity = 15f;

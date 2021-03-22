@@ -68,11 +68,9 @@ public class PlayerGroundedState : PlayerState
         if (grabInput)
         {
             player.EnableGrabber();
-            player.RB.sharedMaterial.friction = 10f;
         }
-        else 
+        else
         {
-            player.RB.sharedMaterial.friction = 0f;
             player.DisableGrabber();
         }
 
@@ -83,7 +81,11 @@ public class PlayerGroundedState : PlayerState
         {
             stateMachine.ChangeState(player.JumpState);
         }
-        else if (attackInput && player.KickState.CanKick() && !isTouchingCeiling)
+        else if (attackInput && player.KickState.CanKick() && player.SlideKickState.CheckIfCanSlideKick() && (isTouchingCeiling || yInput == -1))
+        {
+            stateMachine.ChangeState(player.SlideKickState);
+        }
+        else if (attackInput && player.KickState.CanKick() && player.KickState.isKickCooledDown() && !isTouchingCeiling && yInput != -1)
         {
             stateMachine.ChangeState(player.KickState);
         }

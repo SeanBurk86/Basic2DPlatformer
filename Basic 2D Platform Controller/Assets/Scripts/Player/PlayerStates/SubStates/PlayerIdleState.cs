@@ -17,10 +17,12 @@ public class PlayerIdleState : PlayerGroundedState
     {
         base.Enter();
         player.SetVelocityX(0);
+        player.RB.sharedMaterial = player.fullFrictionMaterial;
     }
 
     public override void Exit()
     {
+        player.RB.sharedMaterial = player.frictionlessMaterial;
         base.Exit();
     }
 

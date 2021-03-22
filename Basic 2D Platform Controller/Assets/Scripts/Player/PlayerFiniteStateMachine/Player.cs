@@ -24,6 +24,7 @@ public class Player : MonoBehaviour
     public PlayerCrouchIdleState CrouchIdleState { get; private set; }
     public PlayerCrouchMoveState CrouchMoveState { get; private set; }
     public PlayerKickState KickState { get; private set; }
+    public PlayerSlideKickState SlideKickState { get; private set; }
     public PlayerRollState RollState { get; private set; }
 
     [SerializeField]
@@ -36,6 +37,11 @@ public class Player : MonoBehaviour
         useBox;
 
     private GameManager GM;
+
+    [SerializeField]
+    public PhysicsMaterial2D frictionlessMaterial,
+        fullFrictionMaterial;
+
 
 
     #endregion
@@ -51,7 +57,8 @@ public class Player : MonoBehaviour
     public float ghostDelaySeconds;
     public PsychicBullet LoadedBullet;
     public Transform EmissionPoint,
-        kickCheck;
+        kickCheck,
+        slideKickCheck;
     private float lastShotTime;
     
     #endregion
@@ -59,7 +66,8 @@ public class Player : MonoBehaviour
     #region Check Transforms
 
     [SerializeField]
-    private Transform groundCheck,
+    private Transform frontGroundCheck,
+        backGroundCheck,
         wallCheck,
         ledgeCheck,
         ceilingCheck,
@@ -109,6 +117,7 @@ public class Player : MonoBehaviour
         InjuredState = new PlayerInjuredState(this, StateMachine, playerData, "injured");
         DeadState = new PlayerDeadState(this, StateMachine, playerData, "dead");
         KickState = new PlayerKickState(this, StateMachine, playerData, "kick");
+        SlideKickState = new PlayerSlideKickState(this, StateMachine, playerData, "slideKick");
         RollState = new PlayerRollState(this, StateMachine, playerData, "roll");
 
     }
@@ -186,13 +195,15 @@ public class Player : MonoBehaviour
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.green;
-        Gizmos.DrawWireSphere(new Vector3(groundCheck.position.x, groundCheck.position.y, groundCheck.position.z), playerData.groundCheckRadius);
+        Gizmos.DrawWireSphere(new Vector3(frontGroundCheck.position.x, frontGroundCheck.position.y, frontGroundCheck.position.z), playerData.groundChecksRadius);
+        Gizmos.DrawWireSphere(new Vector3(backGroundCheck.position.x, backGroundCheck.position.y, backGroundCheck.position.z), playerData.groundChecksRadius);
         Gizmos.DrawLine(new Vector3(wallCheck.position.x, wallCheck.position.y, wallCheck.position.z), new Vector3((wallCheck.position.x + playerData.wallCheckDistance * FacingDirection), wallCheck.position.y, wallCheck.position.z));
         Gizmos.color = Color.blue;
-        Gizmos.DrawWireSphere(ceilingCheck.position, playerData.groundCheckRadius);
+        Gizmos.DrawWireSphere(ceilingCheck.position, playerData.ceilingCheckRadius);
         Gizmos.color = Color.red;
         Gizmos.DrawLine(ledgeCheck.position, new Vector3((ledgeCheck.position.x + playerData.ledgeCheckDistance*FacingDirection), ledgeCheck.position.y, ledgeCheck.position.z));
         Gizmos.DrawWireSphere(kickCheck.position, playerData.kickCheckRadius);
+        Gizmos.DrawWireSphere(slideKickCheck.position, playerData.slideKickCheckRadius);
     }
     #endregion
 
@@ -238,11 +249,12 @@ public class Player : MonoBehaviour
 
     public bool CheckForCeiling()
     {
-        return Physics2D.OverlapCircle(ceilingCheck.position, playerData.groundCheckRadius, playerData.whatIsCeiling);
+        return Physics2D.OverlapCircle(ceilingCheck.position, playerData.ceilingCheckRadius, playerData.whatIsCeiling);
     }
     public bool CheckIfGrounded()
     {
-        return Physics2D.OverlapCircle(groundCheck.position, playerData.groundCheckRadius, playerData.whatIsGround);
+        return Physics2D.OverlapCircle(frontGroundCheck.position, playerData.groundChecksRadius, playerData.whatIsGround)
+            || Physics2D.OverlapCircle(backGroundCheck.position, playerData.groundChecksRadius, playerData.whatIsGround);
     }
 
     public bool CheckIfTouchingWall()
@@ -278,6 +290,11 @@ public class Player : MonoBehaviour
     public Collider2D[] CheckIfKickbox()
     {
         return Physics2D.OverlapCircleAll(kickCheck.position, playerData.kickCheckRadius);
+    }
+
+    public Collider2D[] CheckIfSlideKickbox()
+    {
+        return Physics2D.OverlapCircleAll(slideKickCheck.position, playerData.slideKickCheckRadius);
     }
 
     public bool CheckIfTouchingMovingPlatform()
@@ -384,7 +401,12 @@ public class Player : MonoBehaviour
 
     public void ApplyKickThrust()
     {
-        SetVelocityX(playerData.kickThrustVelocity*FacingDirection);
+        SetVelocityX(playerData.kickThrustVelocity * FacingDirection);
+    }
+
+    public void ApplySlideKickThrust()
+    {
+        SetVelocityX(playerData.slideKickThrustVelocity * FacingDirection);
     }
 
     public void ApplyRollThrust()
@@ -429,9 +451,9 @@ public class Player : MonoBehaviour
 
     private void Shoot()
     {
-        float angleWorkspace = Vector2.SignedAngle(Vector2.right, shotDirection) + 22.5f;
+        float angleWorkspace = Vector2.SignedAngle(Vector2.right, shotDirection) + LoadedBullet.spread/2;
 
-        for(int i = 0; i < 8; i++)
+        for(int i = 0; i < LoadedBullet.numberOfBullets; i++)
         {
             
             Vector2 angleWorkspaceVector = new Vector2(Mathf.Cos(angleWorkspace * Mathf.Deg2Rad), Mathf.Sin(angleWorkspace * Mathf.Deg2Rad));
@@ -439,7 +461,7 @@ public class Player : MonoBehaviour
             GameObject emittedBullet = GameObject.Instantiate(LoadedBullet.gameObject, EmissionPoint.position, Quaternion.Euler(0f, 0f, angleWorkspace));
             Rigidbody2D emittedBulletRB = emittedBullet.GetComponent<Rigidbody2D>();
             emittedBulletRB.AddForce(angleWorkspaceVector * LoadedBullet.BulletForce, ForceMode2D.Impulse);
-            angleWorkspace -= 5.625f;
+            angleWorkspace -= LoadedBullet.spread/LoadedBullet.numberOfBullets;
         }
         
         

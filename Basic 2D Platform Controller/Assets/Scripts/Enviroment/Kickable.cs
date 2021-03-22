@@ -17,6 +17,8 @@ public class Kickable : MonoBehaviour
     private int currentHealth;
     private Vector2 currentVelocity;
 
+    public bool indestructible = false;
+
     private void Start()
     {
         painfulKickable.canHurt = false;
@@ -35,12 +37,21 @@ public class Kickable : MonoBehaviour
         {
             painfulKickable.canHurt = false;
         }
+
+        if(currentHealth < 0)
+        {
+            Destroy(gameObject);
+        }
         
     }
 
     public void Damage(AttackDetails attackDetails)
     {
-        RB.AddForce(new Vector2(attackDetails.attackerFacingDirection,0.25f) * 4, ForceMode2D.Impulse);
-        currentHealth -= attackDetails.damageAmount;
+        RB.AddForce(new Vector2(attackDetails.attackerFacingDirection,0.2f) * 2, ForceMode2D.Impulse);
+        if (!indestructible)
+        {
+            currentHealth -= attackDetails.damageAmount;
+        }
+        
     }
 }
