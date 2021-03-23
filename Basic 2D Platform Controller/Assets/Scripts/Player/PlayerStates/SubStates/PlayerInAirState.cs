@@ -88,9 +88,6 @@ public class PlayerInAirState : PlayerState
 
         CheckJumpMultiplier();
 
-        if (grabInput) { player.EnableGrabber(); }
-        else { player.DisableGrabber(); }
-
         if (isGrounded && player.CurrentVelocity.y < 0.01f)
         {
             stateMachine.ChangeState(player.IdleState);

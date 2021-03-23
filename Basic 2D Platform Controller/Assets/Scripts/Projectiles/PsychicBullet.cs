@@ -30,7 +30,7 @@ public class PsychicBullet : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Enemy"))
+        if (collision.gameObject.CompareTag("Enemy") || collision.gameObject.CompareTag("Kickable"))
         {
             collision.transform.parent.SendMessage("Damage", attackDetails);
         }

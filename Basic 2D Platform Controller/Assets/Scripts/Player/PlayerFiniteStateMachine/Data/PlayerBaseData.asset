@@ -56,7 +56,7 @@ MonoBehaviour:
   whatIsCeiling:
     serializedVersion: 2
     m_Bits: 256
-  kickCheckRadius: 0.29
+  kickCheckRadius: 0.39
   kickThrustVelocity: 20
   kickCooldown: 0.5
   kickDamage: 15

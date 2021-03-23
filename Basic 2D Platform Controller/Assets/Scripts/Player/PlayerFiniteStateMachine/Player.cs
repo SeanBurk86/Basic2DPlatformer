@@ -33,8 +33,8 @@ public class Player : MonoBehaviour
     [SerializeField]
     private GameObject deathChunkParticle,
         deathBloodParticle,
-        playerGrabber,
-        useBox;
+        useBox,
+        grabber;
 
     private GameManager GM;
 
@@ -42,7 +42,8 @@ public class Player : MonoBehaviour
     public PhysicsMaterial2D frictionlessMaterial,
         fullFrictionMaterial;
 
-
+    [SerializeField]
+    private PauseMenu pauseMenu;
 
     #endregion
 
@@ -54,7 +55,8 @@ public class Player : MonoBehaviour
     public Transform DashDirectionIndicator { get; private set; }
     public Transform ShotDirectionIndicator { get; private set; }
     public CapsuleCollider2D MovementCollider { get; private set; }
-    public float ghostDelaySeconds;
+    public float ghostDelaySeconds,
+        boxDetectDistance;
     public PsychicBullet LoadedBullet;
     public Transform EmissionPoint,
         kickCheck,
@@ -146,44 +148,53 @@ public class Player : MonoBehaviour
 
     private void Update()
     {
-        CurrentVelocity = RB.velocity;
-
-        if((topSquishCheck.isSquished == true && bottomSquishCheck.isSquished == true) 
-            || (frontSquishCheck.isSquished == true && backSquishCheck.isSquished == true)) {
-            CurrentHealth -= 10;
-        }
-
-        if(CurrentHealth <= 0)
+        Debug.Log("pauseToggle: " + pauseMenu.pauseToggle);
+        if (!pauseMenu.pauseToggle)
         {
-            Die();
-        }
-        
-        StateMachine.CurrentState.LogicUpdate();
+            CurrentVelocity = RB.velocity;
 
-        isHoldingBox = CheckIfHoldingBox();
-        
-        if (InputHandler.ShotDirectionInput != Vector2.zero)
-        {
-            DisableMelee();
-            ShotDirectionIndicator.gameObject.SetActive(true);
-            shotDirection = InputHandler.ShotDirectionInput;
-            bool isFiring = !InputHandler.AttackInputStop;
-            float angleWorkspace = Vector2.SignedAngle(Vector2.right, shotDirection);
-            ShotDirectionIndicator.rotation = Quaternion.Euler(0f, 0f, angleWorkspace - 45f);
-            if (isFiring && shotDirection != Vector2.zero && CanShoot)
+            if ((topSquishCheck.isSquished == true && bottomSquishCheck.isSquished == true)
+                || (frontSquishCheck.isSquished == true && backSquishCheck.isSquished == true))
             {
-                Shoot();
+                CurrentHealth -= 10;
+            }
+
+            if (CurrentHealth <= 0)
+            {
+                Die();
+            }
+
+            StateMachine.CurrentState.LogicUpdate();
+
+            if (InputHandler.GrabInput) EnableGrabber();
+            else DisableGrabber();
+
+            isHoldingBox = CheckIfHoldingBox();
+
+            if (InputHandler.ShotDirectionInput != Vector2.zero)
+            {
+                DisableMelee();
+                ShotDirectionIndicator.gameObject.SetActive(true);
+                shotDirection = InputHandler.ShotDirectionInput;
+                bool isFiring = !InputHandler.AttackInputStop;
+                float angleWorkspace = Vector2.SignedAngle(Vector2.right, shotDirection);
+                ShotDirectionIndicator.rotation = Quaternion.Euler(0f, 0f, angleWorkspace - 45f);
+                if (isFiring && shotDirection != Vector2.zero && CanShoot)
+                {
+                    Shoot();
+                }
+            }
+            else
+            {
+                EnableMelee();
+                ShotDirectionIndicator.gameObject.SetActive(false);
+            }
+            if (Time.time >= lastShotTime + LoadedBullet.timeBetweenFiring)
+            {
+                CanShoot = true;
             }
         }
-        else
-        {
-            EnableMelee();
-            ShotDirectionIndicator.gameObject.SetActive(false);
-        }
-        if (Time.time >= lastShotTime + LoadedBullet.timeBetweenFiring)
-        {
-            CanShoot = true;
-        }
+        
 
     }
 
@@ -483,16 +494,6 @@ public class Player : MonoBehaviour
         }
     }
 
-    public void EnableGrabber()
-    {
-        playerGrabber.SetActive(true);
-    }
-
-    public void DisableGrabber()
-    {
-        playerGrabber.SetActive(false);
-    }
-
     public void EnableUseBox()
     {
         useBox.SetActive(true);
@@ -501,6 +502,16 @@ public class Player : MonoBehaviour
     public void DisableUseBox()
     {
         useBox.SetActive(false);
+    }
+
+    public void EnableGrabber()
+    {
+        grabber.SetActive(true);
+    }
+
+    public void DisableGrabber()
+    {
+        grabber.SetActive(false);
     }
 
     #endregion

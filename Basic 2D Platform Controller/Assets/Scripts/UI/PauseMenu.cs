@@ -2,28 +2,24 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.EventSystems;
 
 public class PauseMenu : MonoBehaviour
 {
     [SerializeField]
-    private GameObject pauseMenuUI;
+    private GameObject pauseMenuUI,
+        pauseMenuFirstSelectedButton;
 
     [SerializeField]
     private PlayerInputHandler playerInputHandler;
 
-    private bool pauseToggle;
+    public bool pauseToggle;
 
-    private void Start()
+    public void CheckPauseToggle()
     {
-    }
-    void Update()
-    {
-        CheckPauseToggle();
-    }
+        if (pauseToggle) pauseToggle = false;
+        else pauseToggle = true;
 
-    private void CheckPauseToggle()
-    {
-        pauseToggle = playerInputHandler.PauseToggle;
         if (pauseToggle)
         {
             PauseGame();
@@ -36,11 +32,12 @@ public class PauseMenu : MonoBehaviour
     private void PauseGame()
     {
         pauseMenuUI.SetActive(true);
+        EventSystem.current.SetSelectedGameObject(null);
+        EventSystem.current.SetSelectedGameObject(pauseMenuFirstSelectedButton);
         Time.timeScale = 0;
     }
-    public void ContinueGame()
+    private void ContinueGame()
     {
-        playerInputHandler.UsePauseToggle();
         pauseMenuUI.SetActive(false);
         Time.timeScale = 1;
     }
@@ -48,6 +45,7 @@ public class PauseMenu : MonoBehaviour
     public void RestartLevel()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        Time.timeScale = 1;
     }
 
     public void QuitGame()

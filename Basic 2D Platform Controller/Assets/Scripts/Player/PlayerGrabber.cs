@@ -4,23 +4,25 @@ using UnityEngine;
 
 public class PlayerGrabber : MonoBehaviour
 {
+    [SerializeField]
+    private Transform boxHoldPosition;
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Kickable"))
+        if (collision.transform.parent.CompareTag("Kickable"))
         {
             collision.transform.parent.SetParent(transform.parent.transform);
-            collision.transform.parent.SendMessage("Grabbed");
-
+            //collision.transform.GetComponent<Rigidbody2D>().gravityScale = 0f;
         }
+        
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Kickable"))
+        if (collision.transform.parent.CompareTag("Kickable"))
         {
-            Debug.Log("Collision exit name: " + collision.transform.parent.name);
-            collision.transform.parent.SendMessage("Released");
+            //collision.transform.GetComponent<Rigidbody2D>().gravityScale = 4.5f;
             collision.transform.parent.SetParent(null);
         }
+        
     }
 }

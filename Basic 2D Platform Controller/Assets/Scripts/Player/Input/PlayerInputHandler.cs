@@ -44,17 +44,20 @@ public class PlayerInputHandler : MonoBehaviour
     [SerializeField]
     private float inputHoldTime = 0.2f;
 
+    [SerializeField]
+    private PauseMenu pauseMenu;
+
     private float jumpInputStartTime,
         attackInputStartTime,
         rollInputStartTime,
-        dashInputStartTime,
-        interactButtonInputStartTime;
+        dashInputStartTime;
 
     private void Start()
     {
         playerInput = GetComponent<PlayerInput>();
         cam = Camera.main;
         AttackInputStop = true;
+        PauseToggle = true;
     }
 
     private void Update()
@@ -218,8 +221,7 @@ public class PlayerInputHandler : MonoBehaviour
     {
         if (context.started)
         {
-            if (PauseToggle) PauseToggle = false;
-            else PauseToggle = true;
+            pauseMenu.CheckPauseToggle();
         }
     }
 
@@ -241,9 +243,8 @@ public class PlayerInputHandler : MonoBehaviour
     public void UseDashInput() => DashInput = false;
     public void UseAttackInput() => AttackInput = false;
     public void UseRollInput() => RollInput = false;
-    public void UsePauseToggle() => PauseToggle = false;
 
-    private void CheckJumpInputHoldTime()
+        private void CheckJumpInputHoldTime()
     {
         if(Time.time >= jumpInputStartTime + inputHoldTime)
         {

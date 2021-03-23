@@ -65,14 +65,6 @@ public class PlayerGroundedState : PlayerState
         rollInput = player.InputHandler.RollInput;
         interactInput = player.InputHandler.InteractButtonInput;
 
-        if (grabInput)
-        {
-            player.EnableGrabber();
-        }
-        else
-        {
-            player.DisableGrabber();
-        }
 
         if (interactInput) { player.EnableUseBox(); }
         else { player.DisableUseBox(); }
