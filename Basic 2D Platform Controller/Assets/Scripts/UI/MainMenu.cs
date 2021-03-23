@@ -11,11 +11,11 @@ public class MainMenu : MonoBehaviour
 
     private void Awake()
     {
-        audioManager.Play("tonight");
+        audioManager.Play("hauntedkarate");
     }
     public void PlayGame()
     {
-        audioManager.Stop("tonight");
+        audioManager.Stop("hauntedkarate");
         audioManager.Play("dragonflight");
         levelLoader.LoadNextLevel();
     }
