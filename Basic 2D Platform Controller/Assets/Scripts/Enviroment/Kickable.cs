@@ -7,6 +7,9 @@ public class Kickable : MonoBehaviour
     [SerializeField]
     private Rigidbody2D RB;
 
+    [SerializeField]
+    private PhysicsMaterial2D fullFriction,
+        regularFriction;
 
     [SerializeField]
     private PainfulKickable painfulKickable;
@@ -38,7 +41,7 @@ public class Kickable : MonoBehaviour
             painfulKickable.canHurt = false;
         }
 
-        if(currentHealth < 0)
+        if(currentHealth <= 0)
         {
             Destroy(gameObject);
         }
@@ -47,11 +50,23 @@ public class Kickable : MonoBehaviour
 
     public void Damage(AttackDetails attackDetails)
     {
-        RB.AddForce(new Vector2(attackDetails.attackerFacingDirection,0.2f) * 2, ForceMode2D.Impulse);
+        RB.AddForce(new Vector2(attackDetails.attackerFacingDirection,0.375f) * 4, ForceMode2D.Impulse);
         if (!indestructible)
         {
             currentHealth -= attackDetails.damageAmount;
         }
         
+    }
+
+    public void Grabbed()
+    {
+        RB.gravityScale = 0f;
+        RB.sharedMaterial = fullFriction;
+    }
+
+    public void Released()
+    {
+        RB.gravityScale = 4.5f;
+        RB.sharedMaterial = regularFriction;
     }
 }

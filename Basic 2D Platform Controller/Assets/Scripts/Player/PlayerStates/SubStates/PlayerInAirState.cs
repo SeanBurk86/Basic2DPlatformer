@@ -93,7 +93,7 @@ public class PlayerInAirState : PlayerState
 
         if (isGrounded && player.CurrentVelocity.y < 0.01f)
         {
-            stateMachine.ChangeState(player.LandState);
+            stateMachine.ChangeState(player.IdleState);
         }
         else if (isTouchingWall && !isTouchingLedge && !isGrounded)
         {

@@ -44,7 +44,7 @@ MonoBehaviour:
   standSquishCheckScale: 0.75
   standSquishCheckPosition: 0
   ceilingCheckRadius: 0.31
-  groundChecksRadius: 0.29
+  groundChecksRadius: 0.14
   wallCheckDistance: 0.5
   ledgeCheckDistance: 0.7
   whatIsGround:
@@ -55,7 +55,7 @@ MonoBehaviour:
     m_Bits: 256
   whatIsCeiling:
     serializedVersion: 2
-    m_Bits: 4352
+    m_Bits: 256
   kickCheckRadius: 0.29
   kickThrustVelocity: 20
   kickCooldown: 0.5

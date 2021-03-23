@@ -972,9 +972,9 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 1
   m_UsedByComposite: 0
-  m_Offset: {x: 0.77, y: -0.27}
+  m_Offset: {x: 0.71, y: -0.06}
   serializedVersion: 2
-  m_Radius: 0.45
+  m_Radius: 0.33
 --- !u!250 &2068409407
 PointEffector2D:
   m_ObjectHideFlags: 0
@@ -987,7 +987,7 @@ PointEffector2D:
   m_ColliderMask:
     serializedVersion: 2
     m_Bits: 256
-  m_ForceMagnitude: -200
+  m_ForceMagnitude: -100
   m_ForceVariation: 0
   m_DistanceScale: 1
   m_ForceSource: 1
@@ -1007,7 +1007,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4cfe8719c152bcf41ab4d5c8367b2b3b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fullFriction: {fileID: 6200000, guid: be74af7c679884a43928e342a22eeb5f, type: 2}
 --- !u!1 &2141189112
 GameObject:
   m_ObjectHideFlags: 0
@@ -1280,7 +1279,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5848480358253499318}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.19, y: -0.76, z: 0}
+  m_LocalPosition: {x: -0.2, y: -0.76, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 8341170474255657090}
@@ -1402,7 +1401,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7652134026638811118}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.03, y: -0.76, z: 0}
+  m_LocalPosition: {x: 0, y: -0.9, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 8341170474255657090}
@@ -1425,7 +1424,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1761201812930498317
 Transform:
   m_ObjectHideFlags: 0
@@ -1454,7 +1453,7 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_Size: {x: 0.0625, y: 1}
+  m_Size: {x: 0.0625, y: 0.58}
   m_Direction: 0
 --- !u!114 &250094437276284218
 MonoBehaviour:
@@ -1494,7 +1493,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8709519203815855878}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.05, y: 0, z: 0}
+  m_LocalPosition: {x: -0.03, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7477381755598004747}
@@ -1514,7 +1513,7 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_Size: {x: 0.0625, y: 1}
+  m_Size: {x: 0.0625, y: 0.58}
   m_Direction: 0
 --- !u!114 &3783059799679529382
 MonoBehaviour:
@@ -2040,7 +2039,12 @@ PrefabInstance:
     - target: {fileID: 7013576863672358076, guid: 094ba1d4246dde3488534450a6b6b3f6,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.26
+      value: 0.42
+      objectReference: {fileID: 0}
+    - target: {fileID: 7013576863672358076, guid: 094ba1d4246dde3488534450a6b6b3f6,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 094ba1d4246dde3488534450a6b6b3f6, type: 3}

@@ -47,12 +47,17 @@ PrefabInstance:
     - target: {fileID: 5222741824739881663, guid: 97a437e6d3dea4a44b60328ae6857f08,
         type: 3}
       propertyPath: m_AngularDrag
-      value: 0.04
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 5222741824739881663, guid: 97a437e6d3dea4a44b60328ae6857f08,
         type: 3}
       propertyPath: m_Mass
-      value: 1
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5222741824739881663, guid: 97a437e6d3dea4a44b60328ae6857f08,
+        type: 3}
+      propertyPath: m_LinearDrag
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5222741825324568144, guid: 97a437e6d3dea4a44b60328ae6857f08,
         type: 3}
@@ -64,6 +69,11 @@ PrefabInstance:
       propertyPath: indestructible
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5222741825324568145, guid: 97a437e6d3dea4a44b60328ae6857f08,
+        type: 3}
+      propertyPath: regularFriction
+      value: 
+      objectReference: {fileID: 6200000, guid: ae8fd0aa2ff759f4eadfe24dd3e2e29b, type: 2}
     - target: {fileID: 5222741825324568174, guid: 97a437e6d3dea4a44b60328ae6857f08,
         type: 3}
       propertyPath: m_LocalPosition.x
