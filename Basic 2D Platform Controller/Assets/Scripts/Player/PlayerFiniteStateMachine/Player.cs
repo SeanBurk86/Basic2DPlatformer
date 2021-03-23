@@ -148,7 +148,6 @@ public class Player : MonoBehaviour
 
     private void Update()
     {
-        Debug.Log("pauseToggle: " + pauseMenu.pauseToggle);
         if (!pauseMenu.pauseToggle)
         {
             CurrentVelocity = RB.velocity;
