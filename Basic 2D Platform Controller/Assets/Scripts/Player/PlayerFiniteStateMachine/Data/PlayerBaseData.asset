@@ -39,9 +39,9 @@ MonoBehaviour:
   crouchColliderYOffset: -0.4
   standColliderHeight: 1.58
   standColliderYOffset: 0
-  crouchSquishCheckScale: 0.5
+  crouchSquishCheckScale: 0.3
   crouchSquishCheckPosition: -0.5
-  standSquishCheckScale: 0.75
+  standSquishCheckScale: 1
   standSquishCheckPosition: 0
   ceilingCheckRadius: 0.31
   groundChecksRadius: 0.14

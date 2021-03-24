@@ -54,5 +54,17 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: 55e21288b60aa444b8f9665150cadfac, type: 3}
     volume: 0.599
     pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: sportsmen
+    clip: {fileID: 8300000, guid: ec242619df85ebe4cacb9476219599fc, type: 3}
+    volume: 0.599
+    pitch: 1
     loop: 1
+    source: {fileID: 0}
+  - name: goal
+    clip: {fileID: 8300000, guid: 7f7720e73a0a8ac4a915ddb4289404c2, type: 3}
+    volume: 0.599
+    pitch: 1
+    loop: 0
     source: {fileID: 0}

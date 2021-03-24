@@ -58,6 +58,8 @@ public class PlayerData : ScriptableObject
 
     [Header("Check Variables")]
     public float ceilingCheckRadius = 0.3f;
+    public float ceilingCheckSizeX = 0.5f;
+    public float ceilingCheckSizeY = 0.3f;
     public float groundChecksRadius = 0.2f;
     public float wallCheckDistance = 0.5f;
     public float ledgeCheckDistance = 0.75f;

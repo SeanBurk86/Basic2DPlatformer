@@ -63,8 +63,9 @@ public class PlayerSlideKickState : PlayerAbilityState
             {
                 stateMachine.ChangeState(player.IdleState);
             }
-            else
+            else if(!player.CheckForCeiling())
             {
+                Debug.Log("Check for ceiling: " + player.CheckForCeiling());
                 stateMachine.ChangeState(player.InAirState);
             }
         }

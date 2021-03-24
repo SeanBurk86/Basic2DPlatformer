@@ -48,6 +48,12 @@ public class PauseMenu : MonoBehaviour
         Time.timeScale = 1;
     }
 
+    public void GotoMainMenu()
+    {
+        SceneManager.LoadScene(0);
+        Time.timeScale = 1;
+    }
+
     public void QuitGame()
     {
         Debug.Log("I should quit... you're probably in the editor");

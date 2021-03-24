@@ -74,6 +74,11 @@ PrefabInstance:
       propertyPath: regularFriction
       value: 
       objectReference: {fileID: 6200000, guid: ae8fd0aa2ff759f4eadfe24dd3e2e29b, type: 2}
+    - target: {fileID: 5222741825324568145, guid: 97a437e6d3dea4a44b60328ae6857f08,
+        type: 3}
+      propertyPath: isGameBall
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5222741825324568174, guid: 97a437e6d3dea4a44b60328ae6857f08,
         type: 3}
       propertyPath: m_LocalPosition.x

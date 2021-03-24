@@ -41,7 +41,7 @@ public class PlayerAbilityState : PlayerState
             {
                 stateMachine.ChangeState(player.IdleState);
             }
-            else
+            else if (!isGrounded && !player.CheckForCeiling())
             {
                 stateMachine.ChangeState(player.InAirState);
             }
