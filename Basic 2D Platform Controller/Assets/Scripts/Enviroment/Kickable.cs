@@ -17,6 +17,7 @@ public class Kickable : MonoBehaviour
     private Vector2 currentVelocity;
 
     public bool indestructible = false;
+    public bool isGameBall = false;
 
     private void Start()
     {
@@ -41,27 +42,15 @@ public class Kickable : MonoBehaviour
         {
             Destroy(gameObject);
         }
-
-        if(transform.parent == null)
-        {
-            Released();
-        }
         
     }
 
     public void Damage(AttackDetails attackDetails)
     {
-        Released();
         RB.AddForce(new Vector2(attackDetails.attackerFacingDirection,0.375f) * 4, ForceMode2D.Impulse);
         if (!indestructible)
         {
             currentHealth -= attackDetails.damageAmount;
         }
-        
-    }
-
-    public void Released()
-    {
-        RB.gravityScale = 4.5f;
     }
 }

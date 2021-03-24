@@ -5,13 +5,14 @@ using UnityEngine;
 public class PlayerGrabber : MonoBehaviour
 {
     [SerializeField]
-    private Transform boxHoldPosition;
+    CircleCollider2D circleCollider2D;
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.transform.parent.CompareTag("Kickable"))
         {
             collision.transform.parent.SetParent(transform.parent.transform);
-            //collision.transform.GetComponent<Rigidbody2D>().gravityScale = 0f;
+            circleCollider2D.radius = 0.0001f;
         }
         
     }
@@ -20,7 +21,7 @@ public class PlayerGrabber : MonoBehaviour
     {
         if (collision.transform.parent.CompareTag("Kickable"))
         {
-            //collision.transform.GetComponent<Rigidbody2D>().gravityScale = 4.5f;
+            circleCollider2D.radius = 0.3f;
             collision.transform.parent.SetParent(null);
         }
         
