@@ -13,23 +13,17 @@ public class PsychicBullet : MonoBehaviour
     public int numberOfBullets = 7;
 
     private AttackDetails attackDetails;
-    public Vector3 moveVector { get; private set; }
 
     private void Start()
     {
         attackDetails.damageAmount = bulletDamage;
-        attackDetails.hitCollisionPosition = transform.position;
         attackDetails.stunDamageAmount = stunDamage;
         StartCoroutine(DestroyProjectile());
-    }
-    private void FixedUpdate()
-    {
-        attackDetails.hitCollisionPosition = transform.position;
-        transform.Translate(moveVector);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        attackDetails.hitCollisionPosition = transform.position;
         if (collision.gameObject.CompareTag("Enemy") || collision.gameObject.CompareTag("Kickable"))
         {
             collision.transform.parent.SendMessage("Damage", attackDetails);

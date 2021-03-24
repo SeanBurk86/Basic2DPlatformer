@@ -1483,8 +1483,7 @@ PrefabInstance:
         type: 3}
       propertyPath: LoadedBullet
       value: 
-      objectReference: {fileID: -2320102016967439563, guid: bda40a7b5245291409de33e61dffe3ea,
-        type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 7013576862163536069, guid: 094ba1d4246dde3488534450a6b6b3f6,
         type: 3}
       propertyPath: slideKickCheck
@@ -1535,6 +1534,12 @@ PrefabInstance:
       propertyPath: pauseMenu
       value: 
       objectReference: {fileID: 862499249}
+    - target: {fileID: 7013576862163536069, guid: 094ba1d4246dde3488534450a6b6b3f6,
+        type: 3}
+      propertyPath: FrontLoadedBullet
+      value: 
+      objectReference: {fileID: 1853834259247172238, guid: 26c3f380550713144b4e99e6ceb9b618,
+        type: 3}
     - target: {fileID: 7013576862163536072, guid: 094ba1d4246dde3488534450a6b6b3f6,
         type: 3}
       propertyPath: m_GravityScale

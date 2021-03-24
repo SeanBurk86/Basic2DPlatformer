@@ -57,7 +57,9 @@ public class Player : MonoBehaviour
     public CapsuleCollider2D MovementCollider { get; private set; }
     public float ghostDelaySeconds,
         boxDetectDistance;
-    public PsychicBullet LoadedBullet;
+
+    public Bullet FrontLoadedBullet;
+
     public Transform EmissionPoint,
         kickCheck,
         slideKickCheck;
@@ -188,7 +190,7 @@ public class Player : MonoBehaviour
                 EnableMelee();
                 ShotDirectionIndicator.gameObject.SetActive(false);
             }
-            if (Time.time >= lastShotTime + LoadedBullet.timeBetweenFiring)
+            if (Time.time >= lastShotTime + FrontLoadedBullet.bulletData.timeBetweenFiring)
             {
                 CanShoot = true;
             }
@@ -461,17 +463,17 @@ public class Player : MonoBehaviour
 
     private void Shoot()
     {
-        float angleWorkspace = Vector2.SignedAngle(Vector2.right, shotDirection) + LoadedBullet.spread/2;
+        float angleWorkspace = Vector2.SignedAngle(Vector2.right, shotDirection) + FrontLoadedBullet.bulletData.spreadAngle/2;
 
-        for(int i = 0; i < LoadedBullet.numberOfBullets; i++)
+        for(int i = 0; i < FrontLoadedBullet.bulletData.numberOfBullets; i++)
         {
             
             Vector2 angleWorkspaceVector = new Vector2(Mathf.Cos(angleWorkspace * Mathf.Deg2Rad), Mathf.Sin(angleWorkspace * Mathf.Deg2Rad));
 
-            GameObject emittedBullet = GameObject.Instantiate(LoadedBullet.gameObject, EmissionPoint.position, Quaternion.Euler(0f, 0f, angleWorkspace));
+            GameObject emittedBullet = GameObject.Instantiate(FrontLoadedBullet.gameObject, EmissionPoint.position, Quaternion.Euler(0f, 0f, angleWorkspace));
             Rigidbody2D emittedBulletRB = emittedBullet.GetComponent<Rigidbody2D>();
-            emittedBulletRB.AddForce(angleWorkspaceVector * LoadedBullet.BulletForce, ForceMode2D.Impulse);
-            angleWorkspace -= LoadedBullet.spread/LoadedBullet.numberOfBullets;
+            emittedBulletRB.AddForce(angleWorkspaceVector * FrontLoadedBullet.bulletData.bulletForce, ForceMode2D.Impulse);
+            angleWorkspace -= FrontLoadedBullet.bulletData.spreadAngle/ FrontLoadedBullet.bulletData.numberOfBullets;
         }
         
         
