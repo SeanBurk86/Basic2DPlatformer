@@ -14,11 +14,4 @@ public class Goal : MonoBehaviour
         }
     }
 
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        if (collision.transform.parent.GetComponent<Kickable>().isGameBall)
-        {
-            FindObjectOfType<AudioManager>().Stop("switch");
-        }
-    }
 }

@@ -50,6 +50,7 @@ public class PauseMenu : MonoBehaviour
 
     public void GotoMainMenu()
     {
+        FindObjectOfType<AudioManager>().StopAllSounds();
         SceneManager.LoadScene(0);
         Time.timeScale = 1;
     }

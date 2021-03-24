@@ -7,7 +7,6 @@ public class MainMenu : MonoBehaviour
 {
     [SerializeField]
     public LevelLoader levelLoader;
-    [SerializeField]
     public AudioManager audioManager;
 
     public GameObject mainMenu,
@@ -20,6 +19,7 @@ public class MainMenu : MonoBehaviour
 
     private void Awake()
     {
+        audioManager = FindObjectOfType<AudioManager>();
         audioManager.Play("hauntedkarate");
         EventSystem.current.SetSelectedGameObject(null);
         EventSystem.current.SetSelectedGameObject(menuFirstSelectedButton);
@@ -28,7 +28,15 @@ public class MainMenu : MonoBehaviour
     public void LoadLevel(int levelIndex)
     {
         audioManager.StopAllSounds();
-        audioManager.Play("dragonflight");
+        if(levelIndex == 2)
+        {
+            audioManager.Play("audience");
+            audioManager.Play("sportsmen");
+        }
+        else
+        {
+            audioManager.Play("dragonflight");
+        }
         levelLoader.LoadLevelByIndex(levelIndex);
     }
 
