@@ -9,6 +9,8 @@ public class AudioManager : MonoBehaviour
 
     public static AudioManager instance;
 
+    public float masterVolume;
+
     private void Awake()
     {
         if (instance == null)
@@ -30,6 +32,11 @@ public class AudioManager : MonoBehaviour
             s.source.pitch = s.pitch;
             s.source.loop = s.loop;
         }
+    }
+
+    private void Start()
+    {
+        masterVolume = 1f;
     }
 
     public void Play(string name)
@@ -59,6 +66,15 @@ public class AudioManager : MonoBehaviour
             {
                 sound.source.Stop();
             }
+        }
+    }
+
+    public void SetMasterVolume(float volume)
+    {
+        masterVolume = volume;
+        foreach (Sound sound in sounds)
+        {
+            sound.source.volume = sound.volume * volume;
         }
     }
 }
