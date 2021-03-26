@@ -9,6 +9,7 @@ TagManager:
   - Ground
   - Kickable
   - Switch
+  - BulletPickup
   layers:
   - Default
   - TransparentFX

@@ -515,5 +515,14 @@ public class Player : MonoBehaviour
         grabber.SetActive(false);
     }
 
+    public void Pickup(Bullet payload)
+    {
+        if (payload.CompareTag("BulletPickup"))
+        {
+            Debug.Log("Payload received");
+            FrontLoadedBullet = payload;
+        }
+    }
+
     #endregion
 }

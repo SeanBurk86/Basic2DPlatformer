@@ -10,6 +10,11 @@ public class PlayerInteract : MonoBehaviour
         {
             collision.transform.SendMessage("UseSwitch");
         }
-        
+        else if (collision.transform.CompareTag("BulletPickup"))
+        {
+            collision.transform.SendMessage("Grab", GetComponentInParent<Player>());
+        }
+
+
     }
 }
