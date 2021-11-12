@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class Player : MonoBehaviour
 {
@@ -34,7 +35,8 @@ public class Player : MonoBehaviour
     private GameObject deathChunkParticle,
         deathBloodParticle,
         useBox,
-        grabber;
+        grabber,
+        grappler;
 
     private GameManager GM;
 
@@ -59,10 +61,11 @@ public class Player : MonoBehaviour
         boxDetectDistance;
 
     public Bullet FrontLoadedBullet;
+    public Transform EmissionPoint;
 
-    public Transform EmissionPoint,
-        kickCheck,
+    public Transform kickCheck,
         slideKickCheck;
+
     private float lastShotTime;
     
     #endregion
@@ -93,10 +96,14 @@ public class Player : MonoBehaviour
     public bool CanMelee { get; private set; }
     public bool CanFlip { get; private set; }
     public bool CanShoot { get; private set; }
+    
+    public bool CanGrapple { get; private set; }
     public Vector3 MovingPlatformPositionOffset { get; private set; }
     private Vector2 workspace;
     private Vector2 shotDirection;
     private bool isHoldingBox;
+    private Vector2 grapplePoint;
+    private bool hasAnchoredToPoint;
     #endregion
 
     #region Unity Callback Functions
@@ -136,13 +143,17 @@ public class Player : MonoBehaviour
         ShotDirectionIndicator = transform.Find("ShotDirectionIndicator");
         MovementCollider = GetComponent<CapsuleCollider2D>();
         EmissionPoint = ShotDirectionIndicator.Find("IndicatorPoint");
-
+        
         FacingDirection = 1;
         CanBeHurt = true;
         CanShoot = true;
+        CanGrapple = true;
+        
+        hasAnchoredToPoint = false;
         isHoldingBox = false;
         EnableFlip();
         DisableUseBox();
+        DisableGrappler();
         CurrentHealth = playerData.startingHealth;
 
         StateMachine.Initialize(IdleState);
@@ -166,7 +177,7 @@ public class Player : MonoBehaviour
             }
 
             StateMachine.CurrentState.LogicUpdate();
-
+            
             if (InputHandler.GrabInput) EnableGrabber();
             else DisableGrabber();
 
@@ -178,16 +189,29 @@ public class Player : MonoBehaviour
                 ShotDirectionIndicator.gameObject.SetActive(true);
                 shotDirection = InputHandler.ShotDirectionInput;
                 bool isFiring = !InputHandler.AttackInputStop;
+                bool isFiringGrapple = !InputHandler.GrappleButtonInputStop; 
                 float angleWorkspace = Vector2.SignedAngle(Vector2.right, shotDirection);
                 ShotDirectionIndicator.rotation = Quaternion.Euler(0f, 0f, angleWorkspace - 45f);
                 if (isFiring && shotDirection != Vector2.zero && CanShoot)
                 {
                     Shoot();
                 }
+
+                if (isFiringGrapple && shotDirection != Vector2.zero && CanGrapple)
+                {
+                    Grapple();
+                }
+                else if (!isFiringGrapple || shotDirection == Vector2.zero)
+                {
+                    DisableGrappler();
+                    hasAnchoredToPoint = false;
+                }
             }
             else
             {
                 EnableMelee();
+                DisableGrappler();
+                hasAnchoredToPoint = false;
                 ShotDirectionIndicator.gameObject.SetActive(false);
             }
             if (Time.time >= lastShotTime + FrontLoadedBullet.bulletData.timeBetweenFiring)
@@ -382,13 +406,11 @@ public class Player : MonoBehaviour
     public void DisableFlip()
     {
         CanFlip = false;
-        Debug.Log("Flip disabled");
     }
 
     public void EnableFlip()
     {
         CanFlip = true;
-        Debug.Log("Flip re-enabled");
     }
 
     public void EnablePlayerDamage()
@@ -448,8 +470,6 @@ public class Player : MonoBehaviour
     {
         if (CheckIfTouchingMovingPlatform())
         {
-            Debug.Log("Updating dynamic transform position to " + new Vector3(transform.parent.transform.position.x + MovingPlatformPositionOffset.x,
-                transform.parent.transform.position.y + MovingPlatformPositionOffset.y));
             transform.position = new Vector3(transform.parent.transform.position.x + MovingPlatformPositionOffset.x, 
                 transform.parent.transform.position.y + MovingPlatformPositionOffset.y);
         }
@@ -471,14 +491,46 @@ public class Player : MonoBehaviour
             Vector2 angleWorkspaceVector = new Vector2(Mathf.Cos(angleWorkspace * Mathf.Deg2Rad), Mathf.Sin(angleWorkspace * Mathf.Deg2Rad));
 
             GameObject emittedBullet = GameObject.Instantiate(FrontLoadedBullet.gameObject, EmissionPoint.position, Quaternion.Euler(0f, 0f, angleWorkspace));
-            Rigidbody2D emittedBulletRB = emittedBullet.GetComponent<Rigidbody2D>();
-            emittedBulletRB.AddForce(angleWorkspaceVector * FrontLoadedBullet.bulletData.bulletForce, ForceMode2D.Impulse);
+            Rigidbody2D emittedBulletRb = emittedBullet.GetComponent<Rigidbody2D>();
+            emittedBulletRb.AddForce(angleWorkspaceVector * FrontLoadedBullet.bulletData.bulletForce, ForceMode2D.Impulse);
             angleWorkspace -= FrontLoadedBullet.bulletData.spreadAngle/ FrontLoadedBullet.bulletData.numberOfBullets;
         }
         
         
         CanShoot = false;
         lastShotTime = Time.time;
+    }
+
+    private void Grapple()
+    {
+        if (!hasAnchoredToPoint)
+        {
+            SetGrapplePoint();
+        }
+    }
+
+    private void SetGrapplePoint()
+    {
+        
+        RaycastHit2D hit = Physics2D.Raycast(EmissionPoint.position, shotDirection);
+        
+        if (hit)
+        {
+            
+            if (hit.transform.gameObject.layer == 8)
+            {
+                if (Vector2.Distance(hit.point, EmissionPoint.position) <= 15)
+                {
+                    grappler.gameObject.GetComponent<PlayerGrappler>().SetConnectedAnchor(hit.point);
+                    hasAnchoredToPoint = true;
+                    EnableGrappler();
+                }
+                else
+                {
+                    DisableGrappler();
+                }
+            }
+        }
     }
 
     public void CreateGhostTrail()
@@ -513,6 +565,15 @@ public class Player : MonoBehaviour
     public void DisableGrabber()
     {
         grabber.SetActive(false);
+    }
+    public void EnableGrappler()
+    {
+        grappler.SetActive(true);
+    }
+
+    public void DisableGrappler()
+    {
+        grappler.SetActive(false);
     }
 
     public void Pickup(Bullet payload)

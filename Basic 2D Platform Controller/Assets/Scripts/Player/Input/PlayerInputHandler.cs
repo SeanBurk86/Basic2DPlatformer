@@ -37,6 +37,10 @@ public class PlayerInputHandler : MonoBehaviour
 
     public bool InteractButtonInput { get; private set; }
 
+    public bool InteractButtonInputStop { get; private set;  }
+    
+    public bool GrappleButtonInput { get; private set; }
+    public bool GrappleButtonInputStop { get; private set; }
     public bool KeyboardAimToggle { get; private set; }
 
     public bool PauseToggle { get; private set; }
@@ -57,6 +61,8 @@ public class PlayerInputHandler : MonoBehaviour
         playerInput = GetComponent<PlayerInput>();
         cam = Camera.main;
         AttackInputStop = true;
+        InteractButtonInputStop = true;
+        GrappleButtonInputStop = true;
         PauseToggle = true;
     }
 
@@ -173,13 +179,26 @@ public class PlayerInputHandler : MonoBehaviour
         if (context.started)
         {
             InteractButtonInput = true;
-            Debug.Log("Interact button pressed");
-
+            InteractButtonInputStop = false;
         }
         else if (context.canceled)
         {
             InteractButtonInput = false;
-            Debug.Log("Interact button released");
+            InteractButtonInputStop = true;
+        }
+    }
+    
+    public void OnGrappleInput(InputAction.CallbackContext context)
+    {
+        if (context.started)
+        {
+            GrappleButtonInput = true;
+            GrappleButtonInputStop = false;
+        }
+        else if (context.canceled)
+        {
+            GrappleButtonInput = false;
+            GrappleButtonInputStop = true;
         }
     }
 
